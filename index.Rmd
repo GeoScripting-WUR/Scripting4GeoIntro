@@ -1,0 +1,43 @@
+---
+title: "Lesson 1: Introduction to the geo-scripting course"
+author: "Jan Verbesselt, Loïc Dutrieux, Ben De Vries, Sytze de Bruyn, Aldo Bergsma"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    theme: united
+---
+
+# Content
+An introduction to the Geo-scripting course
+
+* Introduction to scripting in General
+* Introduction to R, Getting started
+* Read and write data sets
+* Writing a function
+* Creating a map
+
+During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (x).
+
+## Objective
+* a self test for yourself you see if you have the necessary scripting skills to continue with the course
+
+## Learning outcomes
+* Refreshing R skills and possibilities
+* Able to write a function
+* Know how to visualise data in R
+* ...
+
+# Intro of the intro
+
+The course is freshly developed based on needs from people who deal with spatial data}
+	* It is a new course, there is a certain flexibility to adjust the content
+	* A team of R experts, Loic, Ben, Eliakim, Sytze, who use Geo-scripting languages every day helped to develop this course}
+	* Feedback is welcome and we are there to help you the course
+	* Avoid copy paste, and make sure you understand all steps
+
+We will show you how to find help
+  * Try to solve the problem as independent as possible}
+	* Work together with fellow students but make sure you complete everything yourself
+
+You need to speak a language in order to learn it!
