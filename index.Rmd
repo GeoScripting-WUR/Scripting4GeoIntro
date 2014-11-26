@@ -22,7 +22,7 @@ A self-test for yourself you see if you have the necessary scripting skills to c
 
 - Refreshing R skills and possibilities
 - Able to write a function
-- Know how to visualise data in R
+- Know how to visualise data (spatial map) in R
 
 # Introduction to the Geo-scripting course
 
@@ -37,7 +37,124 @@ We will show you how to find help
   - Try to solve the problem as independent as possible
 	- Work together with fellow students but make sure you complete everything yourself
 
+## Daily activities
+
+- See course description
+
+## Geo-scripting learning objectives
+
+- Understand basic concepts of applied scripting for spatial data
+- Use functions from a library while writing your script
+- Find libraries which offer spatial data handling functions
+- Know how to find help (on spatial data handling functions)
+- Solve scripting problems (debug, reproducible example, writing functions)
+- Read, write, and visualise spatial data (vector/raster) using a script
+- Apply learned concepts in a case study with geo-data by solving a spatial/ecological/applied question 
+
+## Why geo-scripting?
+
+- Reproducible: avoid clicking and you keep track of what you have done
+-	Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
+-	Build your own tools and functions (e.g. raster filters, MODIS download tool, BFAST package)
+-	Enable collaboration: sharing scripts, functions, and packages
+-	Good for finding errors i.e. debugging
+
+*examples of advantages of geo-scripting to be added here*
+e.g. This course is fully written with scripting languages (i.e. R and MarkDown). What are the advantages?
+
+## What  is a scripting language?
+
+- A scripting language (e.g. R and Python) can interpret and automate the execution of tasks which could alternatively be executed one-by-one by a human operator
+- Different from like C/C++/Fortran since these are languages that need to be compiled first.
+- Compiling? Programmers write programs in a form called source code. Source code must go through several steps before it becomes an executable program. The first step is to pass the source code through a compiler, which translates the high-level language instructions into object code.
+
+ ![Compiling a program)`](figs/compile.jpg)
+
+- A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS/CPU Architecture
+
+## Different scripting languages for geo-scripting
+
+### The main scripting languages for GIS and Remote sensing currently are: 
+
+- R
+- Python
+  - stand-alone (ArcPy and PyQGIS)
+  - integrated within ArcGIS, QGIS 
+
+- GRASS (grass function are included in QGIS)
+- Javascript for geoweb scripting
+- Matlab
+- IDL (ENVI)
+- JavaScript
+
+### Python versus R
+
+- Python is a general purpose programming language with a clear syntax
+- R is particularly strong in statistical computing and graphics
+- Installing libraries in Python is sometimes challenging
+- Syntactic differences can be confusing (especially when combining these) 
+- There are many R and Python packages for spatial analyses and for dealing with spatial data
+- Scripts in both languages can be combined:
+  - call R from Python using e.g. RPy, RPy2
+  - call Python from R (http://rpython.r-forge.r-project.org/)
+
+### Many programs have support for
+
+- Python (Blender, Sketchup, QGIS, MySQL, PostGIS)
+- R (GRASS, QGIS, MySQL, PostGIS)
+
 # Getting started with R scripting
+
+## Get Your R On
+
+### Getting started with Rstudio and R
+
+*add link to intro for using Rstudio*
+
+This preliminary section will cover some basic details about R.
+For this course we will use Rstudio as an IDE to write and run scripts. Open Rstudio!
+Now type the following script in the R console:
+
+```{r
+rm(list = ls())  # Clear the workspace!
+ls() ## no objects left in the workspace
+```
+
+A good way to start most R scripts
+
+```{r
+a <- 1
+a
+```
+
+The first line you passed to the console created a new object named  $a$ in memory.
+The symbol '<-' is somewhat equivalent to an equal sign but recommended as it is used internally.
+In the second line you printed $a$ to the console by simply typing it's name.
+
+**What is the class of this object?**
+
+```{r
+class(a)
+```
+
+You now have requested the class attribute of $a$ and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects ($a$ in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven't specified one (as you didn't in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.
+
+### Set Your Working Directory
+Let's do some basic set up first.
+
+- Create a folder which will be your working directory e.g. Lesson1
+- Create an R script within that folder
+- Set your working directory to the Lesson1 folder
+- Create a $data$ folder within your working directory
+
+In the code block below type in the file path to where your data is being held and then (if you want) use the setwd() (set working directory) command to give R a default location to look for data files.
+
+```{r, eval=FALSE}
+setwd("yourworkingdirectory")
+# This sets the working directory (where R looks for files)
+getwd() # Double check your working directory
+datdir <- file.path("data") ## path
+```
 
 ## Read and write data sets
 ## Writing a function
