@@ -109,8 +109,6 @@ e.g. This course is fully written with scripting languages (i.e. R and MarkDown)
 
 ### Getting started with Rstudio and R
 
-*add link to intro for using Rstudio*
-
 This preliminary section will cover some basic details about R.
 For this course we will use Rstudio as an IDE to write and run scripts. Open Rstudio!
 Now type the following script in the R console:
