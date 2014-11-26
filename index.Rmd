@@ -9,6 +9,7 @@ output:
 ---
 
 # Content
+
 An introduction to the Geo-scripting course
 
 * Introduction to scripting in General
@@ -39,5 +40,6 @@ The course is freshly developed based on needs from people who deal with spatial
 We will show you how to find help
   * Try to solve the problem as independent as possible}
 	* Work together with fellow students but make sure you complete everything yourself
+  * and something extra
 
 You need to speak a language in order to learn it!
