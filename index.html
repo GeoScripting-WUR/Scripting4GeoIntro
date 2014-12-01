@@ -78,9 +78,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </ul></li>
 <li><a href="#getting-started-with-r-scripting">Getting started with R scripting</a><ul>
 <li><a href="#online-help-and-tutorial">Online help and tutorial</a></li>
-<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer.">Getting started with Rstudio and R on your own computer.</a><ul>
+<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer.">Getting started with Rstudio and R on your own computer.</a></li>
 <li><a href="#set-your-working-directory">Set Your Working Directory</a></li>
-</ul></li>
 <li><a href="#read-and-write-data-sets">Read and write data sets</a></li>
 <li><a href="#writing-a-function">Writing a function</a></li>
 <li><a href="#creating-a-map">Creating a map</a></li>
@@ -226,8 +225,9 @@ a</code></pre>
 <p><strong>What is the class of this object?</strong></p>
 <pre class="{r"><code>class(a)</code></pre>
 <p>You now have requested the class attribute of <span class="math">\(a\)</span> and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects (<span class="math">\(a\)</span> in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven’t specified one (as you didn’t in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.</p>
-<div id="set-your-working-directory" class="section level3">
-<h3>Set Your Working Directory</h3>
+</div>
+<div id="set-your-working-directory" class="section level2">
+<h2>Set Your Working Directory</h2>
 <p>Let’s do some basic set up first.</p>
 <ul>
 <li>Create a folder which will be your working directory e.g. Lesson1</li>
@@ -240,7 +240,6 @@ a</code></pre>
 # This sets the working directory (where R looks for files)
 getwd() # Double check your working directory
 datdir &lt;- file.path(&quot;data&quot;) ## path</code></pre>
-</div>
 </div>
 <div id="read-and-write-data-sets" class="section level2">
 <h2>Read and write data sets</h2>

@@ -118,7 +118,7 @@ This preliminary section will cover some basic details about R. For this course 
 Go the following link: [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 
 We will start with the first paragraph:
-Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.
+Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today (e.g. a screenshot or a Twitter tweet that you completed the course).
 
 ## Getting started with Rstudio and R on your own computer.
 
@@ -150,7 +150,8 @@ class(a)
 
 You now have requested the class attribute of $a$ and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects ($a$ in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven't specified one (as you didn't in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.
 
-### Set Your Working Directory
+## Set Your Working Directory
+
 Let's do some basic set up first.
 
 - Create a folder which will be your working directory e.g. Lesson1
@@ -168,7 +169,6 @@ datdir <- file.path("data") ## path
 ```
 
 ## Read and write data sets
-
 
 ## Writing a function
 
