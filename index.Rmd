@@ -111,20 +111,20 @@ e.g. This course is fully written with scripting languages (i.e. R and MarkDown)
 
 # Getting started with R scripting
 
-## Get Your R On
+## Online help and tutorial
 
-### Online help and tutorial
+This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts.
 
-Go the following link: http://www.rstudio.com/resources/training/online-learning/. 
+Go the following link: [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 
 We will start with the first paragraph:
-Learn the basics, and go to **Try R**: http://tryr.codeschool.com/. This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.
+Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.
 
-### Getting started with Rstudio and R on your own computer.
+## Getting started with Rstudio and R on your own computer.
 
-This preliminary section will cover some basic details about R.
-For this course we will use Rstudio as an IDE to write and run scripts. Open Rstudio!
-Now type the following script in the R console:
+A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie and then do the following section.
+ 
+Now, Open Rstudio and type the following script in the R console of **Rstudio**:
 
 ```{r
 rm(list = ls())  # Clear the workspace!
@@ -168,5 +168,8 @@ datdir <- file.path("data") ## path
 ```
 
 ## Read and write data sets
+
+
 ## Writing a function
+
 ## Creating a map

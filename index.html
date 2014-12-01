@@ -77,9 +77,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </ul></li>
 </ul></li>
 <li><a href="#getting-started-with-r-scripting">Getting started with R scripting</a><ul>
-<li><a href="#get-your-r-on">Get Your R On</a><ul>
 <li><a href="#online-help-and-tutorial">Online help and tutorial</a></li>
-<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer.">Getting started with Rstudio and R on your own computer.</a></li>
+<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer.">Getting started with Rstudio and R on your own computer.</a><ul>
 <li><a href="#set-your-working-directory">Set Your Working Directory</a></li>
 </ul></li>
 <li><a href="#read-and-write-data-sets">Read and write data sets</a></li>
@@ -208,16 +207,16 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="getting-started-with-r-scripting" class="section level1">
 <h1>Getting started with R scripting</h1>
-<div id="get-your-r-on" class="section level2">
-<h2>Get Your R On</h2>
-<div id="online-help-and-tutorial" class="section level3">
-<h3>Online help and tutorial</h3>
-<p>Go the following link: <a href="http://www.rstudio.com/resources/training/online-learning/" class="uri">http://www.rstudio.com/resources/training/online-learning/</a>.</p>
-<p>We will start with the first paragraph: Learn the basics, and go to <strong>Try R</strong>: <a href="http://tryr.codeschool.com/" class="uri">http://tryr.codeschool.com/</a>. This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.</p>
+<div id="online-help-and-tutorial" class="section level2">
+<h2>Online help and tutorial</h2>
+<p>This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts.</p>
+<p>Go the following link: <a href="http://www.rstudio.com/resources/training/online-learning/">Rstudio Online Learning</a>.</p>
+<p>We will start with the first paragraph: Learn the basics, and go to <a href="http://tryr.codeschool.com/">Try R</a>. This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.</p>
 </div>
-<div id="getting-started-with-rstudio-and-r-on-your-own-computer." class="section level3">
-<h3>Getting started with Rstudio and R on your own computer.</h3>
-<p>This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts. Open Rstudio! Now type the following script in the R console:</p>
+<div id="getting-started-with-rstudio-and-r-on-your-own-computer." class="section level2">
+<h2>Getting started with Rstudio and R on your own computer.</h2>
+<p>A summary youtube movie about how to use Rstudio and writing a function is here: <a href="https://www.youtube.com/watch?v=jPk6-3prknk">Intro to Rstudio</a>. Have a look at this movie and then do the following section.</p>
+<p>Now, Open Rstudio and type the following script in the R console of <strong>Rstudio</strong>:</p>
 <pre class="{r"><code>rm(list = ls())  # Clear the workspace!
 ls() ## no objects left in the workspace</code></pre>
 <p>A good way to start most R scripts</p>
@@ -227,7 +226,6 @@ a</code></pre>
 <p><strong>What is the class of this object?</strong></p>
 <pre class="{r"><code>class(a)</code></pre>
 <p>You now have requested the class attribute of <span class="math">\(a\)</span> and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects (<span class="math">\(a\)</span> in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven’t specified one (as you didn’t in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.</p>
-</div>
 <div id="set-your-working-directory" class="section level3">
 <h3>Set Your Working Directory</h3>
 <p>Let’s do some basic set up first.</p>
