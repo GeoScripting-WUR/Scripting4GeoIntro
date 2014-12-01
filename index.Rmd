@@ -43,6 +43,10 @@ We will show you how to find help
 
 - See course description
 
+## Course planning and agenda
+
+- See blackboard page for planning and course content
+
 ## Geo-scripting learning objectives
 
 - Understand basic concepts of applied scripting for spatial data
@@ -109,7 +113,14 @@ e.g. This course is fully written with scripting languages (i.e. R and MarkDown)
 
 ## Get Your R On
 
-### Getting started with Rstudio and R
+### Online help and tutorial
+
+Go the following link: http://www.rstudio.com/resources/training/online-learning/. 
+
+We will start with the first paragraph:
+Learn the basics, and go to **Try R**: http://tryr.codeschool.com/. This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today.
+
+### Getting started with Rstudio and R on your own computer.
 
 This preliminary section will cover some basic details about R.
 For this course we will use Rstudio as an IDE to write and run scripts. Open Rstudio!
