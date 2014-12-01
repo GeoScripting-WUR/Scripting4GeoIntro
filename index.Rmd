@@ -10,15 +10,17 @@ output:
     toc: yes
 ---
 
-**ToDo in the morning (self-study/tutorial)**:
+# Today's items
+
+## ToDo in the morning: self-study/tutorial Getting started with R
 
 During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (x).
 
-**Objective of today:** 
+## Objective of today:
 
 A self-test for yourself you see if you have the necessary scripting skills to continue with the course.
 
-**Learning outcomes of today**:
+## Learning outcomes of today:
 
 - Refreshing R skills and possibilities
 - Able to write a function
