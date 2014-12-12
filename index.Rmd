@@ -121,6 +121,7 @@ Go the following link: [Rstudio Online Learning](http://www.rstudio.com/resource
 We will start with the first paragraph:
 Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today (e.g. a screenshot or a Twitter tweet that you completed the course).
 
+# Basic R and RStudio setup
 ## Getting started with Rstudio and R on your own computer.
 
 A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie and then do the following section.
@@ -169,8 +170,96 @@ getwd() # Double check your working directory
 datdir <- file.path("data") ## path
 ```
 
+# Basic R knowledge usefull for Geo-Scripting
+Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
+
+## Vector handling and vector arithmetic
+You'll be introduced in a following lesson with the raster package and the raster classes that have been developped as part of that package. All objects that belong to the class `raster*` are no more than vectors with a few more spatial attributes. *Note that in that case vectors are not related to spacial vector data; in R we call a collection of number a vector.* As a consequence, they can be handled as such, and handling vector is a crucial skill for processing raster data in R.
+Reference manual for vector handling and vector arithmetic can be found [here](http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors).
+
+```{r}
+# Create a vector
+a <- c(3,6,8,1)
+a
+
+# Any mathematical operation can be performed on vectors
+(b <- a * 2)
+(d <- a + 6)
+
+# Two vectors of same length can also be added with each others
+(e <- a + b)
+```
+
+Value replacement
+
+```{r}
+# Values in a vector that satisfy a certain condition can be replaced by other values
+a <- c(2,5,2,5,6,9,2,12)
+
+# Values inferior or equal to 5 are replaced by 0
+a[a <= 5] <- 0
+a
+
+# Condition can be defined using another vector of equal length
+a <- c(2,5,2,5,6,9,2,12)
+b <- c(1,1,0,1,0,0,1,0)
+
+# Change the values of a based on b values
+a[b == 0] <- NA
+a
+
+# More complex value replacement
+a <- c(2,5,2,5,6,9,2,12)
+b <- c(1,1,2,1,0,0,1,2)
+# a values at which b is equal to either 0 or 1 are replaced by NA
+a[b %in% c(0,1)] <- NA
+```
+
+## Character vector handling
+When working with *real* data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writting data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic string handling skills.
+
+<!--
+Jan, below I just listed the key functions, it should be a bit further elaborated
+-->
+
+Key functions for handling character strings are listed below:
+
+* `list.files()`
+* `glob2rx()`, Note: if you know regaular expressions, you do not need that function. But most people are more comfortable working with wildcards.
+* `paste()`, `paste0()`, `sprintf()`
+* `strsplit()`
+
+Example of `strsplit()`
+
+```{r}
+# I have the following character string
+name <- 'today_is_friday_12-12-2014'
+
+# I want to extract the date contained in it, I can split it based on the underscores and the fourth element should be the date
+date0 <- unlist(strsplit('today_is_friday_12-12-2014', split = '_'))[4]
+
+# Which can then be formatted as a date object (until now it is a character string)
+class(date0)
+(date <- as.Date(date0, format = '%m-%d-%Y'))
+class(date)
+```
+
 ## Read and write data sets
+
+`list.files()`
 
 ## Writing a function
 
-## Creating a map
+## Dataframe manipulation
+<!--
+This section is also just a draft and should be further elaborated
+-->
+One central object class of R is the dataframes. The spatial vector classes of R are usually built around dataframes as well, as a consequence, all dataframe manipulation functions and methods are also highly relevant when dealing with spatial vector data in R.
+
+* `str()`
+* `subset()`
+* `cbind()`, `rbind()`
+* Methods with `[,]`, `[,] <-`
+* `merge()`
+
+# Creating a map
