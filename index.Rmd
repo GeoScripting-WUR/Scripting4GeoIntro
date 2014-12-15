@@ -13,9 +13,9 @@ output:
 
 # Today's items
 
-## ToDo in the morning: self-study/tutorial Getting started with R
+## ToDo in the morning
 
-During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (x).
+During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (See [Getting Started With R](#gettingstarted)).
 
 ## Objective of today:
 
@@ -110,16 +110,16 @@ e.g. This course is fully written with scripting languages (i.e. R and MarkDown)
 - Python (Blender, Sketchup, QGIS, MySQL, PostGIS)
 - R (GRASS, QGIS, MySQL, PostGIS)
 
-# Getting started with R scripting
+# Getting started with R scripting {#gettingstarted}
 
 ## Online help and tutorial
 
 This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts.
 
-Go the following link: [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
-
 We will start with the first paragraph:
 Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today (e.g. a screenshot or a Twitter tweet that you completed the course).
+
+Once you have finished continue with the section below.
 
 # Basic R and RStudio setup
 ## Getting started with Rstudio and R on your own computer.
@@ -128,7 +128,7 @@ A summary youtube movie about how to use Rstudio and writing a function is here:
  
 Now, Open Rstudio and type the following script in the R console of **Rstudio**:
 
-```{r
+```{r}
 rm(list = ls())  # Clear the workspace!
 ls() ## no objects left in the workspace
 ```
@@ -141,8 +141,7 @@ a
 ```
 
 The first line you passed to the console created a new object named  $a$ in memory.
-The symbol '<-' is somewhat equivalent to an equal sign but recommended as it is used internally.
-In the second line you printed $a$ to the console by simply typing it's name.
+The symbol '<-' is somewhat equivalent to an equal sign but recommended as it is used internally. In the second line you printed $a$ to the console by simply typing it's name.
 
 **What is the class of this object?**
 
@@ -174,7 +173,12 @@ datdir <- file.path("data") ## path
 Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
 
 ## Vector handling and vector arithmetic
-You'll be introduced in a following lesson with the raster package and the raster classes that have been developped as part of that package. All objects that belong to the class `raster*` are no more than vectors with a few more spatial attributes. *Note that in that case vectors are not related to spacial vector data; in R we call a collection of number a vector.* As a consequence, they can be handled as such, and handling vector is a crucial skill for processing raster data in R.
+You'll be introduced in a following lesson with the raster package and the raster classes that have been developped as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
+
+**In `R` we call a collection of number a vector.** 
+
+As a consequence, handling vector is a crucial skill for processing raster data in R.
+
 Reference manual for vector handling and vector arithmetic can be found [here](http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors).
 
 ```{r}
@@ -213,9 +217,11 @@ a <- c(2,5,2,5,6,9,2,12)
 b <- c(1,1,2,1,0,0,1,2)
 # a values at which b is equal to either 0 or 1 are replaced by NA
 a[b %in% c(0,1)] <- NA
+a
 ```
 
 ## Character vector handling
+
 When working with *real* data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writting data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic string handling skills.
 
 <!--
@@ -263,3 +269,7 @@ One central object class of R is the dataframes. The spatial vector classes of R
 * `merge()`
 
 # Creating a map
+
+# References
+
+- [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
