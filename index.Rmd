@@ -222,20 +222,51 @@ a
 
 ## Character vector handling
 
-When working with *real* data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writting data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic string handling skills.
-
-<!--
-Jan, below I just listed the key functions, it should be a bit further elaborated
--->
+When working with *real* data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
 
 Key functions for handling character strings are listed below:
 
-* `list.files()`
-* `glob2rx()`, Note: if you know regaular expressions, you do not need that function. But most people are more comfortable working with wildcards.
-* `paste()`, `paste0()`, `sprintf()`
-* `strsplit()`
+* `list.files()`: to list files in a directory
+* `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a filename
+* `strsplit()`: to split up a string
 
-Example of `strsplit()`
+<!---
+* Loïc - I did not add this yet - as it requires just a touch more of an explanation - looking for a simple example linked with an application.
+* `glob2rx()`:  Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
+-->
+
+### Example of `list.files()`
+
+```{r, eval=FALSE}
+getwd() ## check your working directory
+list.files() ## list the files available in this directory
+```
+
+**Question**: List the directories in your working directory
+
+### Example of `paste()`
+
+```{r}
+## two handy examples
+paste("Today is", date())
+paste("A", 1:6, sep = "")
+```
+
+**Question**: create one variable containing a sentence, based on a, b, or c:
+
+```{r, eval=FALSE}
+
+"geo-scripting is fun" # by combining a, b, an c
+a <- "geo-scripting"
+b <- "is"
+c <- "fun"
+
+## what if you only have d, defined as a list?
+d <- list(a, b, c)
+paste(d) ## this is not good
+```
+
+### Example of `strsplit()`
 
 ```{r}
 # I have the following character string
@@ -250,14 +281,19 @@ class(date0)
 class(date)
 ```
 
-## Read and write data sets
+See also `?substr`, this can be handy to.
 
-`list.files()`
+## Read and write data sets
 
 ## Writing a function
 
+## Creating a map
+
+# Excercise of today (submit by e-mail to me before 10 am the next day)
+
 ## Dataframe manipulation
 <!--
+
 This section is also just a draft and should be further elaborated
 -->
 One central object class of R is the dataframes. The spatial vector classes of R are usually built around dataframes as well, as a consequence, all dataframe manipulation functions and methods are also highly relevant when dealing with spatial vector data in R.
@@ -268,7 +304,6 @@ One central object class of R is the dataframes. The spatial vector classes of R
 * Methods with `[,]`, `[,] <-`
 * `merge()`
 
-# Creating a map
 
 # References
 

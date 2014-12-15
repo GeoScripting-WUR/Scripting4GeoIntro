@@ -85,12 +85,18 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </ul></li>
 <li><a href="#basic-r-knowledge-usefull-for-geo-scripting"><span class="toc-section-number">5</span> Basic R knowledge usefull for Geo-Scripting</a><ul>
 <li><a href="#vector-handling-and-vector-arithmetic"><span class="toc-section-number">5.1</span> Vector handling and vector arithmetic</a></li>
-<li><a href="#character-vector-handling"><span class="toc-section-number">5.2</span> Character vector handling</a></li>
+<li><a href="#character-vector-handling"><span class="toc-section-number">5.2</span> Character vector handling</a><ul>
+<li><a href="#example-of-list.files"><span class="toc-section-number">5.2.1</span> Example of <code>list.files()</code></a></li>
+<li><a href="#example-of-paste"><span class="toc-section-number">5.2.2</span> Example of <code>paste()</code></a></li>
+<li><a href="#example-of-strsplit"><span class="toc-section-number">5.2.3</span> Example of <code>strsplit()</code></a></li>
+</ul></li>
 <li><a href="#read-and-write-data-sets"><span class="toc-section-number">5.3</span> Read and write data sets</a></li>
 <li><a href="#writing-a-function"><span class="toc-section-number">5.4</span> Writing a function</a></li>
-<li><a href="#dataframe-manipulation"><span class="toc-section-number">5.5</span> Dataframe manipulation</a></li>
+<li><a href="#creating-a-map"><span class="toc-section-number">5.5</span> Creating a map</a></li>
 </ul></li>
-<li><a href="#creating-a-map"><span class="toc-section-number">6</span> Creating a map</a></li>
+<li><a href="#excercise-of-today-submit-by-e-mail-to-me-before-10-am-the-next-day"><span class="toc-section-number">6</span> Excercise of today (submit by e-mail to me before 10 am the next day)</a><ul>
+<li><a href="#dataframe-manipulation"><span class="toc-section-number">6.1</span> Dataframe manipulation</a></li>
+</ul></li>
 <li><a href="#references"><span class="toc-section-number">7</span> References</a></li>
 </ul>
 </div>
@@ -301,18 +307,42 @@ a</code></pre>
 </div>
 <div id="character-vector-handling" class="section level2">
 <h2><span class="header-section-number">5.2</span> Character vector handling</h2>
-<p>When working with <em>real</em> data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writting data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic string handling skills.</p>
-<!--
-Jan, below I just listed the key functions, it should be a bit further elaborated
--->
+<p>When working with <em>real</em> data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
 <p>Key functions for handling character strings are listed below:</p>
 <ul>
-<li><code>list.files()</code></li>
-<li><code>glob2rx()</code>, Note: if you know regaular expressions, you do not need that function. But most people are more comfortable working with wildcards.</li>
-<li><code>paste()</code>, <code>paste0()</code>, <code>sprintf()</code></li>
-<li><code>strsplit()</code></li>
+<li><code>list.files()</code>: to list files in a directory</li>
+<li><code>paste()</code>, <code>paste0()</code>, <code>sprintf()</code>: useful to combine vectors e.g. to create a filename</li>
+<li><code>strsplit()</code>: to split up a string</li>
 </ul>
-<p>Example of <code>strsplit()</code></p>
+<!---
+* Loïc - I did not add this yet - as it requires just a touch more of an explanation - looking for a simple example linked with an application.
+* `glob2rx()`:  Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
+-->
+<div id="example-of-list.files" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Example of <code>list.files()</code></h3>
+<pre class="r"><code>getwd() ## check your working directory
+list.files() ## list the files available in this directory</code></pre>
+<p><strong>Question</strong>: List the directories in your working directory</p>
+</div>
+<div id="example-of-paste" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
+<pre class="r"><code>## two handy examples
+paste(&quot;Today is&quot;, date())</code></pre>
+<pre><code>## [1] &quot;Today is Mon Dec 15 11:42:32 2014&quot;</code></pre>
+<pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
+<pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
+<p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
+<pre class="r"><code>&quot;geo-scripting is fun&quot; # by combining a, b, an c
+a &lt;- &quot;geo-scripting&quot;
+b &lt;- &quot;is&quot;
+c &lt;- &quot;fun&quot;
+
+## what if you only have d, defined as a list?
+d &lt;- list(a, b, c)
+paste(d) ## this is not good</code></pre>
+</div>
+<div id="example-of-strsplit" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> Example of <code>strsplit()</code></h3>
 <pre class="r"><code># I have the following character string
 name &lt;- 'today_is_friday_12-12-2014'
 
@@ -326,17 +356,25 @@ class(date0)</code></pre>
 <pre><code>## [1] &quot;2014-12-12&quot;</code></pre>
 <pre class="r"><code>class(date)</code></pre>
 <pre><code>## [1] &quot;Date&quot;</code></pre>
+<p>See also <code>?substr</code>, this can be handy to.</p>
+</div>
 </div>
 <div id="read-and-write-data-sets" class="section level2">
 <h2><span class="header-section-number">5.3</span> Read and write data sets</h2>
-<p><code>list.files()</code></p>
 </div>
 <div id="writing-a-function" class="section level2">
 <h2><span class="header-section-number">5.4</span> Writing a function</h2>
 </div>
+<div id="creating-a-map" class="section level2">
+<h2><span class="header-section-number">5.5</span> Creating a map</h2>
+</div>
+</div>
+<div id="excercise-of-today-submit-by-e-mail-to-me-before-10-am-the-next-day" class="section level1">
+<h1><span class="header-section-number">6</span> Excercise of today (submit by e-mail to me before 10 am the next day)</h1>
 <div id="dataframe-manipulation" class="section level2">
-<h2><span class="header-section-number">5.5</span> Dataframe manipulation</h2>
+<h2><span class="header-section-number">6.1</span> Dataframe manipulation</h2>
 <!--
+
 This section is also just a draft and should be further elaborated
 -->
 <p>One central object class of R is the dataframes. The spatial vector classes of R are usually built around dataframes as well, as a consequence, all dataframe manipulation functions and methods are also highly relevant when dealing with spatial vector data in R.</p>
@@ -348,9 +386,6 @@ This section is also just a draft and should be further elaborated
 <li><code>merge()</code></li>
 </ul>
 </div>
-</div>
-<div id="creating-a-map" class="section level1">
-<h1><span class="header-section-number">6</span> Creating a map</h1>
 </div>
 <div id="references" class="section level1">
 <h1><span class="header-section-number">7</span> References</h1>
