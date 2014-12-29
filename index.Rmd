@@ -41,25 +41,31 @@ A self-test for yourself you see if you have the necessary scripting skills to c
 This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts.
 
 We will start with the first paragraph:
-Learn the basics, and go to [Try R](http://tryr.codeschool.com/). This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Upload the proof to blackboard that you have completed all chapters and challenges. Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today (e.g. a screenshot or a Twitter tweet that you completed the course).
+Learn the basics, and go to [Try R](http://tryr.codeschool.com/). 
 
+This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to Jan.Verbesselt''wur.nl with:
+
+- the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course).
+- Record the time you need to complete this online course and write down if you have questions.
+Send me, Jan Verbesselt, an e-mail with the information before 12 today 
 Once you have finished continue with the section below.
 
 # Basic R and RStudio setup
+
 ## Getting started with Rstudio and R on your own computer.
 
-A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie and then do the following section.
+A summary youtube movie about how to use `Rstudio` and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with `Rstudio` and then do the following section.
  
-Now, Open Rstudio and type the following script in the R console of **Rstudio**:
+Now, Open `Rstudio` and type the following script in the R console of **Rstudio**:
 
-```{r}
+```{r, message=FALSE, results='hide'}
 rm(list = ls())  # Clear the workspace!
 ls() ## no objects left in the workspace
 ```
 
 A good way to start most R scripts
 
-```{r
+```{r}
 a <- 1
 a
 ```
@@ -311,7 +317,7 @@ if (!file.exists(file.path(datdir, "PHL_adm2.RData"))) {
 
 Try to understand the code below, and let me know if you have questions. Feel free to use this code as an example and use this for the excercise below.
 
-```{r phil, eval=TRUE}
+```{r phil, eval=TRUE, fig.align='center'}
 mar <- adm[adm$NAME_1 == "Marinduque",]
 plot(mar, bg = "dodgerblue", axes=T)
 plot(mar, lwd = 10, border = "skyblue", add=T)
@@ -330,9 +336,9 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 
 # Excercise lesson 1
 
-**Write you own function to create a map.**
+**Write your own function to create a map.**
 
-Submit a clear, reproducible, and documented script containing a function to create a spatial map
+Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
 
 - define a function
 - demonstrate the function
@@ -340,7 +346,7 @@ Submit a clear, reproducible, and documented script containing a function to cre
 - keep it simple (!) e.g. just plot the adminstrative boundaries
 - The function should accept `country` and `level` as input arguments
 - Filename: *lastnamefirstname.R*
-- submit by e-mail to me before 10 am the next day.
+- submit by e-mail to me before 1030 am the next day.
 
 # References
 
