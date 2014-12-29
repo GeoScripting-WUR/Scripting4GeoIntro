@@ -1,9 +1,10 @@
 ---
-title: 'Lesson 1: Introduction to the geo-scripting course'
+title: "Lesson 1: Introduction to the geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
-    theme: united
+    theme: "cosmo"
     toc: yes
     toc_depth: 4
     number_sections: true
@@ -11,7 +12,7 @@ output:
 
 # Today's items
 
-## ToDo in the morning
+## `To Do` in the morning
 
 During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (See [Getting Started With R](#gettingstarted)).
 
