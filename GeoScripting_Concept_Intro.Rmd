@@ -11,7 +11,7 @@ output: ioslides_presentation
 - The course is freshly developed based on needs from people who deal with spatial data
 - It is a new course, there is a certain flexibility to adjust the content!
 - A team of R experts who use Geo-scripting languages every day helped to develop this course
-- Feedback is welcome! 
+- Feedback is welcome! You can use the following anonymous form to submit ideas, requests, bugs:
 - Avoid copy paste, and make sure you understand all steps
 
 We will show you how to find help
@@ -25,7 +25,10 @@ We will show you how to find help
 ## Team work & helping eachother
 
 - Teams of two (e.g. somebody who followed the `python` course and who didn't follow it)
-- The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions) for everybody!
+- The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php) for everybody!
+    - Try to obtain the highest score (overall score, best question, best answer)
+    - Ask at least one good question
+    - Answer at least one question
 
 ## Geo-scripting learning objectives
 
