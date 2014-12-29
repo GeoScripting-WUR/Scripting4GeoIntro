@@ -1,0 +1,82 @@
+---
+title: "The Geo-scripting course"
+author: "Jan Verbesselt and Loïc Dutrieux"
+date: "29 Dec 2014"
+output: ioslides_presentation
+
+---
+
+## Course concept
+
+- The course is freshly developed based on needs from people who deal with spatial data
+- It is a new course, there is a certain flexibility to adjust the content
+- A team of R experts, Loïc Dutrieux, Ben Devries, Sytze, who use Geo-scripting languages every day helped to develop this course
+- Feedback is welcome and we are there to help you the course
+- Avoid copy paste, and make sure you understand all steps
+
+We will show you how to find help
+  - Try to solve the problem as independent as possible
+  - Work together with fellow students but make sure you complete everything yourself
+
+## Course planning
+
+[Planning of the geo-scripting course](https://docs.google.com/document/d/1yTomAgB9Mny-h0ZEd0mhr0nU5_fD5ysZBAvFYqI5Fn4/edit?usp=sharing)
+
+## Geo-scripting learning objectives
+
+- Understand basic concepts of applied scripting for spatial data
+- Use functions from a library while writing your script
+- Find libraries which offer spatial data handling functions
+- Know how to find help (on spatial data handling functions)
+- Solve scripting problems (debug, reproducible example, writing functions)
+- Read, write, and visualise spatial data (vector/raster) using a script
+- Apply learned concepts in a case study with geo-data by solving a spatial/ecological/applied question 
+
+## Why geo-scripting?
+
+- Reproducible: avoid clicking and you keep track of what you have done
+-	Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
+-	Build your own tools and functions (e.g. raster filters, MODIS download tool, BFAST package)
+-	Enable collaboration: sharing scripts, functions, and packages
+-	Good for finding errors i.e. debugging
+
+*examples of advantages of geo-scripting to be added here*
+e.g. This course is fully written with scripting languages (i.e. R and MarkDown). What are the advantages?
+
+## What  is a scripting language?
+
+- A scripting language (e.g. R and Python) can interpret and automate the execution of tasks which could alternatively be executed one-by-one by a human operator
+- A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS/CPU Architecture
+- Different from like C/C++/Fortran since these are languages that need to be compiled first.
+
+## Compiling
+- Compiling? Programmers write programs in a form called source code. Source code must go through several steps before it becomes an executable program. The first step is to pass the source code through a compiler, which translates the high-level language instructions into object code.
+
+ ![Compiling a program)`](figs/compile.jpg)
+
+## The main scripting languages for GIS and Remote sensing currently are: 
+
+- R
+- Python
+- GRASS (grass function are included in QGIS)
+- Javascript for geoweb scripting
+- Matlab
+- IDL (ENVI)
+- JavaScript
+- ...
+
+## Python versus R
+
+- Python is a general purpose programming language with a clear syntax
+- R is particularly strong in statistical computing and graphics
+- Installing libraries in Python is sometimes challenging
+- Syntactic differences can be confusing (especially when combining these) 
+- There are many R and Python packages for spatial analyses and for dealing with spatial data
+- Scripts in both languages can be combined:
+  - call R from Python using e.g. RPy, RPy2
+  - call Python from R (http://rpython.r-forge.r-project.org/)
+
+## Many programs have support for
+
+- Python (Blender, Sketchup, QGIS, MySQL, PostGIS)
+- R (GRASS, QGIS, MySQL, PostGIS)
