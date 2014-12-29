@@ -64,7 +64,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><a href="#objective-of-today"><span class="toc-section-number">1.2</span> Objective of today:</a></li>
 <li><a href="#learning-outcomes-of-today"><span class="toc-section-number">1.3</span> Learning outcomes of today:</a></li>
 </ul></li>
-<li><a href="#introduction-to-the-geo-scripting-course"><span class="toc-section-number">2</span> Introduction to the Geo-scripting course</a></li>
+<li><a href="#introduction"><span class="toc-section-number">2</span> Introduction</a></li>
 <li><a href="#gettingstarted"><span class="toc-section-number">3</span> Getting started with R scripting</a><ul>
 <li><a href="#online-help-and-tutorial"><span class="toc-section-number">3.1</span> Online help and tutorial</a></li>
 </ul></li>
@@ -92,11 +92,15 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h1><span class="header-section-number">1</span> Today’s items</h1>
 <div id="to-do-in-the-morning" class="section level2">
 <h2><span class="header-section-number">1.1</span> <code>To Do</code> in the morning</h2>
-<p>During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (See <a href="#gettingstarted">Getting Started With R</a>).</p>
+<p>During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards.</p>
+<p>See <a href="#gettingstarted">Getting Started With R</a>).</p>
 </div>
 <div id="objective-of-today" class="section level2">
 <h2><span class="header-section-number">1.2</span> Objective of today:</h2>
-<p>A self-test for yourself you see if you have the necessary scripting skills to continue with the course.</p>
+<ul>
+<li>A self-test for yourself you see if you have the necessary scripting skills to continue with the course.</li>
+<li>Introduction to the course, planning, and teams</li>
+</ul>
 </div>
 <div id="learning-outcomes-of-today" class="section level2">
 <h2><span class="header-section-number">1.3</span> Learning outcomes of today:</h2>
@@ -107,9 +111,9 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </ul>
 </div>
 </div>
-<div id="introduction-to-the-geo-scripting-course" class="section level1">
-<h1><span class="header-section-number">2</span> Introduction to the Geo-scripting course</h1>
-<p><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1">Presentation about the Geo-scripting course</a>:</p>
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">2</span> Introduction</h1>
+<p><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1">Presentation about the Geo-scripting course</a></p>
 <ul>
 <li>Introduction</li>
 <li>Planning</li>
@@ -123,11 +127,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h2><span class="header-section-number">3.1</span> Online help and tutorial</h2>
 <p>This preliminary section will cover some basic details about R. For this course we will use Rstudio as an IDE to write and run scripts.</p>
 <p>We will start with the first paragraph: Learn the basics, and go to <a href="http://tryr.codeschool.com/">Try R</a>.</p>
-<p>This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to Jan.Verbesselt’’wur.nl with:</p>
+<p>This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to <em>Jan Verbesselt</em> by 12 today with:</p>
 <ul>
 <li>the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course).</li>
-<li>Record the time you need to complete this online course and write down if you have questions. Send me, Jan Verbesselt, an e-mail with the information before 12 today Once you have finished continue with the section below.</li>
+<li>Record the time you needed to complete this online course</li>
+<li>Let me know if you have questions/or something is unclear</li>
 </ul>
+<p>If you have questions that fellow students can help you with you can use the <a href="http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions">Question and Answer Website of the Geo-scripting course</a>. Try it out! I will explain how this can be used during the discussion session that starts at 1330 today in PC38.</p>
+<p>Once you have finished continue with the section below.</p>
 </div>
 </div>
 <div id="basic-r-and-rstudio-setup" class="section level1">
@@ -139,9 +146,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <pre class="r"><code>rm(list = ls())  # Clear the workspace!
 ls() ## no objects left in the workspace</code></pre>
 <p>A good way to start most R scripts</p>
-<pre class="r"><code>a &lt;- 1
+<pre class="{r"><code>a &lt;- 1
 a</code></pre>
-<pre><code>## [1] 1</code></pre>
 <p>The first line you passed to the console created a new object named <span class="math">\(a\)</span> in memory. The symbol ‘&lt;-’ is somewhat equivalent to an equal sign but recommended as it is used internally. In the second line you printed <span class="math">\(a\)</span> to the console by simply typing it’s name.</p>
 <p><strong>What is the class of this object?</strong></p>
 <pre class="{r"><code>class(a)</code></pre>
@@ -231,7 +237,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Mon Dec 29 17:05:22 2014&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Mon Dec 29 18:24:34 2014&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>

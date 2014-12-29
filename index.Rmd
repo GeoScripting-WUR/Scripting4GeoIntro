@@ -14,11 +14,14 @@ output:
 
 ## `To Do` in the morning
 
-During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards (See [Getting Started With R](#gettingstarted)).
+During the morning session read through this tutorial but focus on the code examples from Introduction to R onwards.
+
+See [Getting Started With R](#gettingstarted)).
 
 ## Objective of today:
 
-A self-test for yourself you see if you have the necessary scripting skills to continue with the course.
+- A self-test for yourself you see if you have the necessary scripting skills to continue with the course.
+- Introduction to the course, planning, and teams
 
 ## Learning outcomes of today:
 
@@ -26,9 +29,9 @@ A self-test for yourself you see if you have the necessary scripting skills to c
 - Able to write a function
 - Know how to visualise data (spatial map) in R
 
-# Introduction to the Geo-scripting course
+# Introduction
 
-[Presentation about the Geo-scripting course](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1):
+[Presentation about the Geo-scripting course](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1)
 
   - Introduction
   - Planning
@@ -44,11 +47,14 @@ This preliminary section will cover some basic details about R. For this course 
 We will start with the first paragraph:
 Learn the basics, and go to [Try R](http://tryr.codeschool.com/). 
 
-This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to Jan.Verbesselt''wur.nl with:
+This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to *Jan Verbesselt* by 12 today with:
 
 - the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course).
-- Record the time you need to complete this online course and write down if you have questions.
-Send me, Jan Verbesselt, an e-mail with the information before 12 today 
+- Record the time you needed to complete this online course
+- Let me know if you have questions/or something is unclear
+
+If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). Try it out! I will explain how this can be used during the discussion session that starts at 1330 today in PC38.
+
 Once you have finished continue with the section below.
 
 # Basic R and RStudio setup
@@ -66,7 +72,7 @@ ls() ## no objects left in the workspace
 
 A good way to start most R scripts
 
-```{r}
+```{r
 a <- 1
 a
 ```
