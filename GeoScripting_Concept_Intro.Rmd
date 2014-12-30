@@ -1,7 +1,7 @@
 ---
 title: "The Geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
-date: "29 Dec 2014"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: ioslides_presentation
 
 ---
@@ -11,7 +11,7 @@ output: ioslides_presentation
 - The course is freshly developed based on needs from people who deal with spatial data
 - It is a new course, there is a certain flexibility to adjust the content!
 - A team of R experts who use Geo-scripting languages every day helped to develop this course
-- Feedback is welcome! You can use the following anonymous form to submit ideas, requests, bugs:
+- Feedback is welcome! You can use the following [anonymous form](http://goo.gl/forms/3iFSNgg3Ne to submit ideas, requests, bugs) 
 - Avoid copy paste, and make sure you understand all steps
 
 We will show you how to find help
