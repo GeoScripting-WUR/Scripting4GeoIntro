@@ -350,15 +350,13 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 
 # Excercise lesson 1
 
-**Write your own function to create a map.**
-
-Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
+**Write your own function to create a map**. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
 
 - define a function
-- demonstrate the function
-- Send the script to another team and let them test it! Does it work yes/no? Before send it to us.
+- demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)
 - keep it simple (!) e.g. just plot the adminstrative boundaries
 - The function should accept `country` and `level` as input arguments
+- Send the script to another team and let them test it! Does it work yes/no? Make sure you solve all problems before sending it to us.
 - Filename: *lastnamefirstname.R* (of the team members)
 - submit by e-mail to me before 1030 am the next day.
 
