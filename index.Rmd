@@ -10,26 +10,27 @@ output:
     number_sections: true
 ---
 
-# Today's items
+# Today (5/01/2015)
 
-## `To Do` in the morning
+ ![All the best for 2015)`](figs/champ.jpg)
 
-During the morning session, self-study, read through this tutorial but focus on the code examples from Introduction to R onwards.
+- Self-study in the morning
+- 1330: Course introduction, planning, selection of the teams (PC38, GAIA)
 
-The lesson will start at 1330 in PC38. 
+## `To Do` in the morning: self-study
 
 If you are working on your own laptop you need to install `Rstudio` and `R`. See here for info how to do that: http://www.rstudio.com/products/rstudio/download/
 
-As a refresher and self-test go to [Try R](http://tryr.codeschool.com/) and complete.
-This morning during this tutorial you need to complete the full 8 chapters of this R basics online course (you can sign in, and complete all chapters here). Send an e-mail to *Jan Verbesselt* by 12 today with:
+You need to complete before 1130 on 5/01/2015:
 
-- the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course).
-- Record the time you needed to complete this online course
-- Let me know if you have questions/or something is unclear
+- A R-refresher and self-test: http://tryr.codeschool.com/. How much time does it take you to complete the full 8 chapters of this *R basics online course* (you can sign in, and complete all chapters here)? Send an e-mail to *Jan Verbesselt* by 12 today with the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course)
+- The Getting started with R section ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
+- Fill in the following questionnaire (after finishing the R-refresher): http://goo.gl/forms/fZk2c8J4t4
 
-If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). Try it out! I will explain how this can be used during this course at 1330 today in PC38.
+In the morning you can work from home or can come to the PC38 room, GAIA. 
+You need to have Rstudio Desktop (Free) and R (Free) installed on your laptop (see http://www.rstudio.com/products/rstudio/download/ )
 
-Once you have finished continue with the section: [Getting Started With R](#gettingstarted).
+If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). **Try it out!** I will explain how this can be used during this course at 1330 today in PC38.
 
 ## Objective of today:
 
@@ -38,7 +39,7 @@ Once you have finished continue with the section: [Getting Started With R](#gett
 
 ## Learning outcomes of today:
 
-- Refreshing R skills and possibilities
+- Refreshing R skills and assessing scripting skills
 - Able to write a function
 - Know how to visualise data (spatial map) in R
 
@@ -197,7 +198,9 @@ paste("A", 1:6, sep = "")
 a <- "geo-scripting"
 b <- "is"
 c <- "fun"
+```
 
+```{r, echo=FALSE, eval=FALSE}
 ## what if you only have d, defined as a list?
 d <- list(a, b, c)
 paste(d) ## this is not good
@@ -218,6 +221,8 @@ class(date0)
 class(date)
 ```
 
+**Question**: How do we select friday from the `name` variable?
+
 See also `?substr`, this can be handy to.
 
 ## Reading and writing data
@@ -232,8 +237,10 @@ However you can read in virtually any type of text file. Type `?read.table` in y
 ```{r, eval=TRUE}
 # getwd() ## check your working directory
 test <- c(1:5, "6,7", "8,9,10")
+print(test)
 write.csv(test, file = "testing.csv") ## write to your working directory
 rm(test) ## we remove test from the R working environment
+ls() ## check the objective in the working environment
 read.csv("testing.csv") ## read from your working directory
 ```
 
@@ -349,10 +356,10 @@ Submit a clear, reproducible, and documented script containing a function to cre
 
 - define a function
 - demonstrate the function
-- make sure the script is tested by somebody else
+- Send the script to another team and let them test it! Does it work yes/no? Before send it to us.
 - keep it simple (!) e.g. just plot the adminstrative boundaries
 - The function should accept `country` and `level` as input arguments
-- Filename: *lastnamefirstname.R*
+- Filename: *lastnamefirstname.R* (of the team members)
 - submit by e-mail to me before 1030 am the next day.
 
 # References
