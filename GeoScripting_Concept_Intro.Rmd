@@ -2,7 +2,7 @@
 title: "The Geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: ioslides_presentation
+output: slidy_presentation
 
 ---
 
@@ -25,22 +25,23 @@ Key course tips:
 
 - Teams of two (e.g. somebody who followed the `python` course and who didn't follow it)
   - select the team (2 persons) and fill in the [form](http://goo.gl/forms/fzlIlQHlPv)
-  - select which team will review your excercise before submitting
+  - select which team will review your excercise
   
-- The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php) for everybody!
+- The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php)
     - Try to obtain the highest score (overall score, best question, best answer)
     - Ask at least one good question
     - Answer at least one question
 
 ## Geo-scripting learning objectives
 
-- Understand basic concepts of applied scripting for spatial data
-- Use functions from a library while writing your script
-- Find libraries which offer spatial data handling functions
 - Know how to find help (on spatial data handling functions)
-- Solve scripting problems (debug, reproducible example, writing functions)
-- Read, write, and visualise spatial data (vector/raster) using a script
-- Apply learned concepts in a case study with geo-data by solving a spatial/ecological/applied question 
+- Use functions from a library
+- Find libraries, functions for geo-data
+- Solve scripting problems
+    - writing a good question!
+    - debugging
+- Read, write, and visualise spatial data using a script
+- Apply learned concepts for your own work 
 
 ## Why geo-scripting?
 
@@ -60,31 +61,47 @@ e.g. This course is fully written with scripting languages (i.e. R and MarkDown)
 - Different from like C/C++/Fortran since these are languages that need to be compiled first.
 
 ## Compiling
-- Compiling? Programmers write programs in a form called source code. Source code must go through several steps before it becomes an executable program. The first step is to pass the source code through a compiler, which translates the high-level language instructions into object code.
+- Compiling? 
+Passing the source code through a compiler, which translates the `high-level language` instructions into `object code`.
 
- ![Compiling a program)`](figs/compile.jpg)
+```{r, echo=FALSE, fig.align='center', fig.width=6, strip.white=TRUE}
+library(png)
+library(grid)
+img <- readPNG("figs/load_javac.png")
+grid.raster(img)
+```
+
 
 ## The main scripting languages for GIS and Remote sensing currently are: 
 
 - R
 - Python
 - GRASS (grass function are included in QGIS)
-- Javascript for geoweb scripting
+- JavaScript for geoweb scripting
 - Matlab
 - IDL (ENVI)
-- JavaScript
 - ...
 
 ## Python versus R
 
-- Python is a general purpose programming language with a clear syntax
+- Python is a general purpose programming language
 - R is particularly strong in statistical computing and graphics
 - Installing libraries in Python is sometimes challenging
 - Syntactic differences can be confusing (especially when combining these) 
-- There are many R and Python packages for spatial analyses and for dealing with spatial data
+- There are many R and Python packages for spatial analyses
 - Scripts in both languages can be combined:
-  - call R from Python using e.g. RPy, RPy2
+  - call R from Python using e.g. RPy2
   - call Python from R (http://rpython.r-forge.r-project.org/)
+
+## R in Python
+
+A very simple example using the Python Rpy2 module:
+
+```{r, engine='python', eval = TRUE}
+import rpy2.robjects as robjects
+pi = robjects.r['pi']
+print(pi[0])
+```
 
 ## Many programs have support for
 

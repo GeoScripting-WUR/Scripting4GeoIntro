@@ -240,7 +240,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Wed Dec 31 12:21:28 2014&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Wed Dec 31 16:11:41 2014&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -290,7 +290,7 @@ ls() ## check the objective in the working environment</code></pre>
 ## 5 5      5
 ## 6 6    6,7
 ## 7 7 8,9,10</code></pre>
-<p><strong>Question</strong>: Do you know how to read an excell file into R? What are the different options?</p>
+<p><strong>Question</strong>: Do you know how to read an excell file into R? What are the different options? How do you find help? (5mins)</p>
 </div>
 <div id="writing-a-function" class="section level2">
 <h2><span class="header-section-number">5.4</span> Writing a function</h2>
@@ -360,8 +360,7 @@ Data Source: GADM.org&quot;, adj = c(0, 0), cex = 0.7, col = &quot;grey20&quot;)
 </div>
 <div id="excercise-lesson-1" class="section level1">
 <h1><span class="header-section-number">6</span> Excercise lesson 1</h1>
-<p><strong>Write your own function to create a map.</strong></p>
-<p>Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:</p>
+<p><strong>Write your own function to create a map</strong>. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:</p>
 <ul>
 <li>define a function</li>
 <li>demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)</li>
@@ -387,6 +386,24 @@ One central object class of R is the dataframes. The spatial vector classes of R
 * `cbind()`, `rbind()`
 * Methods with `[,]`, `[,] <-`
 * `merge()`
+
+# ```{r, echo=FALSE}
+# df <- data.frame(x = 1:10, y = 1:10)
+# ## load the googleVis package
+# suppressPackageStartupMessages(library(googleVis))
+# ## create the scatter chart
+# sc <- gvisScatterChart(data=df,
+#                         options=list(width=300, height=300, 
+#                                      legend='none',
+#                                      hAxis="{title:'x'}",
+#                                      vAxis="{title:'y'}")
+#           )
+# plot(sc)
+# ```
+# 
+# ```{r, results='asis', echo=FALSE}
+# print(sc, "chart")  ## same as cat(sc$html$chart)
+# ```
 -->
 </div>
 

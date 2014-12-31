@@ -245,7 +245,7 @@ read.csv("testing.csv") ## read from your working directory
 ```
 
 **Question**: Do you know how to read an excell file into R? 
-What are the different options?
+What are the different options? How do you find help? (5mins)
 
 ## Writing a function
 
@@ -348,6 +348,8 @@ Coordinate System: WGS 1984\n
 Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 ```
 
+
+
 # Excercise lesson 1
 
 **Write your own function to create a map**. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
@@ -375,4 +377,22 @@ One central object class of R is the dataframes. The spatial vector classes of R
 * `cbind()`, `rbind()`
 * Methods with `[,]`, `[,] <-`
 * `merge()`
+
+# ```{r, echo=FALSE}
+# df <- data.frame(x = 1:10, y = 1:10)
+# ## load the googleVis package
+# suppressPackageStartupMessages(library(googleVis))
+# ## create the scatter chart
+# sc <- gvisScatterChart(data=df,
+#                         options=list(width=300, height=300, 
+#                                      legend='none',
+#                                      hAxis="{title:'x'}",
+#                                      vAxis="{title:'y'}")
+#           )
+# plot(sc)
+# ```
+# 
+# ```{r, results='asis', echo=FALSE}
+# print(sc, "chart")  ## same as cat(sc$html$chart)
+# ```
 -->
