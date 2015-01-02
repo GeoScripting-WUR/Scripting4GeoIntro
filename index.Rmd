@@ -380,6 +380,9 @@ library(raster)
 
 - submit by e-mail to me before 10.30u `6/01/15`
 
+## Assessment - and criteria for the excercise
+
+It needs to work (yes/no), when we copy it to our R environment and run. If it does not work it is not ok.
 
 
 # References
