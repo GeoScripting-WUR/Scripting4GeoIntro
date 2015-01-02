@@ -108,7 +108,9 @@ grid.raster(img)
 - Scripts in both languages can be combined:
     - call R from Python using e.g. RPy2
     - call Python from R (http://rpython.r-forge.r-project.org/)
-- ...
+- ... and more: see here for a question asked on [StackExchange for programmers](https://programmers.stackexchange.com/questions/181342/r-vs-python-for-data-analysis)
+
+![R_PythonSymbol](figs/RPythonS.png)
 
 ## R in Python
 
@@ -119,6 +121,8 @@ import rpy2.robjects as robjects
 pi = robjects.r['pi']
 print(pi[0])
 ```
+
+![RPython](figs/RPython.jpeg)
 
 ## Many programs have support for
 

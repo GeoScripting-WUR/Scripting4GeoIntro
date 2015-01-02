@@ -359,11 +359,28 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - The function should accept `country` and `level` as input arguments
 - Send the script to another team and let them test it! Does it work yes/no? Make sure you solve all problems before sending it to us.
 - Copy and paste the documented script within an e-mail (no html)
-- submit by e-mail to me before 1030 6/01/15
 
 ```{r, eval=FALSE}
+# Name: Team name and members of the team
+# Date: December 2014
 
+# Import packages
+library(raster)
+
+# Define the function
+
+
+# An example based on that function
 ```
+
+- Tips: 
+    - Do not use any "paths" e.g. 'mydocument/John/blabla' specific for your computer. In this excercise you should not need any paths
+    - do not set the working directory (see above i.e. also specific to your computer)
+    - Use the script template above
+
+- submit by e-mail to me before 10.30u `6/01/15`
+
+
 
 # References
 
