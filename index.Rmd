@@ -12,45 +12,44 @@ output:
 
 # Today (5/01/2015)
 
+- Morning: Self-study from home or PC38 (16 PC's are available while 26 students are registerd for the geo-scripting course 2015).
+- 1330-1430: course introduction, planning and teams selection(PC38, first floor, GAIA)
+
  ![All the best for 2015)`](figs/champ.jpg)
-
-- Self-study in the morning
-- 1330: Course introduction, planning, selection of the teams (PC38, GAIA)
-
+ 
 ## `To Do` in the morning: self-study
 
 If you are working on your own laptop you need to install `Rstudio` and `R`. See here for info how to do that: http://www.rstudio.com/products/rstudio/download/
 
-You need to complete before 1130 on 5/01/2015:
+You need to complete before 12 on 5/01/2015:
 
-- A R-refresher and self-test: http://tryr.codeschool.com/. How much time does it take you to complete the full 8 chapters of this *R basics online course* (you can sign in, and complete all chapters here)? Send an e-mail to *Jan Verbesselt* by 12 today with the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course)
-- The Getting started with R section ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
+- A R-refresher and self-test: http://tryr.codeschool.com/. How much time does it take you to complete the full 8 chapters of this *R basics online course* (you can sign in, and complete all chapters here)? Send an e-mail to *Jan Verbesselt* with the proof that you have completed all chapters and challenges. (e.g. a screenshot or a Twitter tweet that you completed the course)
+
 - Fill in the following questionnaire (after finishing the R-refresher): http://goo.gl/forms/fZk2c8J4t4
+
+- Read and do the `getting started with R section` ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
 
 In the morning you can work from home or can come to the PC38 room, GAIA. 
 You need to have Rstudio Desktop (Free) and R (Free) installed on your laptop (see http://www.rstudio.com/products/rstudio/download/ )
 
 If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). **Try it out!** I will explain how this can be used during this course at 1330 today in PC38.
 
-## Objective of today:
+## Objective and Learning outcomes of today:
 
-- A self-test for yourself you see if you have the necessary scripting skills to continue with the course.
-- Introduction to the course, planning, and teams
+Introduction to the course, planning, teamwork, and projectweek:
 
-## Learning outcomes of today:
-
-- Refreshing R skills and assessing scripting skills
+- Refreshing R skills and assessing scripting skills to see if you have the necessary scripting skills to continue with the course
 - Able to write a function
 - Know how to visualise data (spatial map) in R
 
 # Introduction
 
-[Presentation about the Geo-scripting course](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1)
+[Presentation about the Geo-scripting course](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1):
 
   - Introduction
   - Planning
   - Teamwork
-  - Questions to be filled in
+
 
 # Getting started with R scripting {#gettingstarted}
 
@@ -294,7 +293,7 @@ Here is an example of how you can create a map in R. Download data from the Glob
 
 There is a function do get *public* data from anywhere in the world. See help of the getData funciton in the `raster` package:
 
-```{r}
+```{r, message=FALSE}
 library(raster)
 ?getData
 ?raster::getData
