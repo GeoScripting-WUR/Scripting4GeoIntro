@@ -13,6 +13,8 @@ output:
 - A team of `R` & `Python` experts who use Geo-scripting languages every day helped to develop this course
 - Experts from compagnies, research insitute and our RS and GIS group will present 
 
+![Coolprogramming](figs/solve-cool-problems.png)
+
 ## Why geo-scripting?
 
 -  Enable collaboration!!! 
@@ -25,11 +27,16 @@ output:
 
 Can you think of other advantages?
 
+
+![Facebook`](figs/facebook.png)
+
 ## Why geo-scripting?
 
 - Build your own tools and functions (e.g. automated webprocessing, etc.)
 -	Good for finding errors i.e. debugging
 - ...
+
+![CoolprogrammingwithPython](figs/16199604.jpg)
 
 ## Course planning
 
@@ -99,8 +106,9 @@ grid.raster(img)
 - Syntactic differences can be confusing (especially when combining these) 
 - There are many R and Python packages for spatial analyses
 - Scripts in both languages can be combined:
-  - call R from Python using e.g. RPy2
-  - call Python from R (http://rpython.r-forge.r-project.org/)
+    - call R from Python using e.g. RPy2
+    - call Python from R (http://rpython.r-forge.r-project.org/)
+- ...
 
 ## R in Python
 
