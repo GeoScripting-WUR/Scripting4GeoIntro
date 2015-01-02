@@ -30,7 +30,7 @@ You need to complete before 12 on 5/01/2015:
 - Read and do the `getting started with R section` ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
 
 In the morning you can work from home or can come to the PC38 room, GAIA. 
-You need to have Rstudio Desktop (Free) and R (Free) installed on your laptop (see http://www.rstudio.com/products/rstudio/download/ )
+You need to have Rstudio Desktop (Free) and R (Free) installed on your laptop (see http://www.rstudio.com/products/rstudio/download/ ). For more information see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
 If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). **Try it out!** I will explain how this can be used during this course at 1330 today in PC38.
 
