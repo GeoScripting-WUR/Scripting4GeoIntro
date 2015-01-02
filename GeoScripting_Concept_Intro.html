@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Jan Verbesselt and Loïc Dutrieux" />
+  <meta name="copyright" content="Geo-scripting 2015" /> 
   <title>The Geo-scripting course</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
@@ -36,31 +37,59 @@ code > span.er { color: #ff0000; font-weight: bold; }
   <p class="author">
 Jan Verbesselt and Loïc Dutrieux
   </p>
-  <p class="date">31 December, 2014</p>
+  <p class="date">02 January, 2015</p>
 </div>
-<div id="course-concept" class="slide section level2">
-<h1>Course concept</h1>
+<div id="intro" class="slide section level2">
+<h1>Intro</h1>
 <ul>
 <li>The course is freshly developed based on needs from people who deal with spatial data</li>
 <li>A team of <code>R</code> &amp; <code>Python</code> experts who use Geo-scripting languages every day helped to develop this course</li>
-<li>Feedback is welcome e.g. via the following <a href="http://goo.gl/forms/3iFSNgg3Ne%20to%20submit%20ideas,%20requests,%20bugs">form</a></li>
+<li>Experts from compagnies, research insitute and our RS and GIS group will present</li>
 </ul>
-<p>Key course tips:</p>
+</div>
+<div id="why-geo-scripting" class="slide section level2">
+<h1>Why geo-scripting?</h1>
 <ul>
-<li>Avoid copy paste, and make sure you understand all steps</li>
-<li>Learn how to find help</li>
+<li>Enable collaboration!!!
+<ul>
+<li>sharing scripts, functions, and packages</li>
+<li>use social R and Python community e.g. stackExchange, mailinglists</li>
+</ul></li>
+<li>Reproducible: avoid clicking and you keep track of what you have done
+<ul>
+<li>not possible with clicking</li>
+</ul></li>
+<li>Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
+<ul>
+<li>e.g. this presentation is fully written with scripting languages (i.e. <code>R</code> and <code>MarkDown</code>)</li>
+</ul></li>
+</ul>
+<p>Can you think of other advantages?</p>
+</div>
+<div id="why-geo-scripting-1" class="slide section level2">
+<h1>Why geo-scripting?</h1>
+<ul>
+<li>Build your own tools and functions (e.g. automated webprocessing, etc.)</li>
+<li>Good for finding errors i.e. debugging</li>
+<li>…</li>
 </ul>
 </div>
 <div id="course-planning" class="slide section level2">
 <h1>Course planning</h1>
 <p><a href="https://docs.google.com/document/d/1yTomAgB9Mny-h0ZEd0mhr0nU5_fD5ysZBAvFYqI5Fn4/edit?usp=sharing">Planning of the geo-scripting course</a></p>
+<ul>
+<li>Feedback is welcome e.g. via the following <a href="http://goo.gl/forms/3iFSNgg3Ne%20to%20submit%20ideas,%20requests,%20bugs">form</a></li>
+</ul>
 </div>
 <div id="team-work-helping-each-other" class="slide section level2">
 <h1>Team work &amp; helping each other</h1>
 <ul>
-<li>Teams of two (e.g. somebody who followed the <code>python</code> course and who didn’t follow it)</li>
+<li><p>Teams of two (e.g. somebody who followed the <code>python</code> course and who didn’t follow it):</p>
+<ul>
 <li>select the team (2 persons) and fill in the <a href="http://goo.gl/forms/fzlIlQHlPv">form</a></li>
-<li><p>select which team will review your excercise</p></li>
+<li>select which team will review your excercise</li>
+</ul></li>
+<li><p>Other teams will be selected for the project work</p></li>
 <li>The <a href="http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php">Q&amp;A forum</a>
 <ul>
 <li>Try to obtain the highest score (overall score, best question, best answer)</li>
@@ -84,23 +113,15 @@ Jan Verbesselt and Loïc Dutrieux
 <li>Apply learned concepts for your own work</li>
 </ul>
 </div>
-<div id="why-geo-scripting" class="slide section level2">
-<h1>Why geo-scripting?</h1>
-<ul>
-<li>Reproducible: avoid clicking and you keep track of what you have done</li>
-<li>Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data</li>
-<li>Build your own tools and functions (e.g. raster filters, MODIS download tool, BFAST package)</li>
-<li>Enable collaboration: sharing scripts, functions, and packages</li>
-<li>Good for finding errors i.e. debugging</li>
-</ul>
-<p><em>examples of advantages of geo-scripting to be added here</em> e.g. This course is fully written with scripting languages (i.e. R and MarkDown). What are the advantages?</p>
-</div>
 <div id="what-is-a-scripting-language" class="slide section level2">
 <h1>What is a scripting language?</h1>
 <ul>
-<li>A scripting language (e.g. R and Python) can interpret and automate the execution of tasks which could alternatively be executed one-by-one by a human operator</li>
-<li>A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS/CPU Architecture</li>
-<li>Different from like C/C++/Fortran since these are languages that need to be compiled first.</li>
+<li>A scripting language can interpret and automate the execution of tasks, instead of clicking!!!</li>
+<li>A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS (e.g. windows)</li>
+<li>This is different from like C/C++/Fortran
+<ul>
+<li>these are languages that need to be compiled first.</li>
+</ul></li>
 </ul>
 </div>
 <div id="compiling" class="slide section level2">
@@ -148,6 +169,15 @@ pi = robjects.r[<span class="st">'pi'</span>]
 <ul>
 <li>Python (Blender, Sketchup, QGIS, MySQL, PostGIS)</li>
 <li>R (GRASS, QGIS, MySQL, PostGIS)</li>
+</ul>
+</div>
+<div id="time-for-you-r-action" class="slide section level2">
+<h1>Time for you R action!</h1>
+<ul>
+<li>How did the <a href="http://tryr.codeschool.com/">TryR</a> go?</li>
+<li>Is the questionnaire filled in? <a href="http://goo.gl/forms/fZk2c8J4t4" class="uri">http://goo.gl/forms/fZk2c8J4t4</a></li>
+<li><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted">Getting started with R section</a></li>
+<li>The excercise of today</li>
 </ul>
 </div>
 

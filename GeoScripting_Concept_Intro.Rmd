@@ -2,30 +2,49 @@
 title: "The Geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: slidy_presentation
-
+output: 
+  slidy_presentation:
+    footer: "Geo-scripting 2015"
 ---
 
-## Course concept
+## Intro
 
 - The course is freshly developed based on needs from people who deal with spatial data
 - A team of `R` & `Python` experts who use Geo-scripting languages every day helped to develop this course
-- Feedback is welcome e.g. via the following [form](http://goo.gl/forms/3iFSNgg3Ne to submit ideas, requests, bugs) 
+- Experts from compagnies, research insitute and our RS and GIS group will present 
 
-Key course tips:
+## Why geo-scripting?
 
-  - Avoid copy paste, and make sure you understand all steps
-  - Learn how to find help
+-  Enable collaboration!!! 
+    - sharing scripts, functions, and packages
+    - use social R and Python community e.g. stackExchange, mailinglists
+- Reproducible: avoid clicking and you keep track of what you have done 
+    - not possible with clicking
+- Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
+    - e.g. this presentation is fully written with scripting languages (i.e. `R` and `MarkDown`)
+
+Can you think of other advantages?
+
+## Why geo-scripting?
+
+- Build your own tools and functions (e.g. automated webprocessing, etc.)
+-	Good for finding errors i.e. debugging
+- ...
 
 ## Course planning
 
 [Planning of the geo-scripting course](https://docs.google.com/document/d/1yTomAgB9Mny-h0ZEd0mhr0nU5_fD5ysZBAvFYqI5Fn4/edit?usp=sharing)
 
+- Feedback is welcome e.g. via the following [form](http://goo.gl/forms/3iFSNgg3Ne to submit ideas, requests, bugs) 
+
 ## Team work & helping each other
 
-- Teams of two (e.g. somebody who followed the `python` course and who didn't follow it)
-  - select the team (2 persons) and fill in the [form](http://goo.gl/forms/fzlIlQHlPv)
-  - select which team will review your excercise
+- Teams of two (e.g. somebody who followed the `python` course and who didn't follow it):
+
+    - select the team (2 persons) and fill in the [form](http://goo.gl/forms/fzlIlQHlPv)
+    - select which team will review your excercise
+
+- Other teams will be selected for the project work
   
 - The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php)
     - Try to obtain the highest score (overall score, best question, best answer)
@@ -43,22 +62,12 @@ Key course tips:
 - Read, write, and visualise spatial data using a script
 - Apply learned concepts for your own work 
 
-## Why geo-scripting?
-
-- Reproducible: avoid clicking and you keep track of what you have done
--	Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
--	Build your own tools and functions (e.g. raster filters, MODIS download tool, BFAST package)
--	Enable collaboration: sharing scripts, functions, and packages
--	Good for finding errors i.e. debugging
-
-*examples of advantages of geo-scripting to be added here*
-e.g. This course is fully written with scripting languages (i.e. R and MarkDown). What are the advantages?
-
 ## What  is a scripting language?
 
-- A scripting language (e.g. R and Python) can interpret and automate the execution of tasks which could alternatively be executed one-by-one by a human operator
-- A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS/CPU Architecture
-- Different from like C/C++/Fortran since these are languages that need to be compiled first.
+- A scripting language can interpret and automate the execution of tasks, instead of clicking!!!
+- A scripting language is the glue, between different commands, functions, and objectives without the need to compile it for each OS (e.g. windows)
+- This is different from like C/C++/Fortran 
+    - these are languages that need to be compiled first.
 
 ## Compiling
 - Compiling? 
@@ -107,3 +116,12 @@ print(pi[0])
 
 - Python (Blender, Sketchup, QGIS, MySQL, PostGIS)
 - R (GRASS, QGIS, MySQL, PostGIS)
+
+## Time for you R action!
+
+- How did the [TryR](http://tryr.codeschool.com/) go?
+- Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4
+- [Getting started with R section](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted)
+- The excercise of today
+
+

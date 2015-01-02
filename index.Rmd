@@ -358,8 +358,12 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - keep it simple (!) e.g. just plot the adminstrative boundaries
 - The function should accept `country` and `level` as input arguments
 - Send the script to another team and let them test it! Does it work yes/no? Make sure you solve all problems before sending it to us.
-- Filename: *lastnamefirstname.R* (of the team members)
-- submit by e-mail to me before 1030 am the next day.
+- Copy and paste the documented script within an e-mail (no html)
+- submit by e-mail to me before 1030 6/01/15
+
+```{r, eval=FALSE}
+
+```
 
 # References
 
