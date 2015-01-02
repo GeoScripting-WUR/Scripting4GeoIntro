@@ -13,7 +13,7 @@ output:
 # Today (5/01/2015)
 
 - Morning: Self-study from home or PC38 (16 PC's are available while 26 students are registerd for the geo-scripting course 2015).
-- 1330-1430: course introduction, planning and teams selection(PC38, first floor, GAIA)
+- 1330-1430: course introduction, planning and teams selection (PC38, first floor, GAIA)
 
  ![All the best for 2015)`](figs/champ.jpg)
  
