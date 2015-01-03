@@ -61,7 +61,7 @@ This preliminary section will cover some basic details about R. For this course 
 
 ## Getting started with Rstudio and R on your own computer.
 
-A summary youtube movie about how to use `Rstudio` and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with `Rstudio` and then do the following section.
+A summary youtube movie about how to use `Rstudio` and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with `Rstudio` and then do the following section. See the following tutorial for a [short introduction on the Rstudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
  
 Now, Open `Rstudio` and type the following script in the R console of **Rstudio**:
 
@@ -161,6 +161,7 @@ a
 ```
 
 **Question:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
+(just note down these questions as they will be discussed during the lesson at 1330 on monday)
 
 ## Character vector handling
 
@@ -361,8 +362,9 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - define a function
 - demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)
 - keep it simple (!) e.g. just plot the adminstrative boundaries
-- The function should accept `country` and `level` as input arguments
-- Send the script to another team and let them test it! Does it work yes/no? Make sure you solve all problems before sending it to us.
+- The function should accept `country` and `level` as input arguments 
+- Optional (for a bonus):Getting the administrative labels and legend correct.
+- Send the script to another team and let them test it (for the afternoon, after we have set-up the team)! Does it work yes/no? If yes, you can send it by e-mail.
 - Copy and paste the documented script within an e-mail (no html)
 
 ```{r, eval=FALSE}
@@ -390,10 +392,10 @@ library(raster)
 It needs to work (yes/no), when we copy it to our R environment and run. If it does not work it is not ok.
 
 
-# References
+# References and more info
 
 - [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
-
+- https://www.coursera.org/course/rprog
 
 <!--
 ## Dataframe manipulation

@@ -85,7 +85,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><a href="#excercise-lesson-1"><span class="toc-section-number">6</span> Excercise lesson 1</a><ul>
 <li><a href="#assessment---and-criteria-for-the-excercise"><span class="toc-section-number">6.1</span> Assessment - and criteria for the excercise</a></li>
 </ul></li>
-<li><a href="#references"><span class="toc-section-number">7</span> References</a></li>
+<li><a href="#references-and-more-info"><span class="toc-section-number">7</span> References and more info</a></li>
 </ul>
 </div>
 
@@ -138,7 +138,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h1><span class="header-section-number">4</span> Basic R and RStudio setup</h1>
 <div id="getting-started-with-rstudio-and-r-on-your-own-computer." class="section level2">
 <h2><span class="header-section-number">4.1</span> Getting started with Rstudio and R on your own computer.</h2>
-<p>A summary youtube movie about how to use <code>Rstudio</code> and writing a function is here: <a href="https://www.youtube.com/watch?v=jPk6-3prknk">Intro to Rstudio</a>. Have a look at this movie if you do not know how to work with <code>Rstudio</code> and then do the following section.</p>
+<p>A summary youtube movie about how to use <code>Rstudio</code> and writing a function is here: <a href="https://www.youtube.com/watch?v=jPk6-3prknk">Intro to Rstudio</a>. Have a look at this movie if you do not know how to work with <code>Rstudio</code> and then do the following section. See the following tutorial for a <a href="http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf">short introduction on the Rstudio interface</a>.</p>
 <p>Now, Open <code>Rstudio</code> and type the following script in the R console of <strong>Rstudio</strong>:</p>
 <pre class="r"><code>rm(list = ls())  # Clear the workspace!
 ls() ## no objects left in the workspace</code></pre>
@@ -210,7 +210,7 @@ b &lt;- c(1,1,2,1,0,0,1,2)
 a[b %in% c(0,1)] &lt;- NA
 a</code></pre>
 <pre><code>## [1] NA NA  2 NA NA NA NA 12</code></pre>
-<p><strong>Question:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12?</p>
+<p><strong>Question:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12? (just note down these questions as they will be discussed during the lesson at 1330 on monday)</p>
 </div>
 <div id="character-vector-handling" class="section level2">
 <h2><span class="header-section-number">5.2</span> Character vector handling</h2>
@@ -235,7 +235,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Sat Jan  3 07:55:49 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Sat Jan  3 11:43:01 2015&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -360,7 +360,8 @@ Data Source: GADM.org&quot;, adj = c(0, 0), cex = 0.7, col = &quot;grey20&quot;)
 <li>demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)</li>
 <li>keep it simple (!) e.g. just plot the adminstrative boundaries</li>
 <li>The function should accept <code>country</code> and <code>level</code> as input arguments</li>
-<li>Send the script to another team and let them test it! Does it work yes/no? Make sure you solve all problems before sending it to us.</li>
+<li>Optional (for a bonus):Getting the administrative labels and legend correct.</li>
+<li>Send the script to another team and let them test it (for the afternoon, after we have set-up the team)! Does it work yes/no? If yes, you can send it by e-mail.</li>
 <li>Copy and paste the documented script within an e-mail (no html)</li>
 </ul>
 <pre class="r"><code># Name: Team name and members of the team
@@ -387,10 +388,11 @@ library(raster)
 <p>It needs to work (yes/no), when we copy it to our R environment and run. If it does not work it is not ok.</p>
 </div>
 </div>
-<div id="references" class="section level1">
-<h1><span class="header-section-number">7</span> References</h1>
+<div id="references-and-more-info" class="section level1">
+<h1><span class="header-section-number">7</span> References and more info</h1>
 <ul>
 <li><a href="http://www.rstudio.com/resources/training/online-learning/">Rstudio Online Learning</a>.</li>
+<li><a href="https://www.coursera.org/course/rprog" class="uri">https://www.coursera.org/course/rprog</a></li>
 </ul>
 <!--
 ## Dataframe manipulation
