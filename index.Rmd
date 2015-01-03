@@ -317,7 +317,7 @@ Now we will download the administrative boundaries of the Philippines:
 
 ```{r, eval=FALSE}
 datdir <- 'data'
-if (!file.exists(datdir)) { dir.create(datdir)}
+dir.create(datdir, showWarnings = FALSE)
 adm <- raster::getData("GADM", country = "PHL",
                        level = 2, path = datdir)
 plot(adm[adm$NAME_1 == "Tarlac",])
