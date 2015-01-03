@@ -52,13 +52,21 @@ Can you think of other advantages?
     - select which team will review your excercise
 
 - Other teams will be selected for the project work
-  
+
+<div class="centered">
+![](figs/teamwork.jpeg)
+</div>
+
+## Team work & helping each other
+
 - The [Q&A forum](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php)
     - Try to obtain the highest score (overall score, best question, best answer)
     - Ask at least one good question
     - Answer at least one question
 
-![](figs/teamwork.jpeg)
+See the forum and try to answer a question now...
+    - Log-in first - otherwise your question will be anonymous
+    - ...
 
 ## Geo-scripting learning objectives
 

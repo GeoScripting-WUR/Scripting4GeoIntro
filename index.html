@@ -54,7 +54,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">Lesson 1: Introduction to the geo-scripting course</h1>
 <h4 class="author"><em>Jan Verbesselt and Loïc Dutrieux</em></h4>
-<h4 class="date"><em>02 January, 2015</em></h4>
+<h4 class="date"><em>03 January, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -203,13 +203,14 @@ b &lt;- c(1,1,0,1,0,0,1,0)
 a[b == 0] &lt;- NA
 a</code></pre>
 <pre><code>## [1]  2  5 NA  5 NA NA  2 NA</code></pre>
-<pre class="r"><code># More complex value replacement
-a &lt;- c(2,5,2,5,6,9,2,12)
+<p>More complex value replacement:</p>
+<pre class="r"><code>a &lt;- c(2,5,2,5,6,9,2,12)
 b &lt;- c(1,1,2,1,0,0,1,2)
 # a values at which b is equal to either 0 or 1 are replaced by NA
 a[b %in% c(0,1)] &lt;- NA
 a</code></pre>
 <pre><code>## [1] NA NA  2 NA NA NA NA 12</code></pre>
+<p><strong>Question:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12?</p>
 </div>
 <div id="character-vector-handling" class="section level2">
 <h2><span class="header-section-number">5.2</span> Character vector handling</h2>
@@ -234,7 +235,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Fri Jan  2 16:50:17 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Sat Jan  3 07:55:49 2015&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>

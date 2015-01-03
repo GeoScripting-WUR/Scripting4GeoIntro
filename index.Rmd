@@ -148,14 +148,19 @@ b <- c(1,1,0,1,0,0,1,0)
 # Change the values of a based on b values
 a[b == 0] <- NA
 a
+```
 
-# More complex value replacement
+More complex value replacement:
+
+```{r}
 a <- c(2,5,2,5,6,9,2,12)
 b <- c(1,1,2,1,0,0,1,2)
 # a values at which b is equal to either 0 or 1 are replaced by NA
 a[b %in% c(0,1)] <- NA
 a
 ```
+
+**Question:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
 
 ## Character vector handling
 
