@@ -385,7 +385,7 @@ library(raster)
     - do not set the working directory (see above i.e. also specific to your computer)
     - Use the script template above
 
-- submit by e-mail to me before 10.30u `6/01/15`
+- submit by e-mail to me before 10.30u **6/01/15**
 
 ## Assessment - and criteria for the excercise
 

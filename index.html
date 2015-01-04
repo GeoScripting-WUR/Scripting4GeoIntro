@@ -54,7 +54,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">Lesson 1: Introduction to the geo-scripting course</h1>
 <h4 class="author"><em>Jan Verbesselt and Loïc Dutrieux</em></h4>
-<h4 class="date"><em>03 January, 2015</em></h4>
+<h4 class="date"><em>04 January, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -235,7 +235,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Sat Jan  3 11:43:01 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Sun Jan  4 15:51:30 2015&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -330,7 +330,7 @@ a2b</code></pre>
 <pre class="r"><code>raster::getData(&quot;ISO3&quot;)</code></pre>
 <p>Now we will download the administrative boundaries of the Philippines:</p>
 <pre class="r"><code>datdir &lt;- 'data'
-if (!file.exists(datdir)) { dir.create(datdir)}
+dir.create(datdir, showWarnings = FALSE)
 adm &lt;- raster::getData(&quot;GADM&quot;, country = &quot;PHL&quot;,
                        level = 2, path = datdir)
 plot(adm[adm$NAME_1 == &quot;Tarlac&quot;,])</code></pre>
@@ -381,7 +381,7 @@ library(raster)
 <li>do not set the working directory (see above i.e. also specific to your computer)</li>
 <li>Use the script template above</li>
 </ul></li>
-<li>submit by e-mail to me before 10.30u <code>6/01/15</code></li>
+<li>submit by e-mail to me before 10.30u <strong>6/01/15</strong></li>
 </ul>
 <div id="assessment---and-criteria-for-the-excercise" class="section level2">
 <h2><span class="header-section-number">6.1</span> Assessment - and criteria for the excercise</h2>

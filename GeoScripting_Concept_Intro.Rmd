@@ -179,4 +179,11 @@ print(pi[0])
 - [Getting started with R section](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted)
 - The excercise of today
 
+## Tomorrow morning
+
+- Finalise the lesson 1 and the excercise
+- Look at Lesson 2
+    - an overview of what is possible with scripting
+    - no need to understand the code (lesson 2 is a demonstration lesson!)
+
 
