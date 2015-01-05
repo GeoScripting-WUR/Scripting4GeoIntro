@@ -295,9 +295,8 @@ Next, a new object `a2b` is created which contains the result of applying `newfu
 
 ## Creating a map within R - a simple demo
 
-Here is an example of how you can create a map in R. Download data from the Global Adminstrative Areas Data base ([GADM](/http://www.gadm.org)).
+Here is an example of how you can create a map in R. It is a function do get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
 
-There is a function do get *public* data from anywhere in the world. See help of the getData funciton in the `raster` package:
 
 ```{r, message=FALSE}
 library(raster)
@@ -305,9 +304,10 @@ library(raster)
 ?raster::getData
 ```
 
-Read the help to find out how we can find the country codes? \\
+Read the help to find out how we can find the country codes?
+**Question**: What is the country code of Belgium?
 
-**Question**:What is the country code of Belgium?
+More info about the datasets see [Global Adminstrative Areas Data base (GADM)](/http://www.gadm.org)).
 
 ```{r, eval=FALSE}
 raster::getData("ISO3")
