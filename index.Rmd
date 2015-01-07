@@ -110,9 +110,9 @@ datdir <- file.path("data") ## path
 Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
 
 ## Vector handling and vector arithmetic
-You'll be introduced in a following lesson with the raster package and the raster classes that have been developped as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
+You'll be introduced in a following lesson with the raster package and the raster classes that have been developed as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
 
-**In `R` we call a collection of number a vector.** 
+**In `R` we call a collection of numbers a vector.** 
 
 As a consequence, handling vector is a crucial skill for processing raster data in R.
 
@@ -165,7 +165,7 @@ a
 
 ## Character vector handling
 
-When working with *real* data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
+When working with *real* data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
 
 Key functions for handling character strings are listed below:
 
@@ -228,13 +228,13 @@ class(date)
 
 **Question**: How do we select friday from the `name` variable?
 
-See also `?substr`, this can be handy to.
+See also `?substr`, this can be handy too.
 
 ## Reading and writing data
 
 In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).
 
-Here, an example is giving how can read (import in R) and write a text file (i.e. export from R).
+Here, an example is givem how youn can read (import in R) and write a text file (i.e. export from R).
 
 The most common way to read in spread sheet tables is with the `read.csv()` command.
 However you can read in virtually any type of text file. Type `?read.table` in your console for some other examples.
@@ -295,7 +295,7 @@ Next, a new object `a2b` is created which contains the result of applying `newfu
 
 ## Creating a map within R - a simple demo
 
-Here is an example of how you can create a map in R. It is a function do get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
+Here is an example of how you can create a map in R. It is a function to get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
 
 
 ```{r, message=FALSE}

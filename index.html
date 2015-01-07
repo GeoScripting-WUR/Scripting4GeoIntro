@@ -54,7 +54,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">Lesson 1: Introduction to the geo-scripting course</h1>
 <h4 class="author"><em>Jan Verbesselt and Loïc Dutrieux</em></h4>
-<h4 class="date"><em>05 January, 2015</em></h4>
+<h4 class="date"><em>07 January, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -171,8 +171,8 @@ datdir &lt;- file.path(&quot;data&quot;) ## path</code></pre>
 <p>Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we’ve summarized what we think are important skills for geo scripting below.</p>
 <div id="vector-handling-and-vector-arithmetic" class="section level2">
 <h2><span class="header-section-number">5.1</span> Vector handling and vector arithmetic</h2>
-<p>You’ll be introduced in a following lesson with the raster package and the raster classes that have been developped as part of that package. All objects that belong to the class <code>raster</code> are <strong>vectors</strong> with a few more spatial attributes.</p>
-<p><strong>In <code>R</code> we call a collection of number a vector.</strong></p>
+<p>You’ll be introduced in a following lesson with the raster package and the raster classes that have been developed as part of that package. All objects that belong to the class <code>raster</code> are <strong>vectors</strong> with a few more spatial attributes.</p>
+<p><strong>In <code>R</code> we call a collection of numbers a vector.</strong></p>
 <p>As a consequence, handling vector is a crucial skill for processing raster data in R.</p>
 <p>Reference manual for vector handling and vector arithmetic can be found <a href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors">here</a>.</p>
 <pre class="r"><code># Create a vector
@@ -214,7 +214,7 @@ a</code></pre>
 </div>
 <div id="character-vector-handling" class="section level2">
 <h2><span class="header-section-number">5.2</span> Character vector handling</h2>
-<p>When working with <em>real</em> data, such as shapefiles or satellite imagery, the data always need to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
+<p>When working with <em>real</em> data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
 <p>Key functions for handling character strings are listed below:</p>
 <ul>
 <li><code>list.files()</code>: to list files in a directory</li>
@@ -235,7 +235,7 @@ list.files() ## list the files available in this directory</code></pre>
 <h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
 <pre class="r"><code>## two handy examples
 paste(&quot;Today is&quot;, date())</code></pre>
-<pre><code>## [1] &quot;Today is Mon Jan  5 14:51:05 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Wed Jan  7 10:15:41 2015&quot;</code></pre>
 <pre class="r"><code>paste(&quot;A&quot;, 1:6, sep = &quot;&quot;)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -260,13 +260,13 @@ class(date0)</code></pre>
 <pre class="r"><code>class(date)</code></pre>
 <pre><code>## [1] &quot;Date&quot;</code></pre>
 <p><strong>Question</strong>: How do we select friday from the <code>name</code> variable?</p>
-<p>See also <code>?substr</code>, this can be handy to.</p>
+<p>See also <code>?substr</code>, this can be handy too.</p>
 </div>
 </div>
 <div id="reading-and-writing-data" class="section level2">
 <h2><span class="header-section-number">5.3</span> Reading and writing data</h2>
 <p>In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).</p>
-<p>Here, an example is giving how can read (import in R) and write a text file (i.e. export from R).</p>
+<p>Here, an example is givem how youn can read (import in R) and write a text file (i.e. export from R).</p>
 <p>The most common way to read in spread sheet tables is with the <code>read.csv()</code> command. However you can read in virtually any type of text file. Type <code>?read.table</code> in your console for some other examples.</p>
 <pre class="r"><code># getwd() ## check your working directory
 test &lt;- c(1:5, &quot;6,7&quot;, &quot;8,9,10&quot;)
@@ -320,7 +320,7 @@ a2b</code></pre>
 </div>
 <div id="creating-a-map-within-r---a-simple-demo" class="section level2">
 <h2><span class="header-section-number">5.5</span> Creating a map within R - a simple demo</h2>
-<p>Here is an example of how you can create a map in R. It is a function do get <em>public</em> data from anywhere in the world. See help of the <code>getData</code> function in the <code>raster</code> package.</p>
+<p>Here is an example of how you can create a map in R. It is a function to get <em>public</em> data from anywhere in the world. See help of the <code>getData</code> function in the <code>raster</code> package.</p>
 <pre class="r"><code>library(raster)
 ?getData
 ?raster::getData</code></pre>
