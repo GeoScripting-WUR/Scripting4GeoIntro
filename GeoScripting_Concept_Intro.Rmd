@@ -1,16 +1,15 @@
 ---
 title: "The Geo-scripting course"
-author: "Jan Verbesselt and Loïc Dutrieux"
+author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   slidy_presentation:
-    footer: "Geo-scripting 2015"
+    footer: "Geo-scripting 2015/6"
 ---
 
-## Intro
-
-- How did the [TryR](http://tryr.codeschool.com/) go?
-- Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4
+[//]: #  (## Intro)
+[//]: #  (- How did the [TryR](http://tryr.codeschool.com/) go?)
+[//]: #  ( - Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4)
 
 ## The Geo-scripting course
 
