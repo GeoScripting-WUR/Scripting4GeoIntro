@@ -11,10 +11,22 @@ output:
 [//]: #  (- How did the [TryR](http://tryr.codeschool.com/) go?)
 [//]: #  ( - Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4)
 
+[//]: #  (Why are you following this course?)
+[//]: #  (Why is your background? Are you ready?)
+[//]: #  (Welcome to the course, you are following this course because you would like to learn about geo-scripting... Well, this course has been build by... experts for you. Well do you know what geo-scripting is...)
+
 ## The Geo-scripting course
 
-* A team of `R` & `Python` experts who use Geo-scripting languages every day helped to develop this course
-* Experts from compagnies, research insitute and our RS and GIS group will present 
+
+Scripting to solved spatial challenges!
+
+![scripting](figs/scriptingfun_1.jpg)
+
+* A team of `R` & `Python` experts who use Geo-scripting languages 
+every day helped to develop this course
+
+* Experts from compagnies, research insitute (Alterra, ISRIC) and 
+our own RS and GIS group will present 
 
 ## Why geo-scripting?
 
@@ -26,33 +38,40 @@ Can you think of other advantages?
 
 -  Enable collaboration!!! 
     - sharing scripts, functions, and packages
-    - use social R and Python community e.g. stackExchange, mailinglists
+    - finding help
+        - use social R and Python community e.g. stackExchange, mailinglists
+    
+![Facebook`](figs/facebook.png)
+
+## Why geo-scripting?
+
 - Reproducible: avoid clicking and you keep track of what you have done 
     - not possible with clicking
-
-
-
-
-![Facebook`](figs/facebook.png)
 
 ## Why geo-scripting?
 
 - Efficient: you can write a script to do something for you e.g. multiple
 times e.g. automatically downloading data
-- e.g. this presentation is fully written with scripting languages 
-    (i.e. `R` and `MarkDown`)
 
--	Good for finding errors i.e. debugging
-- ...
+-	Good for finding errors
 
 ## Why geo-scripting?
-- Build your own tools and functions (e.g. automated webprocessing, etc.)
 
+- Build your own tools and functions (e.g. automated webprocessing, etc.)
 
 ![CoolprogrammingwithPython](figs/16199604.jpg)
 
-
 [See Lesson 2 demo's!](https://geoscripting-wur.github.io/Scripting4Geo/#why-scripting)
+
+## Geo-scripting learning objectives
+
+- Read, write, and visualise spatial data using a script
+- Find & use libraries, functions for geo-data handling
+- Know how to find help
+- Solve scripting problems
+    - writing a good question!
+    - debugging your script
+- Apply learned concepts for your own geo-challenge 
 
 ## Course planning
 
@@ -83,17 +102,6 @@ See the forum and try to answer a question now and login, otherwise your questio
 
 
 - Feedback is welcome e.g. via the following [form](http://goo.gl/forms/3iFSNgg3Ne to submit ideas, requests, bugs) 
-
-## Geo-scripting learning objectives
-
-- Know how to find help (on spatial data handling functions)
-- Use functions from a library
-- Find libraries, functions for geo-data
-- Solve scripting problems
-    - writing a good question!
-    - debugging
-- Read, write, and visualise spatial data using a script
-- Apply learned concepts for your own work 
 
 ## What  is a scripting language?
 
