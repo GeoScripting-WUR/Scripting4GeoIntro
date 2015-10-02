@@ -3,7 +3,7 @@ title: "The Geo-scripting course"
 author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  slidy_presentation:
+  ioslides_presentation:
     footer: "Geo-scripting 2015/6"
 ---
 
@@ -29,8 +29,7 @@ Can you think of other advantages?
     - use social R and Python community e.g. stackExchange, mailinglists
 - Reproducible: avoid clicking and you keep track of what you have done 
     - not possible with clicking
-- Efficient: you can write a script to do something for you e.g. multiple times e.g. automatically downloading data
-    - e.g. this presentation is fully written with scripting languages (i.e. `R` and `MarkDown`)
+
 
 
 
@@ -38,9 +37,17 @@ Can you think of other advantages?
 
 ## Why geo-scripting?
 
-- Build your own tools and functions (e.g. automated webprocessing, etc.)
+- Efficient: you can write a script to do something for you e.g. multiple
+times e.g. automatically downloading data
+- e.g. this presentation is fully written with scripting languages 
+    (i.e. `R` and `MarkDown`)
+
 -	Good for finding errors i.e. debugging
 - ...
+
+## Why geo-scripting?
+- Build your own tools and functions (e.g. automated webprocessing, etc.)
+
 
 ![CoolprogrammingwithPython](figs/16199604.jpg)
 
