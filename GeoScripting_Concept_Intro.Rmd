@@ -18,7 +18,7 @@ output:
 ## The Geo-scripting course
 
 
-Scripting to solved spatial challenges!
+Goal: Scripting to solve spatial challenges!
 
 ![scripting](figs/scriptingfun_1.jpg)
 
@@ -68,8 +68,8 @@ times e.g. automatically downloading data
 - Read, write, and visualise spatial data using a script
 - Find & use libraries, functions for geo-data handling
 - Know how to find help
-- Solve scripting problems
     - writing a good question!
+- Solve scripting problems
     - debugging your script
 - Apply learned concepts for your own geo-challenge 
 
