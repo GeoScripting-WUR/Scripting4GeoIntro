@@ -1,5 +1,5 @@
 ---
-title: "The Geo-scripting course"
+title: "Geo-scripting"
 author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
@@ -8,25 +8,29 @@ output:
 ---
 
 [//]: #  (## Intro)
-[//]: #  (- How did the [TryR](http://tryr.codeschool.com/) go?)
+[//]: #  (- How did the [TryR](http://tryr.codeschool.com/) go? how much time did it take?)
 [//]: #  ( - Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4)
 
 [//]: #  (Why are you following this course?)
 [//]: #  (Why is your background? Are you ready?)
 [//]: #  (Welcome to the course, you are following this course because you would like to learn about geo-scripting... Well, this course has been build by... experts for you. Well do you know what geo-scripting is...)
 
-## The Geo-scripting course
+## The geo-scripting course
 
+- How did the [TryR](http://tryr.codeschool.com/) go?
+- Is the questionnaire filled in? http://goo.gl/forms/fZk2c8J4t4
+    *  For you to refresh your knowledge and 
+    *  See if you are ready for this course 
 
-Goal: Scripting to solve spatial challenges!
+## Did you know?!
 
-![scripting](figs/scriptingfun_1.jpg)
+Scripts can be used to process lot's of data:
 
-* A team of `R` & `Python` experts who use Geo-scripting languages 
-every day helped to develop this course
+For example:
 
-* Experts from compagnies, research insitute (Alterra, ISRIC) and 
-our own RS and GIS group will present 
+  - the Google Earth Engine is used for global deforestation monitoring
+      - https://earthengine.google.org/#intro
+      - http://earthenginepartners.appspot.com/science-2013-global-forest
 
 ## Why geo-scripting?
 
@@ -36,22 +40,16 @@ Can you think of other advantages?
 
 ## Why geo-scripting?
 
--  Enable collaboration!!! 
-    - sharing scripts, functions, and packages
-    - finding help
-        - use social R and Python community e.g. stackExchange, mailinglists
+-  Enable collaboration
+    - a huge social R and Python community
     
 ![Facebook`](figs/facebook.png)
 
 ## Why geo-scripting?
 
-- Reproducible: avoid clicking and you keep track of what you have done 
-    - not possible with clicking
+- Reproducible: you keep track of what you have done 
 
-## Why geo-scripting?
-
-- Efficient: you can write a script to do something for you e.g. multiple
-times e.g. automatically downloading data
+- Efficient: you can write a script to do something and repeat your analysis x1000... 
 
 -	Good for finding errors
 
@@ -72,6 +70,16 @@ times e.g. automatically downloading data
 - Solve scripting problems
     - debugging your script
 - Apply learned concepts for your own geo-challenge 
+
+## The geo-scripting course
+
+Goal: Scripting to solve spatial challenges!
+
+* A team of `R` & `Python` experts who use geo-scripting languages 
+every day helped to develop this course
+
+* Experts from compagnies, research insitute (Alterra, ISRIC) and 
+our own RS and GIS group will present 
 
 ## Course planning
 
