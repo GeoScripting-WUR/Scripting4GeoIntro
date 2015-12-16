@@ -1,19 +1,28 @@
 ---
-title: "Lesson 1: Introduction to the geo-scripting course"
+title: "[WUR GRS-51806 Geoscripting](https://geoscripting-wur.github.io/)"
+subtitle: "Week 1, Lesson 1: Introduction to the geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
-    theme: "cosmo"
+    number_sections: yes
+    css: custom.css
+    highlight: tango
     toc: yes
-    toc_depth: 4
-    number_sections: true
+    toc_depth: 2
 ---
 
-# Today (5/01/2015)
+# Today
 
-- Morning: Self-study from home or PC38 (16 PC's are available while 26 students are registerd for the geo-scripting course 2015).
-- 1330-1430: course introduction, planning and teams selection (PC38, first floor, GAIA)
+Good morning! 
+Here is what you will do today:
+
+Time  | Activity
+------------- | -------------
+Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section.
+1330 to 1430  | course introduction, planning and teams selection (PC37, first floor, GAIA)
+Rest of the afternoon | Do/finalise the exercise.
+
 
  ![All the best for 2015)`](figs/champ.jpg)
  
