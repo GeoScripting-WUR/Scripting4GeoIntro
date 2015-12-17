@@ -59,7 +59,6 @@ Introduction to the course, planning, teamwork, and projectweek:
   - Planning
   - Teamwork
 
-
 # Getting started with R scripting {#gettingstarted}
 
 ## Online help and tutorial
