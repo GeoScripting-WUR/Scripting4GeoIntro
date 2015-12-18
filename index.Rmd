@@ -23,7 +23,7 @@ Morning  |  Self-study: go through the tutorial below and answer the questions m
 1330 to 1430  | course introduction, planning and teams selection (PC37, first floor, GAIA)
 Rest of the afternoon | Do/finalise the exercise.
 
- ![All the best for 2015)`](figs/champ.jpg)
+ ![All the best for 2016)`](figs/champ.jpg)
  
 ## `To Do` in the morning: self-study
 
@@ -394,12 +394,11 @@ library(raster)
     - do not set the working directory (see above i.e. also specific to your computer)
     - Use the script template above
 
-- submit by e-mail to me before 10.30u **6/01/15**
+- submit via BlackBoard via our Script Review Center. See deadline description there.
 
-## Assessment - and criteria for the excercise
+## Assessment - and evaluation criteria for the excercise
 
-It needs to work (yes/no), when we copy it to our R environment and run. If it does not work it is not ok.
-
+It needs to work (yes/no) when we copy it to our R environment and run. 
 
 # References and more info
 
