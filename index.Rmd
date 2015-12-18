@@ -27,7 +27,7 @@ Rest of the afternoon | Do/finalise the exercise.
  
 ## `To Do` in the morning: self-study
 
-You need to complete before 12 on 5/01/2015:
+You need to complete before 12 on 4/01/2016:
 
 - A R-refresher and self-test: http://tryr.codeschool.com/. How much time does it take you to complete the full 8 chapters of this *R basics online course* (you can sign in, and complete all chapters here)? Send an e-mail to *Jan Verbesselt* with the proof that you have completed all chapters and challenges. (i.e. a screenshot that you completed the course)
 
