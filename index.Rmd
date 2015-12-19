@@ -46,8 +46,6 @@ If you have questions that fellow students can help you with you can use the [Qu
 
 ## Objective and Learning outcomes of today:
 
-Introduction to the course, planning, teamwork, and projectweek:
-
 - Refreshing R skills and assessing scripting skills to see if you have the 
 necessary scripting skills to continue with the course
 - Able to write a function
@@ -71,7 +69,7 @@ ls() ## no objects left in the workspace
 
 A good way to start most R scripts
 
-```{r
+```{r}
 a <- 1
 a
 ```
@@ -81,7 +79,7 @@ The symbol '<-' is somewhat equivalent to an equal sign but recommended as it is
 
 **What is the class of this object?**
 
-```{r
+```{r}
 class(a)
 ```
 
@@ -160,7 +158,7 @@ a
 ```
 
 **Question:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
-(just note down these questions as they will be discussed during the lesson at 1330 on monday)
+(just note down these questions as they will be discussed during the discussion session at 1330 today)
 
 ## Character vector handling
 
@@ -249,7 +247,7 @@ read.csv("testing.csv") ## read from your working directory
 ```
 
 **Question**: Do you know how to read an excell file into R? 
-What are the different options? How do you find help? (5mins)
+What are the different options? How can you find help?
 
 ## Writing a function
 
@@ -304,6 +302,7 @@ library(raster)
 ```
 
 Read the help to find out how we can find the country codes?
+
 **Question**: What is the country code of Belgium?
 
 More info about the datasets see [Global Adminstrative Areas Data base (GADM)](/http://www.gadm.org)).
@@ -351,8 +350,6 @@ text(122.08, 13.22, "Projection: Geographic\n
 Coordinate System: WGS 1984\n
 Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 ```
-
-
 
 # Excercise lesson 1
 
