@@ -20,7 +20,7 @@ Here is what you will do today:
 Time  | Activity
 ------------- | -------------
 Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section.
-1330 to 1430  | course introduction, planning and teams selection (PC37, first floor, GAIA)
+1330 to 1430  | [Course introduction, planning and teams selection (PC37, first floor, GAIA)](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1):
 Rest of the afternoon | Do/finalise the exercise.
 
  ![All the best for 2016)`](figs/champ.jpg)
@@ -48,25 +48,15 @@ If you have questions that fellow students can help you with you can use the [Qu
 
 Introduction to the course, planning, teamwork, and projectweek:
 
-- Refreshing R skills and assessing scripting skills to see if you have the necessary scripting skills to continue with the course
+- Refreshing R skills and assessing scripting skills to see if you have the 
+necessary scripting skills to continue with the course
 - Able to write a function
 - Know how to visualise data (spatial map) in R
 
-# Introduction
-
-[Presentation about the Geo-scripting course](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1):
-
-  - Introduction
-  - Planning
-  - Teamwork
-
-# Getting started with R scripting {#gettingstarted}
-
-## Online help and tutorial
+# Basic R and RStudio setup {#gettingstarted}
 
 This preliminary section will cover some basic details about R. For this course we will use Rstudio to write and run scripts.
-
-# Basic R and RStudio setup
+In case you are working on your own computer would like to know how to install R and Rstudio: https://geoscripting-wur.github.io/system_setup/
 
 ## Getting started with Rstudio and R on your own computer.
 

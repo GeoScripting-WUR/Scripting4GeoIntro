@@ -77,7 +77,7 @@ img {
 <h1 class="title"><a href="https://geoscripting-wur.github.io/">WUR GRS-51806 Geoscripting</a></h1>
 <h3 class="subtitle"><em>Week 1, Lesson 1: Introduction to the geo-scripting course</em></h3>
 <h4 class="author"><em>Jan Verbesselt and Loïc Dutrieux</em></h4>
-<h4 class="date"><em>18 December, 2015</em></h4>
+<h4 class="date"><em>19 December, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -86,25 +86,21 @@ img {
 <li><a href="#to-do-in-the-morning-self-study"><span class="toc-section-number">1.1</span> <code>To Do</code> in the morning: self-study</a></li>
 <li><a href="#objective-and-learning-outcomes-of-today"><span class="toc-section-number">1.2</span> Objective and Learning outcomes of today:</a></li>
 </ul></li>
-<li><a href="#introduction"><span class="toc-section-number">2</span> Introduction</a></li>
-<li><a href="#gettingstarted"><span class="toc-section-number">3</span> Getting started with R scripting</a><ul>
-<li><a href="#online-help-and-tutorial"><span class="toc-section-number">3.1</span> Online help and tutorial</a></li>
+<li><a href="#gettingstarted"><span class="toc-section-number">2</span> Basic R and RStudio setup</a><ul>
+<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer."><span class="toc-section-number">2.1</span> Getting started with Rstudio and R on your own computer.</a></li>
+<li><a href="#set-your-working-directory"><span class="toc-section-number">2.2</span> Set Your Working Directory</a></li>
 </ul></li>
-<li><a href="#basic-r-and-rstudio-setup"><span class="toc-section-number">4</span> Basic R and RStudio setup</a><ul>
-<li><a href="#getting-started-with-rstudio-and-r-on-your-own-computer."><span class="toc-section-number">4.1</span> Getting started with Rstudio and R on your own computer.</a></li>
-<li><a href="#set-your-working-directory"><span class="toc-section-number">4.2</span> Set Your Working Directory</a></li>
+<li><a href="#basic-r-knowledge-usefull-for-geo-scripting"><span class="toc-section-number">3</span> Basic R knowledge usefull for Geo-Scripting</a><ul>
+<li><a href="#vector-handling-and-vector-arithmetic"><span class="toc-section-number">3.1</span> Vector handling and vector arithmetic</a></li>
+<li><a href="#character-vector-handling"><span class="toc-section-number">3.2</span> Character vector handling</a></li>
+<li><a href="#reading-and-writing-data"><span class="toc-section-number">3.3</span> Reading and writing data</a></li>
+<li><a href="#writing-a-function"><span class="toc-section-number">3.4</span> Writing a function</a></li>
+<li><a href="#creating-a-map-within-r---a-simple-demo"><span class="toc-section-number">3.5</span> Creating a map within R - a simple demo</a></li>
 </ul></li>
-<li><a href="#basic-r-knowledge-usefull-for-geo-scripting"><span class="toc-section-number">5</span> Basic R knowledge usefull for Geo-Scripting</a><ul>
-<li><a href="#vector-handling-and-vector-arithmetic"><span class="toc-section-number">5.1</span> Vector handling and vector arithmetic</a></li>
-<li><a href="#character-vector-handling"><span class="toc-section-number">5.2</span> Character vector handling</a></li>
-<li><a href="#reading-and-writing-data"><span class="toc-section-number">5.3</span> Reading and writing data</a></li>
-<li><a href="#writing-a-function"><span class="toc-section-number">5.4</span> Writing a function</a></li>
-<li><a href="#creating-a-map-within-r---a-simple-demo"><span class="toc-section-number">5.5</span> Creating a map within R - a simple demo</a></li>
+<li><a href="#excercise-lesson-1"><span class="toc-section-number">4</span> Excercise lesson 1</a><ul>
+<li><a href="#assessment---and-evaluation-criteria-for-the-excercise"><span class="toc-section-number">4.1</span> Assessment - and evaluation criteria for the excercise</a></li>
 </ul></li>
-<li><a href="#excercise-lesson-1"><span class="toc-section-number">6</span> Excercise lesson 1</a><ul>
-<li><a href="#assessment---and-evaluation-criteria-for-the-excercise"><span class="toc-section-number">6.1</span> Assessment - and evaluation criteria for the excercise</a></li>
-</ul></li>
-<li><a href="#references-and-more-info"><span class="toc-section-number">7</span> References and more info</a></li>
+<li><a href="#references-and-more-info"><span class="toc-section-number">5</span> References and more info</a></li>
 </ul>
 </div>
 
@@ -125,7 +121,7 @@ img {
 </tr>
 <tr class="even">
 <td align="left">1330 to 1430</td>
-<td align="left">course introduction, planning and teams selection (PC37, first floor, GAIA)</td>
+<td align="left"><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1">Course introduction, planning and teams selection (PC37, first floor, GAIA)</a>:</td>
 </tr>
 <tr class="odd">
 <td align="left">Rest of the afternoon</td>
@@ -157,26 +153,11 @@ img {
 </ul>
 </div>
 </div>
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">2</span> Introduction</h1>
-<p><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1">Presentation about the Geo-scripting course</a>:</p>
-<ul>
-<li>Introduction</li>
-<li>Planning</li>
-<li>Teamwork</li>
-</ul>
-</div>
 <div id="gettingstarted" class="section level1">
-<h1><span class="header-section-number">3</span> Getting started with R scripting</h1>
-<div id="online-help-and-tutorial" class="section level2">
-<h2><span class="header-section-number">3.1</span> Online help and tutorial</h2>
-<p>This preliminary section will cover some basic details about R. For this course we will use Rstudio to write and run scripts.</p>
-</div>
-</div>
-<div id="basic-r-and-rstudio-setup" class="section level1">
-<h1><span class="header-section-number">4</span> Basic R and RStudio setup</h1>
+<h1><span class="header-section-number">2</span> Basic R and RStudio setup</h1>
+<p>This preliminary section will cover some basic details about R. For this course we will use Rstudio to write and run scripts. In case you are working on your own computer would like to know how to install R and Rstudio: <a href="https://geoscripting-wur.github.io/system_setup/" class="uri">https://geoscripting-wur.github.io/system_setup/</a></p>
 <div id="getting-started-with-rstudio-and-r-on-your-own-computer." class="section level2">
-<h2><span class="header-section-number">4.1</span> Getting started with Rstudio and R on your own computer.</h2>
+<h2><span class="header-section-number">2.1</span> Getting started with Rstudio and R on your own computer.</h2>
 <p>A summary youtube movie about how to use <code>Rstudio</code> and writing a function is here: <a href="https://www.youtube.com/watch?v=jPk6-3prknk">Intro to Rstudio</a>. Have a look at this movie if you do not know how to work with <code>Rstudio</code> and then do the following section. See the following tutorial for a <a href="http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf">short introduction on the Rstudio interface</a>.</p>
 <p>Now, Open <code>Rstudio</code> and type the following script in the R console of <strong>Rstudio</strong>:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>())  <span class="co"># Clear the workspace!</span>
@@ -190,7 +171,7 @@ a</code></pre>
 <p>You now have requested the class attribute of <span class="math">\(a\)</span> and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects (<span class="math">\(a\)</span> in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven’t specified one (as you didn’t in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.</p>
 </div>
 <div id="set-your-working-directory" class="section level2">
-<h2><span class="header-section-number">4.2</span> Set Your Working Directory</h2>
+<h2><span class="header-section-number">2.2</span> Set Your Working Directory</h2>
 <p>Let’s do some basic set up first.</p>
 <ul>
 <li>Create a folder which will be your working directory e.g. Lesson1</li>
@@ -206,10 +187,10 @@ datdir &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span cla
 </div>
 </div>
 <div id="basic-r-knowledge-usefull-for-geo-scripting" class="section level1">
-<h1><span class="header-section-number">5</span> Basic R knowledge usefull for Geo-Scripting</h1>
+<h1><span class="header-section-number">3</span> Basic R knowledge usefull for Geo-Scripting</h1>
 <p>Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we’ve summarized what we think are important skills for geo scripting below.</p>
 <div id="vector-handling-and-vector-arithmetic" class="section level2">
-<h2><span class="header-section-number">5.1</span> Vector handling and vector arithmetic</h2>
+<h2><span class="header-section-number">3.1</span> Vector handling and vector arithmetic</h2>
 <p>You’ll be introduced in a following lesson with the raster package and the raster classes that have been developed as part of that package. All objects that belong to the class <code>raster</code> are <strong>vectors</strong> with a few more spatial attributes.</p>
 <p><strong>In <code>R</code> we call a collection of numbers a vector.</strong></p>
 <p>As a consequence, handling vector is a crucial skill for processing raster data in R.</p>
@@ -252,7 +233,7 @@ a</code></pre>
 <p><strong>Question:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12? (just note down these questions as they will be discussed during the lesson at 1330 on monday)</p>
 </div>
 <div id="character-vector-handling" class="section level2">
-<h2><span class="header-section-number">5.2</span> Character vector handling</h2>
+<h2><span class="header-section-number">3.2</span> Character vector handling</h2>
 <p>When working with <em>real</em> data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
 <p>Key functions for handling character strings are listed below:</p>
 <ul>
@@ -265,16 +246,16 @@ a</code></pre>
 * `glob2rx()`:  Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
 -->
 <div id="example-of-list.files" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> Example of <code>list.files()</code></h3>
+<h3><span class="header-section-number">3.2.1</span> Example of <code>list.files()</code></h3>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>() ## check your working directory
 <span class="kw">list.files</span>() ## list the files available in this directory</code></pre>
 <p><strong>Question</strong>: List the directories in your working directory</p>
 </div>
 <div id="example-of-paste" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Example of <code>paste()</code></h3>
+<h3><span class="header-section-number">3.2.2</span> Example of <code>paste()</code></h3>
 <pre class="sourceCode r"><code class="sourceCode r">## two handy examples
 <span class="kw">paste</span>(<span class="st">&quot;Today is&quot;</span>, <span class="kw">date</span>())</code></pre>
-<pre><code>## [1] &quot;Today is Fri Dec 18 16:44:37 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Sat Dec 19 06:44:06 2015&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;A&quot;</span>, <span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -284,7 +265,7 @@ b &lt;-<span class="st"> &quot;is&quot;</span>
 c &lt;-<span class="st"> &quot;fun&quot;</span></code></pre>
 </div>
 <div id="example-of-strsplit" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Example of <code>strsplit()</code></h3>
+<h3><span class="header-section-number">3.2.3</span> Example of <code>strsplit()</code></h3>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># I have the following character string</span>
 name &lt;-<span class="st"> 'today_is_friday_12-12-2014'</span>
 
@@ -303,7 +284,7 @@ date0 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="
 </div>
 </div>
 <div id="reading-and-writing-data" class="section level2">
-<h2><span class="header-section-number">5.3</span> Reading and writing data</h2>
+<h2><span class="header-section-number">3.3</span> Reading and writing data</h2>
 <p>In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).</p>
 <p>Here, an example is givem how youn can read (import in R) and write a text file (i.e. export from R).</p>
 <p>The most common way to read in spread sheet tables is with the <code>read.csv()</code> command. However you can read in virtually any type of text file. Type <code>?read.table</code> in your console for some other examples.</p>
@@ -327,7 +308,7 @@ test &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1<
 <p><strong>Question</strong>: Do you know how to read an excell file into R? What are the different options? How do you find help? (5mins)</p>
 </div>
 <div id="writing-a-function" class="section level2">
-<h2><span class="header-section-number">5.4</span> Writing a function</h2>
+<h2><span class="header-section-number">3.4</span> Writing a function</h2>
 <p>It is hard to unleash the full potential of R without writing your own functions. Luckily it’s very easy to do. Here are some trivial examples:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># put the function arguments in () and the evaluation in {}</span>
 add &lt;-<span class="st"> </span>function(x){
@@ -358,7 +339,7 @@ a2b</code></pre>
 <p>Next, a new object <code>a2b</code> is created which contains the result of applying <code>newfunc</code> to the two objects you have defined earlier. The second last R command prints this new object to the console. Finally, you can now remove the objects you have created to make room for the next exercise by selecting and running the last line of the code.</p>
 </div>
 <div id="creating-a-map-within-r---a-simple-demo" class="section level2">
-<h2><span class="header-section-number">5.5</span> Creating a map within R - a simple demo</h2>
+<h2><span class="header-section-number">3.5</span> Creating a map within R - a simple demo</h2>
 <p>Here is an example of how you can create a map in R. It is a function to get <em>public</em> data from anywhere in the world. See help of the <code>getData</code> function in the <code>raster</code> package.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(raster)
 ?getData
@@ -391,7 +372,7 @@ adm &lt;-<span class="st"> </span>raster::<span class="kw">getData</span>(<span 
 </div>
 </div>
 <div id="excercise-lesson-1" class="section level1">
-<h1><span class="header-section-number">6</span> Excercise lesson 1</h1>
+<h1><span class="header-section-number">4</span> Excercise lesson 1</h1>
 <p><strong>Write your own function to create a map</strong>. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:</p>
 <ul>
 <li>define a function</li>
@@ -422,12 +403,12 @@ adm &lt;-<span class="st"> </span>raster::<span class="kw">getData</span>(<span 
 <li>submit via BlackBoard via our Script Review Center. See deadline description there.</li>
 </ul>
 <div id="assessment---and-evaluation-criteria-for-the-excercise" class="section level2">
-<h2><span class="header-section-number">6.1</span> Assessment - and evaluation criteria for the excercise</h2>
+<h2><span class="header-section-number">4.1</span> Assessment - and evaluation criteria for the excercise</h2>
 <p>It needs to work (yes/no) when we copy it to our R environment and run.</p>
 </div>
 </div>
 <div id="references-and-more-info" class="section level1">
-<h1><span class="header-section-number">7</span> References and more info</h1>
+<h1><span class="header-section-number">5</span> References and more info</h1>
 <ul>
 <li><a href="http://www.rstudio.com/resources/training/online-learning/">Rstudio Online Learning</a>.</li>
 <li><a href="https://www.coursera.org/course/rprog" class="uri">https://www.coursera.org/course/rprog</a></li>
