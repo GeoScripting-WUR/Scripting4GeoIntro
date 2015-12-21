@@ -77,7 +77,7 @@ img {
 <h1 class="title"><a href="https://geoscripting-wur.github.io/">WUR GRS-51806 Geoscripting</a></h1>
 <h3 class="subtitle"><em>Week 1, Lesson 1: Introduction to the geo-scripting course</em></h3>
 <h4 class="author"><em>Jan Verbesselt and Loïc Dutrieux</em></h4>
-<h4 class="date"><em>19 December, 2015</em></h4>
+<h4 class="date"><em>21 December, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -117,11 +117,11 @@ img {
 <tbody>
 <tr class="odd">
 <td align="left">Morning</td>
-<td align="left">Self-study: go through the tutorial below and answer the questions mentioned in <strong>bold</strong> within the self-study section.</td>
+<td align="left">Self-study: go through the tutorial below and answer the questions mentioned in <strong>bold</strong> within the self-study section via a questionnaire available in our Blackboard page.</td>
 </tr>
 <tr class="even">
 <td align="left">1330 to 1430</td>
-<td align="left"><a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1">Course introduction, planning and teams selection (PC37, first floor, GAIA)</a>:</td>
+<td align="left">Course introduction, planning and teams selection (PC37, first floor, GAIA):</td>
 </tr>
 <tr class="odd">
 <td align="left">Rest of the afternoon</td>
@@ -134,14 +134,11 @@ img {
 <h2><span class="header-section-number">1.1</span> <code>To Do</code> in the morning: self-study</h2>
 <p>You need to complete before 12 on 4/01/2016:</p>
 <ul>
-<li><p>A R-refresher and self-test: <a href="http://tryr.codeschool.com/" class="uri">http://tryr.codeschool.com/</a>. How much time does it take you to complete the full 8 chapters of this <em>R basics online course</em> (you can sign in, and complete all chapters here)? Send an e-mail to <em>Jan Verbesselt</em> with the proof that you have completed all chapters and challenges. (i.e. a screenshot that you completed the course)</p></li>
-<li><p>Fill in the following questionnaire link provided via blackboard.</p></li>
-<li><p>Read and do the <code>getting started with R section</code> (<a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted">see below</a>)</p></li>
+<li>Read and do the <code>getting started with R section</code> (<a href="https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted">see below</a>)</li>
+<li>See also information provide via blackboard in the section course description (see lesson 1)</li>
 </ul>
-<p>In the morning you can work from home or can come to the PC37 and PC35 room, GAIA.</p>
-<p>You need to have <code>Rstudio Desktop</code> (Free) and <code>R</code> (Free) installed (already available in the PClab).</p>
-<p>For more information see <a href="http://geoscripting-wur.github.io/system_setup/">Geo-scripting system set-up</a></p>
-<p>If you have questions that fellow students can help you with you can use the <a href="http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions">Question and Answer Website of the Geo-scripting course</a>. <strong>Try it out!</strong> We will explain how this can be used during this course at 1330 today in PC37.</p>
+<p>In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have <code>Rstudio Desktop</code> (Free) and <code>R</code> (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see <a href="http://geoscripting-wur.github.io/system_setup/">Geo-scripting system set-up</a></p>
+<p>If you have questions that fellow students can help you with you can use the <a href="http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions">Question and Answer Website of the Geo-scripting course</a>. <strong>Try to ask or answer a question today</strong> We will explain how this can be used during this course at 1330 today in PC37.</p>
 </div>
 <div id="objective-and-learning-outcomes-of-today" class="section level2">
 <h2><span class="header-section-number">1.2</span> Objective and Learning outcomes of today:</h2>
@@ -256,7 +253,7 @@ a</code></pre>
 <h3><span class="header-section-number">3.2.2</span> Example of <code>paste()</code></h3>
 <pre class="sourceCode r"><code class="sourceCode r">## two handy examples
 <span class="kw">paste</span>(<span class="st">&quot;Today is&quot;</span>, <span class="kw">date</span>())</code></pre>
-<pre><code>## [1] &quot;Today is Sat Dec 19 07:34:18 2015&quot;</code></pre>
+<pre><code>## [1] &quot;Today is Mon Dec 21 14:57:47 2015&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;A&quot;</span>, <span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;A1&quot; &quot;A2&quot; &quot;A3&quot; &quot;A4&quot; &quot;A5&quot; &quot;A6&quot;</code></pre>
 <p><strong>Question</strong>: create one variable containing a sentence, based on a, b, or c:</p>
@@ -342,8 +339,10 @@ a2b</code></pre>
 <div id="creating-a-map-within-r---a-simple-demo" class="section level2">
 <h2><span class="header-section-number">3.5</span> Creating a map within R - a simple demo</h2>
 <p>Here is an example of how you can create a map in R. It is a function to get <em>public</em> data from anywhere in the world. See help of the <code>getData</code> function in the <code>raster</code> package.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(raster)
-?getData
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(raster)</code></pre>
+<pre><code>## Warning: no function found corresponding to methods exports from 'raster'
+## for: 'overlay'</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">?getData
 ?raster::getData</code></pre>
 <p>Read the help to find out how we can find the country codes?</p>
 <p><strong>Question</strong>: What is the country code of Belgium?</p>
@@ -381,9 +380,8 @@ adm &lt;-<span class="st"> </span>raster::<span class="kw">getData</span>(<span 
 <li>demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)</li>
 <li>keep it simple (!) e.g. just plot the adminstrative boundaries</li>
 <li>The function should accept <code>country</code> and <code>level</code> as input arguments</li>
-<li>Optional (for a bonus):Getting the administrative labels and legend correct.</li>
-<li>Send the script to another team and let them test it (for the afternoon, after we have set-up the team)! Does it work yes/no? If yes, you can send it by e-mail.</li>
-<li>Copy and paste the documented script within an e-mail (no html)</li>
+<li>Optional (for a bonus): Getting the administrative labels and legend correct.</li>
+<li>Use the script review center to submit your “documented script” in time (see instructions via blackboard), make sure your review at least one script of the other team</li>
 </ul>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Name: Team name and members of the team</span>
 <span class="co"># Date: December 2014</span>
@@ -402,11 +400,10 @@ adm &lt;-<span class="st"> </span>raster::<span class="kw">getData</span>(<span 
 <li>do not set the working directory (see above i.e. also specific to your computer)</li>
 <li>Use the script template above</li>
 </ul></li>
-<li>submit via BlackBoard via our Script Review Center. See deadline description there.</li>
 </ul>
 <div id="assessment---and-evaluation-criteria-for-the-excercise" class="section level2">
 <h2><span class="header-section-number">4.1</span> Assessment - and evaluation criteria for the excercise</h2>
-<p>It needs to work (yes/no) when we copy it to our R environment and run.</p>
+<p>It needs to work (yes/no), when we test your script on our computer within R.</p>
 </div>
 </div>
 <div id="references-and-more-info" class="section level1">

@@ -14,13 +14,12 @@ output:
 
 # Today
 
-Good morning! 
-Here is what you will do today:
+Good morning!  Here is what you will do today:
 
 Time  | Activity
 ------------- | -------------
-Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section.
-1330 to 1430  | [Course introduction, planning and teams selection (PC37, first floor, GAIA)](https://geoscripting-wur.github.io/Scripting4GeoIntro/GeoScripting_Concept_Intro.html#1):
+Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section via a questionnaire available in our Blackboard page.
+1330 to 1430  | Course introduction, planning and teams selection (PC37, first floor, GAIA):
 Rest of the afternoon | Do/finalise the exercise.
 
  ![All the best for 2016)`](figs/champ.jpg)
@@ -29,20 +28,13 @@ Rest of the afternoon | Do/finalise the exercise.
 
 You need to complete before 12 on 4/01/2016:
 
-- A R-refresher and self-test: http://tryr.codeschool.com/. How much time does it take you to complete the full 8 chapters of this *R basics online course* (you can sign in, and complete all chapters here)? Send an e-mail to *Jan Verbesselt* with the proof that you have completed all chapters and challenges. (i.e. a screenshot that you completed the course)
-
-- Fill in the following questionnaire link provided via blackboard.
-
 - Read and do the `getting started with R section` ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
+- See also information provide via blackboard in the section course description (see lesson 1)
 
-In the morning you can work from home or can come to the PC37 and PC35 room, GAIA.
-
-You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). 
-
-For more information see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
 If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). 
-**Try it out!** We will explain how this can be used during this course at 1330 today in PC37.
+**Try to ask or answer a question today** We will explain how this can be used during this course at 1330 today in PC37.
 
 ## Objective and Learning outcomes of today:
 
@@ -359,9 +351,9 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)
 - keep it simple (!) e.g. just plot the adminstrative boundaries
 - The function should accept `country` and `level` as input arguments 
-- Optional (for a bonus):Getting the administrative labels and legend correct.
-- Send the script to another team and let them test it (for the afternoon, after we have set-up the team)! Does it work yes/no? If yes, you can send it by e-mail.
-- Copy and paste the documented script within an e-mail (no html)
+- Optional (for a bonus): Getting the administrative labels and legend correct.
+- Use the script review center to submit your "documented script" in time (see instructions via blackboard), 
+make sure your review at least one script of the other team
 
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
@@ -381,11 +373,9 @@ library(raster)
     - do not set the working directory (see above i.e. also specific to your computer)
     - Use the script template above
 
-- submit via BlackBoard via our Script Review Center. See deadline description there.
-
 ## Assessment - and evaluation criteria for the excercise
 
-It needs to work (yes/no) when we copy it to our R environment and run. 
+It needs to work (yes/no), when we test your script on our computer within R.
 
 # References and more info
 
