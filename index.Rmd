@@ -16,7 +16,7 @@ output:
 
 Good morning!  Here is what you will do today:
 
-Time  | Activity
+Timewow  | Activity
 ------------- | -------------
 Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section via a questionnaire available in our Blackboard page.
 1330 to 1430  | Course introduction, planning and teams selection (PC37, first floor, GAIA):
