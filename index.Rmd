@@ -33,7 +33,7 @@ You need to complete before 12 on 4/01/2016:
 
 In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
-If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs50406/question2answer/index.php?qa=questions). 
+If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
 **Try to ask or answer a question today** We will explain how this can be used during this course at 1330 today in PC37.
 
 ## Objective and Learning outcomes of today:
@@ -95,7 +95,7 @@ getwd() # Double check your working directory
 datdir <- file.path("data") ## path
 ```
 
-# Basic R knowledge usefull for Geo-Scripting
+# Basic R knowledge useful for Geo-Scripting
 Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
 
 ## Vector handling and vector arithmetic
@@ -103,7 +103,7 @@ You'll be introduced in a following lesson with the raster package and the raste
 
 **In `R` we call a collection of numbers a vector.** 
 
-As a consequence, handling vector is a crucial skill for processing raster data in R.
+As a consequence, handling vectors is a crucial skill for processing raster data in R.
 
 Reference manual for vector handling and vector arithmetic can be found [here](http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors).
 
@@ -116,7 +116,7 @@ a
 (b <- a * 2)
 (d <- a + 6)
 
-# Two vectors of same length can also be added with each others
+# Two vectors of same length can also be added with each other
 (e <- a + b)
 ```
 
@@ -223,7 +223,7 @@ See also `?substr`, this can be handy too.
 
 In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).
 
-Here, an example is givem how youn can read (import in R) and write a text file (i.e. export from R).
+Here, an example is given how you can read (import in R) and write a text file (i.e. export from R).
 
 The most common way to read in spread sheet tables is with the `read.csv()` command.
 However you can read in virtually any type of text file. Type `?read.table` in your console for some other examples.
@@ -238,7 +238,7 @@ ls() ## check the objective in the working environment
 read.csv("testing.csv") ## read from your working directory
 ```
 
-**Question**: Do you know how to read an excell file into R? 
+**Question**: Do you know how to read an excel file into R? 
 What are the different options? How can you find help?
 
 ## Writing a function
@@ -268,7 +268,7 @@ That's about all there is to it. The function will generally return the result o
 
 **Question**: How do you write a function that returns x and z?
 
-Now, let's declares a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
+Now, let's declare a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
 
 ```{r}
 newfunc <- function(x, y) {
@@ -277,10 +277,13 @@ newfunc <- function(x, y) {
 }
 a2b <- newfunc(2, 4)
 a2b
-rm(a, newfunc, a2b)
 ```
 
 Next, a new object `a2b` is created which contains the result of applying `newfunc` to the two objects you have defined earlier. The second last R command prints this new object to the console. Finally, you can now remove the objects you have created to make room for the next exercise by selecting and running the last line of the code.
+
+```{r, eval=FALSE}
+rm(a, newfunc, a2b)
+```
 
 ## Creating a map within R - a simple demo
 
@@ -297,7 +300,7 @@ Read the help to find out how we can find the country codes?
 
 **Question**: What is the country code of Belgium?
 
-More info about the datasets see [Global Adminstrative Areas Data base (GADM)](/http://www.gadm.org)).
+More info about the datasets see [Global Adminstrative Areas Data base (GADM)](http://www.gadm.org)).
 
 ```{r, eval=FALSE}
 raster::getData("ISO3")
@@ -353,7 +356,7 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - The function should accept `country` and `level` as input arguments 
 - Optional (for a bonus): Getting the administrative labels and legend correct.
 - Use the script review center to submit your "documented script" in time (see instructions via blackboard), 
-make sure your review at least one script of the other team
+make sure you review at least one script of the other team
 
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
