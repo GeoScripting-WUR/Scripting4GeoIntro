@@ -28,8 +28,7 @@ Rest of the afternoon | Do/finalise the exercise.
 
 You need to complete before 12 on 4/01/2016:
 
-- Read and do the `getting started with R section` ([see below](https://geoscripting-wur.github.io/Scripting4GeoIntro/#gettingstarted))
-- See also information provide via blackboard in the section course description (see lesson 1)
+- See information provided via blackboard in the section course description: lesson 1!
 
 In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
