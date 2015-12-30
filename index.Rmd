@@ -1,5 +1,5 @@
 ---
-title: "[WUR GRS-51806 Geoscripting](https://geoscripting-wur.github.io/)"
+title: "[WUR Geo-scripting](https://geoscripting-wur.github.io/)"
 subtitle: "Week 1, Lesson 1: Introduction to the geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
