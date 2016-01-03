@@ -1,19 +1,16 @@
 ---
-title: "[WUR Geo-scripting](https://geoscripting-wur.github.io/)"
-subtitle: "Week 1, Lesson 1: Introduction to the geo-scripting course"
 author: "Jan Verbesselt and Loïc Dutrieux"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    number_sections: yes
-    css: custom.css
-    highlight: tango
-    toc: yes
-    toc_depth: 2
+  knitrBootstrap::bootstrap_document:
+    title: "Week 1, Lesson 1: Introduction to the geo-scripting course"
+    theme: cosmo
+    menu: FALSE
 ---
 
-# Today
+# [WUR Geo-scripting](https://geoscripting-wur.github.io/) ![WUR logo](http://www.wageningenur.nl/upload/f9a0b5f2-15c5-4b84-9e14-20ef02f5e265_wur-logo.png)
 
+# Today
 Good morning!  Here is what you will do today:
 
 Time  | Activity
