@@ -32,7 +32,7 @@ You need to complete before 12 on 4/01/2016:
 
 In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
-If you have questions that fellow students can help you with you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
+If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
 **Try to ask or answer a question today** We will explain how this can be used during this course at 1330 today in PC37.
 
 ## Objective and Learning outcomes of today:

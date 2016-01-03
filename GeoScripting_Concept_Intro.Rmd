@@ -4,29 +4,18 @@ author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   ioslides_presentation:
-    footer: "Geo-scripting 2015/6"
+    footer: "Geo-scripting 2016"
 ---
-
-[//]: #  (Why are you following this course?)
-[//]: #  (Why is your background? Are you ready?)
-[//]: #  (Welcome to the course, you are following this course because you would like to learn about geo-scripting... Well, this course has been build by... experts for you. Well do you know what geo-scripting is...)
-
-## The geo-scripting course
-
-- How did the [TryR](http://tryr.codeschool.com/) go?
-- Is the questionnaire filled in?
-    *  For you to refresh your knowledge and 
-    *  See if you are ready for this course 
 
 ## Did you know?!
 
-Scripts can be used to process lot's of data:
+Scripting can be used to process satellite data easily to monitor deforestation globally
 
-For example:
-
-  - the Google Earth Engine is used for global deforestation monitoring
+- Google Earth Engine for global deforestation monitoring
       - https://earthengine.google.org/#intro
-      - http://earthenginepartners.appspot.com/science-2013-global-forest
+
+![forestloss](figs/forest-cover-global.png)
+Image Credit: NASA Goddard, based on data from Hansen et al., 2013.
 
 ## Why geo-scripting?
 
@@ -62,9 +51,6 @@ Can you think of other advantages?
 - Read, write, and visualise spatial data using a script
 - Find & use libraries, functions for geo-data handling
 - Know how to find help
-    - writing a good question!
-- Solve scripting problems
-    - debugging your script
 - Apply learned concepts for your own geo-challenge 
 
 ## The geo-scripting course
@@ -79,9 +65,14 @@ our own RS and GIS group will present
 
 ## Course planning
 
-See blackboard.
+See blackboard (planning, Q&A forum, teams)
 
+## The geo-scripting course
 
+- How did the **DataCamp Introduction to R** go?
+- Questionnaire about yourself
+- Questionnaire on the self-study
+    
 ## Team work & helping each other
 
 - Teams of two (e.g. somebody who followed the `python` course and who didn't follow it):
@@ -104,8 +95,6 @@ See blackboard.
 
 See the forum and try to answer a question now and login, otherwise your question will be anonymous
 
-- Feedback is welcome all tips and tricks are welcome.
-
 ## What  is a scripting language?
 
 - A scripting language can interpret and automate the execution of tasks, instead of clicking!!!
@@ -114,13 +103,13 @@ See the forum and try to answer a question now and login, otherwise your questio
     - these are languages that need to be compiled first.
 
 ## Compiling
-- Compiling? 
-Passing the source code through a compiler, which translates the `high-level language` instructions into `object code`.
+
+Passing the source code through a compiler, which translates the `high-level language` instructions into an `exe`.
 
 ```{r, echo=FALSE, fig.align='center', fig.width=6, strip.white=TRUE}
 library(png)
 library(grid)
-img <- readPNG("figs/load_javac.png")
+img <- readPNG("figs/traditionalCompiler.png")
 grid.raster(img)
 ```
 
