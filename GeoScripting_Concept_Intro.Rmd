@@ -104,7 +104,6 @@ necessary scripting skills to continue with the course
 ## The geo-scripting course
 
 - How did the **DataCamp Introduction to R** go?
-- Questionnaire about yourself
 - Questionnaire on the self-study
     
 ## What  is a scripting language?
