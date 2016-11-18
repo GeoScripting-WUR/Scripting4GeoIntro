@@ -16,21 +16,21 @@ Good morning!  Here is what you will do today:
 Time  | Activity
 ------------- | -------------
 Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section via a questionnaire available in our Blackboard page.
-1330 to 1430  | Course introduction, planning and teams selection (PC37, first floor, GAIA):
+13:30 to 14:30  | Course introduction, planning and teams selection (PC0095, second floor, GAIA):
 Rest of the afternoon | Do/finalise the exercise.
 
- ![All the best for 2016)`](figs/champ.jpg)
+ ![All the best for 2017](figs/champ.jpg)
  
-## `To Do` in the morning: self-study
+## *To Do* in the morning: self-study
 
-You need to complete before 12 on 4/01/2016:
+You need to complete before 12 on 4/01/2017:
 
 - See information provided via blackboard in the section course description: lesson 1!
 
-In the morning you can work from home or can come to the PC37 and PC35 room, GAIA. You need to have `Rstudio Desktop` (Free) and `R` (Free) installed (already available in the PClab). For more information about R and Rstudio installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+In the morning you can work from home or can come to the PC0095 and PC0094 rooms in GAIA. You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
 If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
-**Try to ask or answer a question today** We will explain how this can be used during this course at 1330 today in PC37.
+**Try to ask or answer a question today.** We will explain how this can be used during this course at 13:30 today in PC0095.
 
 ## Objective and Learning outcomes of today:
 
@@ -39,20 +39,20 @@ necessary scripting skills to continue with the course
 - Able to write a function
 - Know how to visualise data (spatial map) in R
 
-# Basic R and RStudio setup {#gettingstarted}
+# Basic *R* and *RStudio* setup {#gettingstarted}
 
-This preliminary section will cover some basic details about R. For this course we will use Rstudio to write and run scripts.
-In case you are working on your own computer would like to know how to install R and Rstudio: https://geoscripting-wur.github.io/system_setup/
+This preliminary section will cover some basic details about *R*. For this course we will use Rstudio to write and run scripts.
+In case you are working on your own computer would like to know how to install *R* and *RStudio*: https://geoscripting-wur.github.io/system_setup/
 
-## Getting started with Rstudio and R on your own computer.
+## Getting started with *RStudio* and *R* on your own computer.
 
-A summary youtube movie about how to use `Rstudio` and writing a function is here: [Intro to Rstudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with `Rstudio` and then do the following section. See the following tutorial for a [short introduction on the Rstudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
+A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to RStudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a [short introduction on the RStudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
  
-Now, Open `Rstudio` and type the following script in the R console of **Rstudio**:
+Now, Open RStudio and type the following script in the R console of **RStudio**:
 
 ```{r, message=FALSE, results='hide'}
-rm(list = ls())  # Clear the workspace!
-ls() ## no objects left in the workspace
+rm(list = ls()) # Clear the workspace!
+ls() # No objects left in the workspace
 ```
 
 A good way to start most R scripts
@@ -77,60 +77,60 @@ You now have requested the class attribute of $a$ and the console has returned t
 
 Let's do some basic set up first.
 
-- Create a folder which will be your working directory e.g. Lesson1
+- Create a folder which will be your working directory e.g. `Lesson1`
 - Create an R script within that folder
-- Set your working directory to the Lesson1 folder
-- Create a $data$ folder within your working directory
+- Set your working directory to the `Lesson1` folder
+- Create a `data` folder within your working directory
 
-In the code block below type in the file path to where your data is being held and then (if you want) use the setwd() (set working directory) command to give R a default location to look for data files.
+In the code block below type in the file path to where your data is being held and then (if you want) use the `setwd()` (set working directory) command to give *R* a default location to look for data files.
 
 ```{r, eval=FALSE}
 setwd("yourworkingdirectory")
-# This sets the working directory (where R looks for files)
+## This sets the working directory (where R looks for files)
 getwd() # Double check your working directory
-datdir <- file.path("data") ## path
+datdir <- file.path("data") # Path
 ```
 
-# Basic R knowledge useful for Geo-Scripting
-Scripting with R to handle spatial problems requires a core set of basic R skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
+# Basic *R* knowledge useful for Geo-Scripting
+Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
 
 ## Vector handling and vector arithmetic
-You'll be introduced in a following lesson with the raster package and the raster classes that have been developed as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
+You'll be introduced in a following lesson with the *raster* package and the raster classes that have been developed as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
 
-**In `R` we call a collection of numbers a vector.** 
+**In *R* we call a collection of numbers a vector.** 
 
-As a consequence, handling vectors is a crucial skill for processing raster data in R.
+As a consequence, handling vectors is a crucial skill for processing raster data in *R*.
 
 Reference manual for vector handling and vector arithmetic can be found [here](http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors).
 
 ```{r}
-# Create a vector
+## Create a vector
 a <- c(3,6,8,1)
 a
 
-# Any mathematical operation can be performed on vectors
+## Any mathematical operation can be performed on vectors
 (b <- a * 2)
 (d <- a + 6)
 
-# Two vectors of same length can also be added with each other
+## Two vectors of same length can also be added with each other
 (e <- a + b)
 ```
 
-Value replacement
+### Value replacement
 
 ```{r}
-# Values in a vector that satisfy a certain condition can be replaced by other values
+## Values in a vector that satisfy a certain condition can be replaced by other values
 a <- c(2,5,2,5,6,9,2,12)
 
-# Values inferior or equal to 5 are replaced by 0
+## Values inferior or equal to 5 are replaced by 0
 a[a <= 5] <- 0
 a
 
-# Condition can be defined using another vector of equal length
+## Condition can be defined using another vector of equal length
 a <- c(2,5,2,5,6,9,2,12)
 b <- c(1,1,0,1,0,0,1,0)
 
-# Change the values of a based on b values
+## Change the values of a based on b values
 a[b == 0] <- NA
 a
 ```
@@ -140,51 +140,52 @@ More complex value replacement:
 ```{r}
 a <- c(2,5,2,5,6,9,2,12)
 b <- c(1,1,2,1,0,0,1,2)
-# a values at which b is equal to either 0 or 1 are replaced by NA
+## a values at which b is equal to either 0 or 1 are replaced by NA
 a[b %in% c(0,1)] <- NA
 a
 ```
 
 **Question:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
-(just note down these questions as they will be discussed during the discussion session at 1330 today)
+(Just note down these questions as they will be discussed during the discussion session at 13:30 today.)
 
 ## Character vector handling
 
-When working with *real* data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
+When working with real data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
 
 Key functions for handling character strings are listed below:
 
-* `list.files()`: to list files in a directory
-* `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a filename
-* `strsplit()`: to split up a string
-
-<!---
-* Loïc - I did not add this yet - as it requires just a touch more of an explanation - looking for a simple example linked with an application.
-* `glob2rx()`:  Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
--->
+* `list.files()`: to list files in a directory.
+* `glob2rx()`: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
+* `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a filename.
+* `strsplit()`: to split up a string.
 
 ### Example of `list.files()`
 
 ```{r, eval=FALSE}
-getwd() ## check your working directory
-list.files() ## list the files available in this directory
+getwd() # check your working directory
+list.files() # list the files available in this directory
 ```
 
-**Question**: List the directories in your working directory
+**Question**: List the directories in your working directory.
 
-### Example of `paste()`
+### Example of `glob2rx()`
+
+```{r, eval=FALSE}
+## List all .txt files in working directory
+list.files(getwd(), pattern = glob2rx("*.txt"))
+```
+
+### Example of `paste()` and `paste0()`
 
 ```{r}
 ## two handy examples
 paste("Today is", date())
-paste("A", 1:6, sep = "")
+paste0("A", 1:6)
 ```
 
-**Question**: create one variable containing a sentence, based on a, b, or c:
+**Question**: Create one variable containing a sentence `"geo-scripting is fun"`, by combining `a`, `b`, and `c`:
 
 ```{r, eval=FALSE}
-
-"geo-scripting is fun" # by combining a, b, an c
 a <- "geo-scripting"
 b <- "is"
 c <- "fun"
@@ -219,22 +220,21 @@ See also `?substr`, this can be handy too.
 
 In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).
 
-Here, an example is given how you can read (import in R) and write a text file (i.e. export from R).
+Here, an example is given how you can read (import into *R*) and write a text file (i.e. export from *R*).
 
 The most common way to read in spread sheet tables is with the `read.csv()` command.
 However you can read in virtually any type of text file. Type `?read.table` in your console for some other examples.
 
 ```{r, eval=TRUE}
-# getwd() ## check your working directory
-test <- c(1:5, "6,7", "8,9,10")
-print(test)
-write.csv(test, file = "testing.csv") ## write to your working directory
-rm(test) ## we remove test from the R working environment
-ls() ## check the objective in the working environment
-read.csv("testing.csv") ## read from your working directory
+# getwd() ## Check your working directory
+(test <- c(1:5, "6,7", "8,9,10"))
+write.csv(test, file = "testing.csv") # Write to your working directory
+rm(test) # Remove the variable "test" from the R working environment
+ls() # Check the objective in the working environment
+(test = read.csv("testing.csv")) # Read from your working directory
 ```
 
-**Question**: Do you know how to read an excel file into R? 
+**Question**: Do you know how to read an *Excel* file into *R*? 
 What are the different options? How can you find help?
 
 ## Writing a function
@@ -242,14 +242,14 @@ What are the different options? How can you find help?
 It is hard to unleash the full potential of R without writing your own functions. Luckily it's very easy to do. Here are some trivial examples:
 
 ```{r}
-# put the function arguments in () and the evaluation in {}
+## Put the function arguments in () and the evaluation in {}
 add <- function(x){
   x + 1
 }
 add(4)
 ```
 
-Set the default values for your function
+Set the default argument values for your function:
 
 ```{r}
 add <- function(x = 5) {
@@ -262,7 +262,7 @@ add(6)
 
 That's about all there is to it. The function will generally return the result of the last line that was evaluated.
 
-**Question**: How do you write a function that returns x and z?
+**Question**: How do you write a function that returns `x` and `z`?
 
 Now, let's declare a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
 
@@ -281,9 +281,9 @@ Next, a new object `a2b` is created which contains the result of applying `newfu
 rm(a, newfunc, a2b)
 ```
 
-## Creating a map within R - a simple demo
+## Creating a map within *R* - a simple demo
 
-Here is an example of how you can create a map in R. It is a function to get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
+Here is an example of how you can create a map in *R*. It is a function to get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
 
 
 ```{r, message=FALSE}
@@ -292,11 +292,11 @@ library(raster)
 ?raster::getData
 ```
 
-Read the help to find out how we can find the country codes?
+Read the help to find out how we can find the country codes.
 
 **Question**: What is the country code of Belgium?
 
-More info about the datasets see [Global Adminstrative Areas Data base (GADM)](http://www.gadm.org)).
+More info about the datasets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
 
 ```{r, eval=FALSE}
 raster::getData("ISO3")
@@ -342,21 +342,21 @@ Coordinate System: WGS 1984\n
 Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 ```
 
-# Excercise lesson 1
+# Lesson 1 excercise
 
 **Write your own function to create a map**. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
 
-- define a function
-- demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example)
-- keep it simple (!) e.g. just plot the adminstrative boundaries
-- The function should accept `country` and `level` as input arguments 
+- Define a function.
+- Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).
+- Keep it simple (!) e.g. just plot the adminstrative boundaries.
+- The function should accept `country` and `level` as input arguments.
 - Optional (for a bonus): Getting the administrative labels and legend correct.
 - Use the script review center to submit your "documented script" in time (see instructions via blackboard), 
-make sure you review at least one script of the other team
+make sure you review at least one script of the other team.
 
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
-# Date: December 2014
+# Date: 10 January 2017
 
 # Import packages
 library(raster)
@@ -368,17 +368,17 @@ library(raster)
 ```
 
 - Tips: 
-    - Do not use any "paths" e.g. 'mydocument/John/blabla' specific for your computer. In this excercise you should not need any paths
-    - do not set the working directory (see above i.e. also specific to your computer)
-    - Use the script template above
+    - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. In this excercise you should not need any paths.
+    - Do not set the working directory (see above i.e. also specific to your computer).
+    - Use the script template above.
 
-## Assessment - and evaluation criteria for the excercise
+## Assessment and evaluation criteria for the excercise
 
-It needs to work (yes/no), when we test your script on our computer within R.
+It needs to work (yes/no) when we test your script on our computer within R.
 
 # References and more info
 
-- [Rstudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
+- [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 - https://www.coursera.org/course/rprog
 
 <!--
