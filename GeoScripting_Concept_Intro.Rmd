@@ -188,7 +188,7 @@ if (!file.exists(fn <- "figs/worldcloudRpackage.png")) {
 
 A very simple example using the Python Rpy2 module:
 
-```{r, engine='python', eval = TRUE}
+```{r, engine='python', eval = FALSE}
 import rpy2.robjects as robjects
 pi = robjects.r['pi']
 print(pi[0])
