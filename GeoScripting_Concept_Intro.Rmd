@@ -4,7 +4,7 @@ author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   ioslides_presentation:
-    footer: "Geo-scripting 2016"
+    footer: "Geo-scripting 2017"
 ---
 
 ## Did you know?!
@@ -14,13 +14,13 @@ Scripting can be used to process satellite data easily to monitor deforestation 
 - Google Earth Engine for global deforestation monitoring
       - https://earthengine.google.org/#intro
 
-![forestloss](figs/forest-cover-global.png)
+![](figs/forest-cover-global.png)
 
 Image Credit: NASA Goddard, based on data from Hansen et al., 2013.
 
 ## Why geo-scripting?
 
-![Coolprogramming](figs/solve-cool-problems.png)
+![](figs/solve-cool-problems.png)
 
 ## Why geo-scripting?
 
@@ -37,13 +37,13 @@ Can you think of other advantages?
 -  Enable collaboration
     - a huge social R and Python community
     
-![Facebook`](figs/facebook.png)
+![](figs/facebook.png)
 
 ## Why geo-scripting?
 
 - Build your own tools and functions (e.g. automated webprocessing, etc.)
 
-![CoolprogrammingwithPython](figs/16199604.jpg)
+![](figs/16199604.jpg)
 
 [See Lesson 2 demo's!](https://geoscripting-wur.github.io/Scripting4Geo/#why-scripting)
 
@@ -142,7 +142,7 @@ grid.raster(img)
 - Syntactic differences between R and Python can be confusing  
 - There are many R and Python packages for spatial analyses
 
-![R_PythonSymbol](figs/RPythonS.png)
+![](figs/RPythonS.png)
 
 ## R packages
 
