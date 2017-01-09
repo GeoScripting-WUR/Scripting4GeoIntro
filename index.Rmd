@@ -145,7 +145,7 @@ a[b %in% c(0,1)] <- NA
 a
 ```
 
-**Question:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
+**Question 1:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
 (Just note down these questions as they will be discussed during the discussion session at 13:30 today.)
 
 ## Character vector handling
@@ -166,7 +166,7 @@ getwd() # check your working directory
 list.files() # list the files available in this directory
 ```
 
-**Question**: List the directories in your working directory.
+**Question 2**: List the directories in your working directory.
 
 ### Example of `glob2rx()`
 
@@ -183,7 +183,7 @@ paste("Today is", date())
 paste0("A", 1:6)
 ```
 
-**Question**: Create one variable containing a sentence `"geo-scripting is fun"`, by combining `a`, `b`, and `c`:
+**Question 3**: Create one variable containing a sentence `"geo-scripting is fun"`, by combining `a`, `b`, and `c`:
 
 ```{r, eval=FALSE}
 a <- "geo-scripting"
@@ -212,7 +212,7 @@ class(date0)
 class(date)
 ```
 
-**Question**: How do we select friday from the `name` variable?
+**Question 4**: How do we select friday from the `name` variable?
 
 See also `?substr`, this can be handy too.
 
@@ -234,7 +234,7 @@ ls() # Check the objective in the working environment
 (test = read.csv("testing.csv")) # Read from your working directory
 ```
 
-**Question**: Do you know how to read an *Excel* file into *R*? 
+**Question 5**: Do you know how to read an *Excel* file into *R*? 
 What are the different options? How can you find help?
 
 ## Writing a function
@@ -262,7 +262,7 @@ add(6)
 
 That's about all there is to it. The function will generally return the result of the last line that was evaluated.
 
-**Question**: How do you write a function that returns `x` and `z`?
+**Question 6**: How do you write a function that returns `x` and `z`?
 
 Now, let's declare a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
 
@@ -294,7 +294,7 @@ library(raster)
 
 Read the help to find out how we can find the country codes.
 
-**Question**: What is the country code of Belgium?
+**Question 7**: What is the country code of Belgium?
 
 More info about the datasets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
 
