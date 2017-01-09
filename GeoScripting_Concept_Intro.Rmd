@@ -77,7 +77,7 @@ See blackboard (planning, Q&A forum, teams)
     - select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard - teams)
     - select also which team will review your exercise
 
-- Other teams will be selected for the project work
+- Other teams can be selected for the project work
 
 <div class="centered">
 ![](figs/teamwork.jpeg)
@@ -93,6 +93,13 @@ See blackboard (planning, Q&A forum, teams)
 http://www.geo-informatie.nl/courses/grs33806/question2answer/index.php
 
 See the forum and try to answer a question now and login, otherwise your question will be anonymous
+
+## Individual assessment
+
+- Question and answer forum
+- DataCamp website: challenges
+- Script reviewing can be done on an individual basis, via script review center (bonus)
+- Feedback on course content via Github
 
 ## Learning outcomes of today:
 
