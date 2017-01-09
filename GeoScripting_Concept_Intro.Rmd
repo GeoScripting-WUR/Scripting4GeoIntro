@@ -52,6 +52,8 @@ Can you think of other advantages?
 - Read, write, and visualise spatial data using a script
 - Find & use libraries, functions for geo-data handling
 - Know how to find help
+    - Write a clear and reproducible script
+    - Learn how to help each other
 - Apply learned concepts for your own geo-challenge 
 
 ## The geo-scripting course
@@ -61,7 +63,7 @@ Goal: Scripting to solve spatial challenges!
 * A team of `R` & `Python` experts who use geo-scripting languages 
 every day helped to develop this course
 
-* Experts from compagnies, research insitute (Alterra, ISRIC) and 
+* Experts from companies, research institute (Alterra, ISRIC) and 
 our own RS and GIS group will present 
 
 ## Course planning
@@ -97,7 +99,7 @@ See the forum and try to answer a question now and login, otherwise your questio
 - Refreshing R skills and assessing scripting skills to see if you have the 
 necessary scripting skills to continue with the course
 - Able to write a function
-- Know how to visualise data (spatial map) in R
+- Know how to visualize data (spatial map) in R
 
 *Socrative Quiz at the end of this presentation!*
 
@@ -194,7 +196,7 @@ pi = robjects.r['pi']
 print(pi[0])
 ```
 
-![RPython](figs/RPython.jpeg)
+![](figs/RPython.jpeg)
 
 ## Many programs have support for
 
@@ -209,18 +211,16 @@ Room: GEOSCRIPTING
 
 Quiz: Geo-scripting intro
 
-
-## Time for R action!
-
-- Let's have a look at the questions in lesson 1!
-- The excercise of today
-
 ## Tomorrow morning
 
 - Finalise the lesson 1 and the excercise
 - Look at Lesson 2
     - an overview of what is possible with scripting
-    - no need to understand the code (lesson 2 is a demonstration lesson!)
+    - no need to understand the code: lesson 2 is a demonstration lesson!
 
 [See Lesson 2 demo's!](https://geoscripting-wur.github.io/Scripting4Geo/#why-scripting)
 
+## Time for R action!
+
+- Let's have a look at the questions in lesson 1!
+- The excercise of today
