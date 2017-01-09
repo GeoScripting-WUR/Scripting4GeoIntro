@@ -98,8 +98,10 @@ See the forum and try to answer a question now and login, otherwise your questio
 
 - Question and answer forum
 - DataCamp website: challenges
-- Script reviewing can be done on an individual basis, via script review center (bonus)
-- Feedback on course content via Github
+    - Free access to all courses
+    - Which course would you like to have as a challenge?
+- Script reviewing can be done on an individual basis, via script review center (bonus points)
+- Feedback on course content via Github (bonus points)
 
 ## Learning outcomes of today:
 
