@@ -870,7 +870,15 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 <div class="row row-offcanvas row-offcanvas-right">
 <div class="contents col-xs-12 col-md-10">
 <h1 id="wur-geo-scripting-wur-logo"><a href="https://geoscripting-wur.github.io/">WUR Geo-scripting</a> <img src="http://www.wageningenur.nl/upload/f9a0b5f2-15c5-4b84-9e14-20ef02f5e265_wur-logo.png" alt="WUR logo" /></h1>
-<h1 id="today">Today</h1>
+<h1 id="week-1-lesson-1-introduction-to-the-geo-scripting">Week 1, Lesson 1: Introduction to the geo-scripting</h1>
+<p><a href="http://www.wur.eu/changemonitor">Jan Verbesselt</a></p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">format(Sys.time(), '%d %B, %Y')</code></pre>
+<p>[1] &quot;19 July, 2017&quot;</p>
+</div>
 <p>Good morning! Here is what you will do today:</p>
 <table style="width:39%;">
 <colgroup>
@@ -879,33 +887,33 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Time</th>
-<th align="left">Activity</th>
+<th>Time</th>
+<th>Activity</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Morning</td>
-<td align="left">Self-study: go through the tutorial below and answer the questions mentioned in <strong>bold</strong> within the self-study section via a questionnaire available in our Blackboard page.</td>
+<td>Morning</td>
+<td>Self-study: go through the tutorial below and answer the questions mentioned in <strong>bold</strong> within the self-study section via a questionnaire available in our Blackboard page.</td>
 </tr>
 <tr class="even">
-<td align="left">13:30 to 14:30</td>
-<td align="left">Course introduction, planning and teams selection (PC0095, second floor, GAIA):</td>
+<td>13:30 to 14:30</td>
+<td>Course introduction, planning and teams selection (PC0095, second floor, GAIA):</td>
 </tr>
 <tr class="odd">
-<td align="left">Rest of the afternoon</td>
-<td align="left">Do/finalise the exercise.</td>
+<td>Rest of the afternoon</td>
+<td>Do/finalise the exercise.</td>
 </tr>
 </tbody>
 </table>
-<p><img src="figs/champ.jpg" alt="" /></p>
+<p><img src="figs/champ.jpg" /></p>
 <h2 id="to-do-in-the-morning-self-study"><em>To Do</em> in the morning: self-study</h2>
-<p>You need to complete before 12 on 9/01/2017:</p>
+<p>You need to complete before 13u today:</p>
 <ul>
 <li>See information provided via blackboard in the section course description: lesson 1!</li>
 </ul>
 <p>In the morning you can work from home or can come to the PC0095 and PC0094 rooms in GAIA. You need to have <em>RStudio Desktop</em> (Free) and <em>R</em> (Free) installed (already available in the PC lab). For more information about <em>R</em> and <em>RStudio</em> installation: see <a href="http://geoscripting-wur.github.io/system_setup/">Geo-scripting system set-up</a></p>
-<p>If you have questions you can use the <a href="http://www.geo-informatie.nl/courses/grs33806/question2answer/">Question and Answer Website of the Geo-scripting course</a>. <strong>Try to ask or answer a question today.</strong> We will explain how this can be used during this course at 13:30 today in PC0095.</p>
+<p>If you have questions you can use the <a href="http://www.geo-informatie.nl/courses/grs33806/question2answer/">Question and Answer Website of the Geo-scripting course</a>. <strong>Try to ask or answer a question today.</strong> We will explain how this can be used during this course at 13:30 today.</p>
 <h2 id="objective-and-learning-outcomes-of-today">Objective and Learning outcomes of today:</h2>
 <ul>
 <li>Refreshing R skills and assessing scripting skills to see if you have the necessary scripting skills to continue with the course</li>
@@ -1066,7 +1074,7 @@ a</code></pre>
 <pre style=""><code class="output r">## [1] NA NA  2 NA NA NA NA 12
 </code></pre>
 </div>
-<p><strong>Question:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12? (Just note down these questions as they will be discussed during the discussion session at 13:30 today.)</p>
+<p><strong>Question 1:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12? (Just note down these questions as they will be discussed during the discussion session at 13:30 today.)</p>
 <h2 id="character-vector-handling">Character vector handling</h2>
 <p>When working with real data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
 <p>Key functions for handling character strings are listed below:</p>
@@ -1084,7 +1092,7 @@ a</code></pre>
 <pre style=""><code class="source r">getwd() # check your working directory
 list.files() # list the files available in this directory</code></pre>
 </div>
-<p><strong>Question</strong>: List the directories in your working directory.</p>
+<p><strong>Question 2</strong>: List the directories in your working directory.</p>
 <h3 id="example-of-glob2rx">Example of <code>glob2rx()</code></h3>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1103,7 +1111,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Sat Jan  7 06:01:16 2017"
+<pre style=""><code class="output r">## [1] "Today is Wed Jul 19 10:29:11 2017"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1115,7 +1123,7 @@ paste("Today is", date())</code></pre>
 <pre style=""><code class="output r">## [1] "A1" "A2" "A3" "A4" "A5" "A6"
 </code></pre>
 </div>
-<p><strong>Question</strong>: Create one variable containing a sentence <code>&quot;geo-scripting is fun&quot;</code>, by combining <code>a</code>, <code>b</code>, and <code>c</code>:</p>
+<p><strong>Question 3</strong>: Create one variable containing a sentence <code>&quot;geo-scripting is fun&quot;</code>, by combining <code>a</code>, <code>b</code>, and <code>c</code>:</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1164,7 +1172,7 @@ class(date0)</code></pre>
 <pre style=""><code class="output r">## [1] "Date"
 </code></pre>
 </div>
-<p><strong>Question</strong>: How do we select friday from the <code>name</code> variable?</p>
+<p><strong>Question 4</strong>: How do we select friday from the <code>name</code> variable?</p>
 <p>See also <code>?substr</code>, this can be handy too.</p>
 <h2 id="reading-and-writing-data">Reading and writing data</h2>
 <p>In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).</p>
@@ -1209,7 +1217,7 @@ ls() # Check the objective in the working environment</code></pre>
 ## 7 7 8,9,10
 </code></pre>
 </div>
-<p><strong>Question</strong>: Do you know how to read an <em>Excel</em> file into <em>R</em>? What are the different options? How can you find help?</p>
+<p><strong>Question 5</strong>: Do you know how to read an <em>Excel</em> file into <em>R</em>? What are the different options? How can you find help?</p>
 <h2 id="writing-a-function">Writing a function</h2>
 <p>It is hard to unleash the full potential of R without writing your own functions. Luckily it's very easy to do. Here are some trivial examples:</p>
 <div class="row">
@@ -1253,7 +1261,7 @@ add()</code></pre>
 </code></pre>
 </div>
 <p>That's about all there is to it. The function will generally return the result of the last line that was evaluated.</p>
-<p><strong>Question</strong>: How do you write a function that returns <code>x</code> and <code>z</code>?</p>
+<p><strong>Question 6</strong>: How do you write a function that returns <code>x</code> and <code>z</code>?</p>
 <p>Now, let's declare a new object, a new function, <code>newfunc</code> (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1289,7 +1297,7 @@ a2b</code></pre>
 ?raster::getData</code></pre>
 </div>
 <p>Read the help to find out how we can find the country codes.</p>
-<p><strong>Question</strong>: What is the country code of Belgium?</p>
+<p><strong>Question 7</strong>: What is the country code of Belgium?</p>
 <p>More info about the datasets see <a href="http://www.gadm.org">Global Adminstrative Areas database (GADM)</a>.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1426,7 +1434,7 @@ Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap
 </p>
 </div>
 </div>
-<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" media="screen"></link>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/simplex/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-bright.min.css" media="screen"></link>
 </div>
 </body>
 </html>

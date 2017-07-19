@@ -4,13 +4,22 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   knitrBootstrap::bootstrap_document:
     title: "Week 1, Lesson 1: Introduction to the geo-scripting course"
-    theme: cosmo
+    theme: "simplex"
+    highlight: Tomorrow Night Bright
     menu: FALSE
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
 ---
 
 # [WUR Geo-scripting](https://geoscripting-wur.github.io/) ![WUR logo](http://www.wageningenur.nl/upload/f9a0b5f2-15c5-4b84-9e14-20ef02f5e265_wur-logo.png)
 
-# Today
+# Week 1, Lesson 1: Introduction to the geo-scripting 
+[Jan Verbesselt](http://www.wur.eu/changemonitor)
+
+```{r, eval=TRUE, echo=TRUE, include=TRUE, results='asis'}
+format(Sys.time(), '%d %B, %Y')
+```
+
 Good morning!  Here is what you will do today:
 
 Time  | Activity
@@ -23,14 +32,14 @@ Rest of the afternoon | Do/finalise the exercise.
  
 ## *To Do* in the morning: self-study
 
-You need to complete before 12 on 9/01/2017:
+You need to complete before 13u today:
 
 - See information provided via blackboard in the section course description: lesson 1!
 
 In the morning you can work from home or can come to the PC0095 and PC0094 rooms in GAIA. You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
 If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
-**Try to ask or answer a question today.** We will explain how this can be used during this course at 13:30 today in PC0095.
+**Try to ask or answer a question today.** We will explain how this can be used during this course at 13:30 today.
 
 ## Objective and Learning outcomes of today:
 
