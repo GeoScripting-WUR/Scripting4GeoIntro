@@ -364,7 +364,7 @@ make sure you review at least one script of the other team.
 
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
-# Date: 10 January 2017
+# Date: 8 January 2018
 
 # Import packages
 library(raster)
