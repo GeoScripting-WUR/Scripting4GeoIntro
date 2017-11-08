@@ -11,7 +11,7 @@ output:
     highlight.chooser: TRUE
 ---
 
-# [WUR Geo-scripting](https://geoscripting-wur.github.io/) ![WUR logo](http://www.wageningenur.nl/upload/f9a0b5f2-15c5-4b84-9e14-20ef02f5e265_wur-logo.png)
+# [WUR Geoscripting](https://geoscripting-wur.github.io/) <img src="http://www.wur.nl/upload/b43b7095-e452-482a-8969-fed9a50393a8_WUR_RGB_standard.png" alt="WUR logo" style="height: 35px;"/>
 
 # Week 1, Lesson 1: Introduction to the geo-scripting 
 
@@ -19,12 +19,12 @@ output:
 format(Sys.time(), '%d %B, %Y')
 ```
 
-Good morning!  Here is what you will do today:
+Good morning! Here is what you will do today:
 
 Time  | Activity
 ------------- | -------------
 Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section via a questionnaire available in our Blackboard page.
-13:30 to 14:30  | Course introduction, planning and teams selection (PC0095, second floor, GAIA):
+13:30 to 14:30  | Course introduction, planning and teams selection (C3020, ORION):
 Rest of the afternoon | Do/finalise the exercise.
 
  ![](figs/champ.jpg)
@@ -35,7 +35,7 @@ You need to complete before 13h today:
 
 - See information provided via blackboard in the section course description: lesson 1!
 
-In the morning you can work from home or can come to the PC0095 and PC0094 rooms in GAIA. You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+In the morning you can work from home or can come to the PC8020 and PC8045 rooms in ORION. You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
 
 If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
 **Try to ask or answer a question today.** We will explain how this can be used during this course at 13:30 today.
@@ -50,7 +50,7 @@ necessary scripting skills to continue with the course
 # Basic *R* and *RStudio* setup {#gettingstarted}
 
 This preliminary section will cover some basic details about *R*. For this course we will use Rstudio to write and run scripts.
-In case you are working on your own computer and would like to know how to install *R* and *RStudio*: https://geoscripting-wur.github.io/system_setup/
+In case you are working on your own computer and would like to know how to install *R* and *RStudio*: [https://geoscripting-wur.github.io/system_setup/](https://geoscripting-wur.github.io/system_setup/).
 
 ## Getting started with *RStudio* and *R* on your own computer.
 
@@ -350,7 +350,7 @@ Coordinate System: WGS 1984\n
 Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 ```
 
-# Lesson 1 excercise
+# Lesson 1 exercise
 
 **Write your own function to create a map**. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
 
@@ -359,8 +359,8 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - Keep it simple (!) e.g. just plot the adminstrative boundaries.
 - The function should accept `country` and `level` as input arguments.
 - Optional (for a bonus): Getting the administrative labels and legend correct.
-- Use the script review center to submit your "documented script" in time (see instructions via blackboard), 
-make sure you review at least one script of the other team.
+- Use the script review center to submit your "documented script" in time before 17.15.
+- Tomorrow your team has to review one script of the other team before 11:00.
 
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
@@ -387,7 +387,7 @@ It needs to work (yes/no) when we test your script on our computer within R.
 # References and more info
 
 - [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
-- https://www.coursera.org/course/rprog
+- [Coursera](https://www.coursera.org/course/rprog)
 
 <!--
 ## Dataframe manipulation
