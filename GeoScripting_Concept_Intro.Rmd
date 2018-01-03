@@ -4,7 +4,7 @@ author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   ioslides_presentation:
-    footer: "Geo-scripting 2017"
+    footer: "Geo-scripting 2018"
 ---
 
 ## Did you know?!
@@ -66,9 +66,11 @@ every day helped to develop this course
 * Experts from companies, research institute (Alterra, ISRIC) and 
 our own RS and GIS group will present 
 
-## Course planning
+## Course concept
 
-See blackboard (planning, Q&A forum, teams)
+Flipped Classroom concept!
+![](figs/flipping-the-classroom.jpg)
+
 
 ## Team work & helping each other
 
@@ -93,6 +95,10 @@ See blackboard (planning, Q&A forum, teams)
 http://www.geo-informatie.nl/courses/grs33806/question2answer/index.php
 
 See the forum and try to answer a question now and login, otherwise your question will be anonymous
+
+## Scoring
+
+See https://goo.gl/3szHDt Course Guide (google docs)
 
 ## Individual assessment
 
@@ -200,7 +206,7 @@ if (!file.exists(fn <- "figs/worldcloudRpackage.png")) {
 
 A very simple example using the Python Rpy2 module:
 
-```{r, engine='python', eval = FALSE}
+```{r,eval=FALSE}
 import rpy2.robjects as robjects
 pi = robjects.r['pi']
 print(pi[0])
