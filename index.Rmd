@@ -359,7 +359,7 @@ Data Source: GADM.org", adj = c(0, 0), cex = 0.7, col = "grey20")
 - Keep it simple (!) e.g. just plot the adminstrative boundaries.
 - The function should accept `country` and `level` as input arguments.
 - Optional (for a bonus): Getting the administrative labels and legend correct.
-- Use the script review center to submit your "documented script" in time before 17.15.
+- Use the script review center in BlackBoard to submit your "documented script" in time before 17.15. See description in BlackBoard - follow the file naming precisely.
 - Tomorrow your team has to review one script of the other team before 11:00.
 
 ```{r, eval=FALSE}
