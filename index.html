@@ -1114,7 +1114,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Mon Jan  8 10:15:10 2018"
+<pre style=""><code class="output r">## [1] "Today is Mon Jan  8 14:54:47 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1338,9 +1338,9 @@ plot(adm[adm$NAME_1 == "Tarlac",])</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r">mar <- adm[adm$NAME_1 == "Marinduque",]
-plot(mar, bg = "dodgerblue", axes=T)
-plot(mar, lwd = 10, border = "skyblue", add=T)
-plot(mar, col = "green4", add = T)
+plot(mar, bg = "dodgerblue", axes=TRUE)
+plot(mar, lwd = 10, border = "skyblue", add=TRUE)
+plot(mar, col = "green4", add = TRUE)
 grid()
 box()
 invisible(text(getSpPPolygonsLabptSlots(mar),

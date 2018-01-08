@@ -335,9 +335,9 @@ Try to understand the code below, and let me know if you have questions. Feel fr
 
 ```{r phil, eval=TRUE, fig.align='center'}
 mar <- adm[adm$NAME_1 == "Marinduque",]
-plot(mar, bg = "dodgerblue", axes=T)
-plot(mar, lwd = 10, border = "skyblue", add=T)
-plot(mar, col = "green4", add = T)
+plot(mar, bg = "dodgerblue", axes=TRUE)
+plot(mar, lwd = 10, border = "skyblue", add=TRUE)
+plot(mar, col = "green4", add = TRUE)
 grid()
 box()
 invisible(text(getSpPPolygonsLabptSlots(mar),
