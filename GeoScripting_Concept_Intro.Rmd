@@ -69,6 +69,7 @@ our own RS and GIS group will present
 ## Course concept
 
 Flipped Classroom concept!
+
 ![](figs/flipping-the-classroom.jpg)
 
 
@@ -77,7 +78,6 @@ Flipped Classroom concept!
 - Teams of two:
 
     - select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard - teams)
-    - select also which team will review your exercise
 
 - Other teams can be selected for the project work
 
@@ -88,7 +88,6 @@ Flipped Classroom concept!
 ## Team work & helping each other
 
 - The Question and Answer forum (see blackboard):
-    - Try to obtain the highest score (overall score, best question, best answer)
     - Ask at least one good question
     - Answer at least one question
 
@@ -98,7 +97,11 @@ See the forum and try to answer a question now and login, otherwise your questio
 
 ## Scoring
 
-See https://goo.gl/3szHDt Course Guide (google docs)
+- All excercises - 30%
+- Questions & Answers forum - 10%
+- Project - 60%
+
+Details: https://goo.gl/3szHDt Course Guide (google docs)
 
 ## Individual assessment
 
@@ -122,7 +125,6 @@ necessary scripting skills to continue with the course
 ## The geo-scripting course
 
 - How did the **DataCamp Introduction to R** go?
-- Questionnaire on the self-study
     
 ## What  is a scripting language?
 
