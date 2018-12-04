@@ -21,24 +21,24 @@ format(Sys.time(), '%d %B, %Y')
 
 Good morning! Here is what you will do today:
 
-Time  | Activity
-------------- | -------------
-Morning  |  Self-study: go through the tutorial below and answer the questions mentioned in **bold** within the self-study section.
-13:30 to 14:30  | Course introduction, planning and teams selection (C3020, ORION):
-Rest of the afternoon | Do/finalise the exercise.
-
- ![](figs/champ.jpg)
+- Morning: 
+    - **Self-study** (working at home/or PC's at WUR) go through the tutorial below 
+    - answer the questions mentioned in **bold** within the self-study section.
+- 14u: 
+    - Course introduction [rooms](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806)
+    - planning and teams selection for geo-scripting
+    - Excercise with submission deadline today.
  
 ## *To Do* in the morning: self-study
 
 You need to complete before 13h today:
 
-- See information provided via blackboard in the section course description: lesson 1!
+- See information provided via blackboard in the section course description: lesson 1! 
+You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). 
+- For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+- If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
+**Try to ask or answer a question today.** We will explain how this can be used today.
 
-In the morning you can work from home or can come to the PC8020 and PC8045 rooms in ORION. You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
-
-If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
-**Try to ask or answer a question today.** We will explain how this can be used during this course at 13:30 today.
 
 ## Objective and Learning outcomes of today:
 
