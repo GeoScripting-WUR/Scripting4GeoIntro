@@ -4,8 +4,14 @@ author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   ioslides_presentation:
-    footer: "Geo-scripting 2018"
+    footer: "Geo-scripting 2019"
 ---
+
+<!--
+add explanation on evaluation criteria - rubrics - evaluation and feedback system
+add explanation on "reproducible example"
+add explanation on test exam
+-->
 
 ## Did you know?!
 
