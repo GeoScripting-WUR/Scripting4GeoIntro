@@ -246,5 +246,6 @@ Quiz: Geo-scripting intro
 
 ## Time for R action!
 
-- Let's have a look at the questions in lesson 1!
 - The excercise of today
+- What is reproducibility!?
+https://gist.github.com/hadley/270442
