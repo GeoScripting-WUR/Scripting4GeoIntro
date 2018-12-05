@@ -876,7 +876,7 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r">format(Sys.time(), '%d %B, %Y')</code></pre>
-<p>[1] &quot;04 December, 2018&quot;</p>
+<p>[1] &quot;05 December, 2018&quot;</p>
 </div>
 <p>Good morning! Here is what you will do today:</p>
 <ul>
@@ -887,7 +887,7 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 </ul></li>
 <li>14u:
 <ul>
-<li>Course introduction <a href="https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806">rooms</a></li>
+<li>Course introduction (<a href="https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806">location of the PC lab</a>)</li>
 <li>planning and teams selection for geo-scripting</li>
 <li>Excercise with submission deadline today.</li>
 </ul></li>
@@ -895,9 +895,9 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 <h2 id="to-do-in-the-morning-self-study"><em>To Do</em> in the morning: self-study</h2>
 <p>You need to complete before 13h today:</p>
 <ul>
-<li>See information provided via blackboard in the section course description: lesson 1! You need to have <em>RStudio Desktop</em> (Free) and <em>R</em> (Free) installed (already available in the PC lab).</li>
-<li>For more information about <em>R</em> and <em>RStudio</em> installation: see <a href="http://geoscripting-wur.github.io/system_setup/">Geo-scripting system set-up</a></li>
-<li>If you have questions you can use the <a href="http://www.geo-informatie.nl/courses/grs33806/question2answer/">Question and Answer Website of the Geo-scripting course</a>. <strong>Try to ask or answer a question today.</strong> We will explain how this can be used today.</li>
+<li><p>See information provided via blackboard in the section course description: lesson 1! You need to have <em>RStudio Desktop</em> (Free) and <em>R</em> (Free) installed on your personal computer. Or work from a Wageningen University PC where this should normally be available.</p></li>
+<li><p>For more information about <em>R</em> and <em>RStudio</em> installation: see <a href="http://geoscripting-wur.github.io/system_setup/">Geo-scripting system set-up</a></p></li>
+<li><p>If you have questions you can use the <a href="http://www.geo-informatie.nl/courses/grs33806/question2answer/">Question and Answer Website of the Geo-scripting course</a>. <strong>Try to ask or answer a question today.</strong> We will explain how this can be used today.</p></li>
 </ul>
 <h2 id="objective-and-learning-outcomes-of-today">Objective and Learning outcomes of today:</h2>
 <ul>
@@ -1060,7 +1060,7 @@ a</code></pre>
 </code></pre>
 </div>
 <blockquote>
-<p><strong>Question 1:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12? (Just note down these questions as they will be discussed during the discussion session at 13:30 today.)</p>
+<p><strong>Question 1:</strong> How do I replace values in <code>b</code> by 3 at which <code>a</code> is 6, 9 and 12?</p>
 </blockquote>
 <h2 id="character-vector-handling">Character vector handling</h2>
 <p>When working with real data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic <strong>string</strong> handling skills.</p>
@@ -1100,7 +1100,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Tue Dec  4 10:13:58 2018"
+<pre style=""><code class="output r">## [1] "Today is Wed Dec  5 14:59:09 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1299,10 +1299,7 @@ a2b</code></pre>
 </blockquote>
 <p>More info about the datasets see <a href="http://www.gadm.org">Global Adminstrative Areas database (GADM)</a>.</p>
 <div class="row">
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button>
-<pre style=""><code class="source r">raster::getData("ISO3")</code></pre>
+
 </div>
 <p>Now we will download the administrative boundaries of the Philippines:</p>
 <div class="row">
@@ -1353,41 +1350,48 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")</code></pre>
 </div>
 </div>
 <h1 id="lesson-1-exercise">Lesson 1 exercise</h1>
-<p><strong>Write your own function to create a map</strong>. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:</p>
 <ul>
-<li>Define a function.</li>
+<li>Write your own function to create a spatial map for a country of <strong>your choice</strong> that is:
+<ul>
+<li>clearly structured</li>
+<li>reproducible by another team on their computer</li>
+<li>documented script</li>
+</ul></li>
+<li>To do's with the script:
+<ul>
+<li>Define the function.</li>
 <li>Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).</li>
-<li>Keep it simple (!) e.g. just plot the adminstrative boundaries.</li>
+<li>Keep it simple (!) e.g. just plot the adminstrative boundaries - as the focus on it on <strong>reproducible scripting</strong></li>
 <li>The function should accept <code>country</code> and <code>level</code> as input arguments.</li>
 <li>Optional (for a bonus): Getting the administrative labels and legend correct.</li>
-<li>Use the script review center in BlackBoard to submit your &quot;documented script&quot; in time before 17.15. See description in BlackBoard - follow the file naming precisely.</li>
-<li>Tomorrow your team has to review one script of the other team before 11:00.</li>
+<li>Use the script review center in BlackBoard to submit your script in time (see details via blackboard).</li>
+</ul></li>
+<li>Tips to make sure the script is <strong>reproducible</strong>, <strong>structured</strong>, and <strong>documented</strong>:
+<ul>
+<li>Do not use any paths e.g. <code>mydocument/John/blabla</code> specific for your computer. In this excercise you should not need any paths.</li>
+<li>Do not set the working directory (see above i.e. also specific to your computer).</li>
+<li>Use the script template below</li>
+<li><a href="https://gist.github.com/hadley/270442">More info about how to create a reproducible example</a></li>
+</ul></li>
+<li>Submission: See description in BlackBoard - follow the file naming precisely. Each team has to review one script of the other team before 11:00**</li>
 </ul>
+Script template:
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r"># Name: Team name and members of the team
-# Date: 8 January 2018
+# Date: 7 January 2019
 
 # Import packages
 library(raster)
-
 # Define the function
-
 
 # An example based on that function</code></pre>
 </div>
-<ul>
-<li>Tips:
-<ul>
-<li>Do not use any paths e.g. <code>mydocument/John/blabla</code> specific for your computer. In this excercise you should not need any paths.</li>
-<li>Do not set the working directory (see above i.e. also specific to your computer).</li>
-<li>Use the script template above.</li>
-</ul></li>
-</ul>
 <h2 id="assessment-and-evaluation-criteria-for-the-excercise">Assessment and evaluation criteria for the excercise</h2>
-<p>It needs to work (yes/no) when we test your script on our computer within R.</p>
+<p>See rubric available via the following google doc:</p>
+<p>Use this rubric and fill in the form as a guideline and copy &quot;as text&quot; (not as a document! or attachement) with the blackboard box.</p>
 <h1 id="references-and-more-info">References and more info</h1>
 <ul>
 <li><a href="http://www.rstudio.com/resources/training/online-learning/">RStudio Online Learning</a>.</li>

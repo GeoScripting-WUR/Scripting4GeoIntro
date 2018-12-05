@@ -25,7 +25,7 @@ Good morning! Here is what you will do today:
     - **Self-study** (working at home/or PC's at WUR) go through the tutorial below 
     - answer the questions mentioned in **bold** within the self-study section.
 - 14u: 
-    - Course introduction [rooms](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806)
+    - Course introduction ([location of the PC lab](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806))
     - planning and teams selection for geo-scripting
     - Excercise with submission deadline today.
  
@@ -34,8 +34,10 @@ Good morning! Here is what you will do today:
 You need to complete before 13h today:
 
 - See information provided via blackboard in the section course description: lesson 1! 
-You need to have *RStudio Desktop* (Free) and *R* (Free) installed (already available in the PC lab). 
+You need to have *RStudio Desktop* (Free) and *R* (Free) installed on your personal computer. Or work from a Wageningen University PC where this should normally be available.
+
 - For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+
 - If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
 **Try to ask or answer a question today.** We will explain how this can be used today.
 
@@ -154,7 +156,6 @@ a
 ```
 
 > **Question 1:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
-(Just note down these questions as they will be discussed during the discussion session at 13:30 today.)
 
 ## Character vector handling
 
@@ -306,7 +307,7 @@ Read the help to find out how we can find the country codes.
 
 More info about the datasets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, message=FALSE, results='hide', echo=FALSE}
 raster::getData("ISO3")
 ```
 
@@ -353,37 +354,47 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
 
 # Lesson 1 exercise
 
-**Write your own function to create a map**. Submit a clear, reproducible, and documented script containing a function to create a spatial map for a country of your choice:
+- Write your own function to create a spatial map for a country of **your choice** that is:
+    - clearly structured
+    - reproducible by another team on their computer
+    - documented script
 
-- Define a function.
-- Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).
-- Keep it simple (!) e.g. just plot the adminstrative boundaries.
-- The function should accept `country` and `level` as input arguments.
-- Optional (for a bonus): Getting the administrative labels and legend correct.
-- Use the script review center in BlackBoard to submit your "documented script" in time before 17.15. See description in BlackBoard - follow the file naming precisely.
-- Tomorrow your team has to review one script of the other team before 11:00.
+- To do's with the script:
+    - Define the function.
+    - Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).
+    - Keep it simple (!) e.g. just plot the adminstrative boundaries - as the focus on it on **reproducible scripting**
+    - The function should accept `country` and `level` as input arguments.
+    - Optional (for a bonus): Getting the administrative labels and legend correct.
+    - Use the script review center in BlackBoard to submit your script in time (see details via blackboard). 
 
+- Tips to make sure the script is **reproducible**, **structured**, and **documented**: 
+    - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
+    In this excercise you should not need any paths.
+    - Do not set the working directory (see above i.e. also specific to your computer).
+    - Use the script template below
+    - [More info about how to create a reproducible example](https://gist.github.com/hadley/270442)
+
+- Submission: See description in BlackBoard - follow the file naming precisely.
+Each team has to review one script of the other team before 11:00**
+
+Script template:
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
-# Date: 8 January 2018
+# Date: 7 January 2019
 
 # Import packages
 library(raster)
-
 # Define the function
-
 
 # An example based on that function
 ```
 
-- Tips: 
-    - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. In this excercise you should not need any paths.
-    - Do not set the working directory (see above i.e. also specific to your computer).
-    - Use the script template above.
 
 ## Assessment and evaluation criteria for the excercise
 
-It needs to work (yes/no) when we test your script on our computer within R.
+See rubric available via the following google doc:
+
+Use this rubric and fill in the form as a guideline and copy "as text" (not as a document! or attachement) with the blackboard box.
 
 # References and more info
 
