@@ -953,15 +953,13 @@ a</code></pre>
 <li>Set your working directory to the <code>Lesson1</code> folder</li>
 <li>Create a <code>data</code> folder within your working directory</li>
 </ul>
-<p>In the code block below type in the file path to where your data is being held and then (if you want) use the <code>setwd()</code> (set working directory) command to give <em>R</em> a default location to look for data files.</p>
+<p>Via Rstudio you can set your working directory via, if you have save your R script to your working directory: <img src="figs/setwd_rstudiotip.png" /></p>
+<p>Then you can use this line to load your data.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">setwd("yourworkingdirectory")
-## This sets the working directory (where R looks for files)
-getwd() # Double check your working directory
-datdir <- file.path("data") # Path</code></pre>
+<pre style=""><code class="source r">datdir <- file.path("data") # Path</code></pre>
 </div>
 <h1 id="basic-r-knowledge-useful-for-geo-scripting">Basic <em>R</em> knowledge useful for Geo-Scripting</h1>
 <p>Scripting with <em>R</em> to handle spatial problems requires a core set of basic <em>R</em> skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below.</p>
@@ -1101,7 +1099,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Mon Dec 10 15:58:00 2018"
+<pre style=""><code class="output r">## [1] "Today is Mon Dec 10 16:06:06 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source

@@ -92,12 +92,12 @@ Let's do some basic set up first.
 - Set your working directory to the `Lesson1` folder
 - Create a `data` folder within your working directory
 
-In the code block below type in the file path to where your data is being held and then (if you want) use the `setwd()` (set working directory) command to give *R* a default location to look for data files.
+Via Rstudio you can set your working directory via, if you have save your R script to your working directory:
+![](figs/setwd_rstudiotip.png)
+
+Then you can use this line to load your data.
 
 ```{r, eval=FALSE}
-setwd("yourworkingdirectory")
-## This sets the working directory (where R looks for files)
-getwd() # Double check your working directory
 datdir <- file.path("data") # Path
 ```
 
