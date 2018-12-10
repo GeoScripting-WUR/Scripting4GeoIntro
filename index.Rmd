@@ -364,12 +364,12 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
     - Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).
     - Keep it simple (!) e.g. just plot the adminstrative boundaries - as the focus on it on **reproducible scripting**
     - The function should accept `country` and `level` as input arguments.
-    - Optional (for a bonus): Getting the administrative labels and legend correct.
-    - Use the script review center in BlackBoard to submit your script in time (see details via blackboard). 
+    - **Bonus**: Getting the administrative labels and legend correct.
+    - Use the script review center in BlackBoard to submit your script in time (see details via blackboard) as text - do not use an attachement. 
 
 - Tips to make sure the script is **reproducible**, **structured**, and **documented**: 
     - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
-    In this excercise you should not need any paths.
+    In this excercise you should not need any paths:
     - Do not set the working directory (see above i.e. also specific to your computer).
     - Use the script template below
     - [More info about how to create a reproducible example](https://gist.github.com/hadley/270442)
@@ -392,7 +392,7 @@ library(raster)
 
 ## Assessment and evaluation criteria for the excercise
 
-See rubric available via the following google doc:
+See rubric available via this google doc: [Rubric Lesson 1](https://docs.google.com/document/d/1bVqVYNDLN8O4Ik0YX6wrk4AMytAwEtlSwWz2EHdB8_I/edit?usp=sharing)
 
 Use this rubric and fill in the form as a guideline and copy "as text" (not as a document! or attachement) with the blackboard box.
 
