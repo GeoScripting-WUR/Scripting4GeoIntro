@@ -910,14 +910,15 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 <h2 id="getting-started-with-rstudio-and-r-on-your-own-computer.">Getting started with <em>RStudio</em> and <em>R</em> on your own computer.</h2>
 <p>A summary youtube movie about how to use Rstudio and writing a function is here: <a href="https://www.youtube.com/watch?v=jPk6-3prknk">Intro to RStudio</a>. Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a <a href="http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf">short introduction on the RStudio interface</a>.</p>
 <p>Now, Open RStudio and type the following script in the R console of <strong>RStudio</strong>:</p>
+<strong>Pro Tip</strong>:
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">rm(list = ls()) # Clear the workspace!
-ls() # No objects left in the workspace</code></pre>
+<pre style=""><code class="source r">#Never set the following in your script! this would make the script not reproducible by others
+setwd('path')</code></pre>
 </div>
-<p>A good way to start most R scripts</p>
+<p>The use of <code>setwd</code> is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1100,7 +1101,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Mon Dec 10 15:47:26 2018"
+<pre style=""><code class="output r">## [1] "Today is Mon Dec 10 15:58:00 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1191,7 +1192,8 @@ ls() # Check the objective in the working environment</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "a"     "b"     "d"     "date"  "date0" "e"     "name"
+<pre style=""><code class="output r">## [1] "a"          "b"          "d"          "date"       "date0"     
+## [6] "e"          "exit"       "name"       "print.exit"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source

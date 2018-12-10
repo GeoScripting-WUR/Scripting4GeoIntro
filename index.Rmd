@@ -60,12 +60,12 @@ A summary youtube movie about how to use Rstudio and writing a function is here:
  
 Now, Open RStudio and type the following script in the R console of **RStudio**:
 
-```{r, message=FALSE, results='hide'}
-rm(list = ls()) # Clear the workspace!
-ls() # No objects left in the workspace
+**Pro Tip**:
+```{r, eval=FALSE}
+#Never set the following in your script! this would make the script not reproducible by others
+setwd('path')
 ```
-
-A good way to start most R scripts
+The use of `setwd` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
 
 ```{r}
 a <- 1
