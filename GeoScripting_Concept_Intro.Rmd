@@ -101,6 +101,8 @@ http://www.geo-informatie.nl/courses/grs33806/question2answer/index.php
 See the forum and try to answer a question now and login, otherwise your question will be anonymous
 
 - Slack: 
+https://wur-grs.slack.com/messages/geoscripting2019
+
 
 ## Scoring
 
