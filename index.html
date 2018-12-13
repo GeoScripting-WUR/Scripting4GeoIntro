@@ -1099,7 +1099,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Thu Dec 13 09:17:38 2018"
+<pre style=""><code class="output r">## [1] "Today is Thu Dec 13 18:28:13 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1401,6 +1401,26 @@ library(raster)
 <ul>
 <li><a href="http://www.rstudio.com/resources/training/online-learning/">RStudio Online Learning</a>.</li>
 <li><a href="https://www.coursera.org/course/rprog">Coursera</a></li>
+</ul>
+<h1 id="optional---but-very-handy">Optional - but very handy!</h1>
+<h2 id="creating-documented-reports">Creating documented reports</h2>
+<p>A great way to avoid clicking and copy pasting is to create a script that combines text (explanation of your script, introduction, or something else) and a R script and creates a report as an html file.</p>
+<p>You can create an <code>.html</code> from a<code>.Rmd</code> file. Click on the following <a href="https://rpubs.com/about/getting-started">link</a> for getting started and publishing your html to the www.</p>
+<h3 id="rstudio">RStudio</h3>
+<ul>
+<li>In RStudio, create a new R Markdown document by choosing File | New | R Markdown
+<ul>
+<li>select HTML as a default output format (see screenshot)</li>
+</ul></li>
+</ul>
+<p><img src="figs/DefaultOutput_Format.png" /></p>
+<p>In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button (&quot;run curent chunk&quot;) on the right top side of the grey box or by clicking in the RMD you can use the shortcut ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.</p>
+<ul>
+<li>Click the Knit HTML button in the doc toolbar to preview your document such as the assignment of today.</li>
+</ul>
+<p><img src="figs/KnitHTML.png" /></p>
+<ul>
+<li>In the preview window, click the Publish button.</li>
 </ul>
 <!--
 ## Dataframe manipulation

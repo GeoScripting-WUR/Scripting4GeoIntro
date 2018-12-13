@@ -405,6 +405,30 @@ library(raster)
 - [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 - [Coursera](https://www.coursera.org/course/rprog)
 
+# Optional - but very handy!
+
+## Creating documented reports
+
+A great way to avoid clicking and copy pasting is to create a script that combines text (explanation of your script, introduction, or something else) and a R script and creates a report as an html file.
+
+You can create an `.html` from a`.Rmd` file. Click on the following [link](https://rpubs.com/about/getting-started) for getting started and publishing your html to the www.
+
+### RStudio
+
+* In RStudio, create a new R Markdown document by choosing File | New | R Markdown
+    * select HTML as a default output format (see screenshot)
+
+![](figs/DefaultOutput_Format.png)
+
+In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button ("run curent chunk") on the right top side of the grey box or by clicking in the RMD you can use the shortcut ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.
+
+* Click the Knit HTML button in the doc toolbar to preview your document such as the assignment of today.
+
+![](figs/KnitHTML.png)
+
+* In the preview window, click the Publish button.
+
+
 <!--
 ## Dataframe manipulation
 This section is also just a draft and should be further elaborated
