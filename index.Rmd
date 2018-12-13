@@ -405,7 +405,7 @@ library(raster)
 - [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 - [Coursera](https://www.coursera.org/course/rprog)
 
-# Optional - but very handy!
+# Pro-tip !!! (optional)
 
 ## Creating documented reports
 
@@ -427,7 +427,6 @@ In the white parts of the R Markdown you can type anything (such as text or titl
 ![](figs/KnitHTML.png)
 
 * In the preview window, click the Publish button.
-
 
 <!--
 ## Dataframe manipulation
