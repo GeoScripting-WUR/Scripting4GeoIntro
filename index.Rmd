@@ -374,8 +374,19 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
     - Use the script template below
     - [More info about how to create a reproducible example](https://gist.github.com/hadley/270442)
 
-- Submission: See description in BlackBoard - follow the file naming precisely.
-Each team has to review one script of the other team before 11:00**
+## Submission
+
+See description in BlackBoard - follow the file naming precisely.
+
+## **Reviewing**
+
+- Each team has to review one script of the other team before **11:00**
+
+- See rubric available via this google doc: [Rubric Lesson 1](https://docs.google.com/document/d/1bVqVYNDLN8O4Ik0YX6wrk4AMytAwEtlSwWz2EHdB8_I/edit?usp=sharing)
+
+- The teams need to use this rubric and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
+
+- The Geo-scripting team will assess the quality of the review done by each team.
 
 Script template:
 ```{r, eval=FALSE}
@@ -388,13 +399,6 @@ library(raster)
 
 # An example based on that function
 ```
-
-
-## Assessment and evaluation criteria for the excercise
-
-See rubric available via this google doc: [Rubric Lesson 1](https://docs.google.com/document/d/1bVqVYNDLN8O4Ik0YX6wrk4AMytAwEtlSwWz2EHdB8_I/edit?usp=sharing)
-
-Use this rubric and fill in the form as a guideline and copy "as text" (not as a document! or attachement) with the blackboard box.
 
 # References and more info
 
