@@ -408,13 +408,12 @@ The three specific tasks that will be assessed are:
 - do not use an attachment
 - follow the file naming precisely!
 
+# Peer-Reviewing
 
-# Reviewing
+You will need to give the team you are reviewing feedback on their exercise solution before 11:00 the next day (use the review team generator Shiny app to see which team). 
 
-You will need to give the team you are reviewing feedback on their exercise solution before 11:00 the next day (use the review team generator Shiny app to see which team). Then clone the repository of the team you have to review to your computer and test it. Add an issue to their project, write your review and give points according to the rubrics. Make sure to mention your team name in the review.
+- The teams need to use the [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing) and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
 
-- Each team has to review one script of the other team before **11:00**
-- The teams need to use this rubric and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
 - The Geo-scripting team will assess the quality of the review done by each team.
 
 # References and more info
