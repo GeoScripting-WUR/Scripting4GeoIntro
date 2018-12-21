@@ -352,7 +352,9 @@ Coordinate System: WGS 1984    \n
 Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
 ```
 
-# Lesson 1 exercise
+# Excercise 1: Develop a function to create a spatial map
+
+## Description
 
 - Write your own function to create a spatial map for a country of **your choice** that is:
     - clearly structured
@@ -361,33 +363,20 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
 
 - To do's with the script:
     - Define the function.
-    - Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).
-    - Keep it simple (!) e.g. just plot the adminstrative boundaries - as the focus on it on **reproducible scripting**
+    - Demonstrate the function 
+    (i.e. use it to plot a map of a country and a certain level as an example).
     - The function should accept `country` and `level` as input arguments.
-    - **Bonus**: Getting the administrative labels and legend correct.
-    - Use the script review center in BlackBoard to submit your script in time (see details via blackboard) as text - do not use an attachement. 
+    
+## Hints
 
-- Tips to make sure the script is **reproducible**, **structured**, and **documented**: 
-    - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
-    In this excercise you should not need any paths:
-    - Do not set the working directory (see above i.e. also specific to your computer).
-    - Use the script template below
-    - [More info about how to create a reproducible example](https://gist.github.com/hadley/270442)
-
-## Submission
-
-See description in BlackBoard - follow the file naming precisely.
-
-## **Reviewing**
-
-- Each team has to review one script of the other team before **11:00**
-
-- See rubric available via this google doc: [Rubric Lesson 1](https://docs.google.com/document/d/1bVqVYNDLN8O4Ik0YX6wrk4AMytAwEtlSwWz2EHdB8_I/edit?usp=sharing)
-
-- The teams need to use this rubric and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
-
-- The Geo-scripting team will assess the quality of the review done by each team.
-
+- Keep it simple (!) e.g. just plot the adminstrative boundaries as the focus on it on **reproducible scripting**
+- Make sure the script is **reproducible**, **structured**, and **documented** 
+- Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
+- Do not set the working directory (see above i.e. also specific to your computer).
+- Data should be downloaded via the script
+- All code requires comments - explaining its function
+- Use the script template below
+    
 Script template:
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
@@ -399,6 +388,34 @@ library(raster)
 
 # An example based on that function
 ```
+
+# Assessment
+
+The rubric for this excercise can be found here: [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing)
+
+The three specific tasks that will be assessed are:
+
+1. create a function (yes, no)
+2. the function accepts minimum two inputs (`country` and `level` ), and is able to plot a map
+3. the function is demonstrated with minimum one working example on how the function can be used
+
+# Bonus
+- Try to get the administrative labels and legend correctly set
+
+# Submission
+
+- Use the script review center in BlackBoard to submit your script by **1715**
+- do not use an attachment
+- follow the file naming precisely!
+
+
+# Reviewing
+
+You will need to give the team you are reviewing feedback on their exercise solution before 11:00 the next day (use the review team generator Shiny app to see which team). Then clone the repository of the team you have to review to your computer and test it. Add an issue to their project, write your review and give points according to the rubrics. Make sure to mention your team name in the review.
+
+- Each team has to review one script of the other team before **11:00**
+- The teams need to use this rubric and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
+- The Geo-scripting team will assess the quality of the review done by each team.
 
 # References and more info
 

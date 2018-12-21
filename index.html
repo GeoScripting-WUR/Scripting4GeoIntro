@@ -876,7 +876,7 @@ Week 1, Lesson 1: Introduction to the geo-scripting course
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r">format(Sys.time(), '%d %B, %Y')</code></pre>
-<p>[1] &quot;13 December, 2018&quot;</p>
+<p>[1] &quot;21 December, 2018&quot;</p>
 </div>
 <p>Good morning! Here is what you will do today:</p>
 <ul>
@@ -1099,7 +1099,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Thu Dec 13 18:29:59 2018"
+<pre style=""><code class="output r">## [1] "Today is Fri Dec 21 12:14:07 2018"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1349,7 +1349,8 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")</code></pre>
 </div>
 </div>
 </div>
-<h1 id="lesson-1-exercise">Lesson 1 exercise</h1>
+<h1 id="excercise-1-develop-a-function-to-create-a-spatial-map">Excercise 1: Develop a function to create a spatial map</h1>
+<h2 id="description">Description</h2>
 <ul>
 <li>Write your own function to create a spatial map for a country of <strong>your choice</strong> that is:
 <ul>
@@ -1361,27 +1362,18 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")</code></pre>
 <ul>
 <li>Define the function.</li>
 <li>Demonstrate the function (i.e. use it to plot a map of a country and a certain level as an example).</li>
-<li>Keep it simple (!) e.g. just plot the adminstrative boundaries - as the focus on it on <strong>reproducible scripting</strong></li>
 <li>The function should accept <code>country</code> and <code>level</code> as input arguments.</li>
-<li><strong>Bonus</strong>: Getting the administrative labels and legend correct.</li>
-<li>Use the script review center in BlackBoard to submit your script in time (see details via blackboard) as text - do not use an attachement.</li>
-</ul></li>
-<li>Tips to make sure the script is <strong>reproducible</strong>, <strong>structured</strong>, and <strong>documented</strong>:
-<ul>
-<li>Do not use any paths e.g. <code>mydocument/John/blabla</code> specific for your computer. In this excercise you should not need any paths:</li>
-<li>Do not set the working directory (see above i.e. also specific to your computer).</li>
-<li>Use the script template below</li>
-<li><a href="https://gist.github.com/hadley/270442">More info about how to create a reproducible example</a></li>
 </ul></li>
 </ul>
-<h2 id="submission">Submission</h2>
-<p>See description in BlackBoard - follow the file naming precisely.</p>
-<h2 id="reviewing"><strong>Reviewing</strong></h2>
+<h2 id="hints">Hints</h2>
 <ul>
-<li><p>Each team has to review one script of the other team before <strong>11:00</strong></p></li>
-<li><p>See rubric available via this google doc: <a href="https://docs.google.com/document/d/1bVqVYNDLN8O4Ik0YX6wrk4AMytAwEtlSwWz2EHdB8_I/edit?usp=sharing">Rubric Lesson 1</a></p></li>
-<li><p>The teams need to use this rubric and fill in the <em>form</em> as a guideline and copy &quot;as text&quot; (<em>not as a document or attachement</em>) within the blackboard box.</p></li>
-<li><p>The Geo-scripting team will assess the quality of the review done by each team.</p></li>
+<li>Keep it simple (!) e.g. just plot the adminstrative boundaries as the focus on it on <strong>reproducible scripting</strong></li>
+<li>Make sure the script is <strong>reproducible</strong>, <strong>structured</strong>, and <strong>documented</strong></li>
+<li>Do not use any paths e.g. <code>mydocument/John/blabla</code> specific for your computer.</li>
+<li>Do not set the working directory (see above i.e. also specific to your computer).</li>
+<li>Data should be downloaded via the script</li>
+<li>All code requires comments - explaining its function</li>
+<li>Use the script template below</li>
 </ul>
 Script template:
 <div class="row">
@@ -1397,6 +1389,31 @@ library(raster)
 
 # An example based on that function</code></pre>
 </div>
+<h1 id="assessment">Assessment</h1>
+<p>The rubric for this excercise can be found here: <a href="https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing">Generic Rubric</a></p>
+<p>The three specific tasks that will be assessed are:</p>
+<ol style="list-style-type: decimal">
+<li>create a function (yes, no)</li>
+<li>the function accepts minimum two inputs (<code>country</code> and <code>level</code> ), and is able to plot a map</li>
+<li>the function is demonstrated with minimum one working example on how the function can be used</li>
+</ol>
+<h1 id="bonus">Bonus</h1>
+<ul>
+<li>Try to get the administrative labels and legend correctly set</li>
+</ul>
+<h1 id="submission">Submission</h1>
+<ul>
+<li>Use the script review center in BlackBoard to submit your script by <strong>1715</strong></li>
+<li>do not use an attachment</li>
+<li>follow the file naming precisely!</li>
+</ul>
+<h1 id="reviewing">Reviewing</h1>
+<p>You will need to give the team you are reviewing feedback on their exercise solution before 11:00 the next day (use the review team generator Shiny app to see which team). Then clone the repository of the team you have to review to your computer and test it. Add an issue to their project, write your review and give points according to the rubrics. Make sure to mention your team name in the review.</p>
+<ul>
+<li>Each team has to review one script of the other team before <strong>11:00</strong></li>
+<li>The teams need to use this rubric and fill in the <em>form</em> as a guideline and copy &quot;as text&quot; (<em>not as a document or attachement</em>) within the blackboard box.</li>
+<li>The Geo-scripting team will assess the quality of the review done by each team.</li>
+</ul>
 <h1 id="references-and-more-info">References and more info</h1>
 <ul>
 <li><a href="http://www.rstudio.com/resources/training/online-learning/">RStudio Online Learning</a>.</li>
