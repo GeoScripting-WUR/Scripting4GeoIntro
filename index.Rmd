@@ -389,17 +389,8 @@ library(raster)
 # An example based on that function
 ```
 
-# Assessment
-
-The rubric for this excercise can be found here: [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing)
-
-The three specific tasks that will be assessed are:
-
-1. create a function (yes, no)
-2. the function accepts minimum two inputs (`country` and `level` ), and is able to plot a map
-3. the function is demonstrated with minimum one working example on how the function can be used
-
 # Bonus
+
 - Try to get the administrative labels and legend correctly set
 
 # Submission
@@ -415,6 +406,12 @@ You will need to give the team you are reviewing feedback on their exercise solu
 - The teams need to use the [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing) and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
 
 - The Geo-scripting team will assess the quality of the review done by each team.
+
+The three specific tasks that will be assessed are:
+
+1. create a function (yes, no)
+2. the function accepts minimum two inputs (`country` and `level` ), and is able to plot a map
+3. the function is demonstrated with minimum one working example on how the function can be used
 
 # References and more info
 
