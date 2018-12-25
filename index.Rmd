@@ -15,57 +15,54 @@ output:
 
 # Week 1, Lesson 1: Introduction to the geo-scripting 
 
-```{r, eval=TRUE, echo=TRUE, include=TRUE, results='asis'}
-format(Sys.time(), '%d %B, %Y')
-```
-
-Good morning! Here is what you will do today:
+Good morning, and welcome to the Geoscripting course! As a student enrolled in the course at Wageningen University, here is what you will do today:
 
 - Morning: 
-    - **Self-study** (working at home/or PC's at WUR) go through the tutorial below 
-    - answer the questions mentioned in **bold** within the self-study section.
-- 14u: 
-    - Course introduction ([location of the PC lab](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806))
-    - planning and teams selection for geo-scripting
-    - Excercise with submission deadline today.
- 
+    - **Self-study** (working at home/or PC's at WUR): go through the tutorial below.
+    - Answer the questions mentioned in **bold** in green boxes within the self-study section.
+- 14:00: 
+    - Participate in the course introduction and planning lecture ([location of the PC lab](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806)).
+    - Select your teammate and come up with a team name.
+    - Do the excercise at the bottom of this page, with submission deadline today.
+
 ## *To Do* in the morning: self-study
 
 You need to complete before 13h today:
 
 - See information provided via blackboard in the section course description: lesson 1! 
-You need to have *RStudio Desktop* (Free) and *R* (Free) installed on your personal computer. Or work from a Wageningen University PC where this should normally be available.
+You need to have *R* and an R GUI such as *RStudio Desktop* installed on your personal computer. Or work from a Wageningen University PC where this should normally be available. Throughout this course, we will be using free and open-source software.
 
-- For more information about *R* and *RStudio* installation: see [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/)
+- For more information about *R* and *RStudio* installation: see the [RStudio website](https://www.rstudio.com/products/rstudio/download/).
 
-- If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/). 
-**Try to ask or answer a question today.** We will explain how this can be used today.
+- If you have questions you can use the [Question and Answer Website of the Geo-scripting course](http://www.geo-informatie.nl/courses/grs33806/question2answer/), or for peer support, the [Slack channel for Geoscripting of the current year](https://wur-grs.slack.com/messages/CER16SCFL).
+**Try to register and then ask or answer a question today.** We will explain how this can be used today.
 
+```{block type="alert alert-info"}
+**Note for external students:** if you are taking the course externally, see the [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/) page for instructions on how to set up all the software needed for the course.
+```
 
 ## Objective and Learning outcomes of today:
 
-- Refreshing R skills and assessing scripting skills to see if you have the 
+- Refresh R skills and assessing scripting skills to see if you have the 
 necessary scripting skills to continue with the course
-- Able to write a function
+- Learn to write a function
 - Know how to visualise data (spatial map) in R
 
 # Basic *R* and *RStudio* setup {#gettingstarted}
 
-This preliminary section will cover some basic details about *R*. For this course we will use Rstudio to write and run scripts.
-In case you are working on your own computer and would like to know how to install *R* and *RStudio*: [https://geoscripting-wur.github.io/system_setup/](https://geoscripting-wur.github.io/system_setup/).
+This preliminary section will cover some basic details about *R*. For this course you can use RStudio to write and run scripts.
+In case you are working on your own computer and would like to know how to install *R* and *RStudio*, see the [RStudio website](https://www.rstudio.com/products/rstudio/download/).
+
+
+```{block type="alert alert-info"}
+**Protip**: if you are following the course externally, you can also set up all the rest of the necessary software for the course now. See the [system setup page](https://geoscripting-wur.github.io/system_setup/) for instructions. This is not necessary for enrolled students, as all the software will be provided in the upcoming lessons.
+```
 
 ## Getting started with *RStudio* and *R* on your own computer.
 
 A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to RStudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a [short introduction on the RStudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
- 
-Now, Open RStudio and type the following script in the R console of **RStudio**:
 
-**Pro Tip**:
-```{r, eval=FALSE}
-#Never set the following in your script! this would make the script not reproducible by others
-setwd('path')
-```
-The use of `setwd` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
+Now, Open RStudio and type the following script in the R console of **RStudio**:
 
 ```{r}
 a <- 1
@@ -73,7 +70,7 @@ a
 ```
 
 The first line you passed to the console created a new object named  $a$ in memory.
-The symbol '<-' is somewhat equivalent to an equal sign but recommended as it is used internally. In the second line you printed $a$ to the console by simply typing it's name.
+The symbol `<-` is somewhat equivalent to an equals sign `=` for assigning values to variables. In the second line you printed $a$ to the console by simply typing its name.
 
 **What is the class of this object?**
 
@@ -92,39 +89,55 @@ Let's do some basic set up first.
 - Set your working directory to the `Lesson1` folder
 - Create a `data` folder within your working directory
 
-Via Rstudio you can set your working directory via, if you have save your R script to your working directory:
+In RStudio you can set your working directory this way, if you have saved your R script to your working directory:
 ![](figs/setwd_rstudiotip.png)
 
-Then you can use this line to load your data.
+```{block, type="alert alert-info"}
+**Protip**: The use of `setwd()` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
+```
 
 ```{r, eval=FALSE}
-datdir <- file.path("data") # Path
+# Never set the following in your script! This would make the script not reproducible by others!
+setwd('some/path/on/your/computer')
+```
+
+Then you can use relative paths to load your data, for example:
+
+```{r, eval=FALSE}
+# Path to a file "my-table.csv" in the directory "data", relative to your script file
+datafile <- file.path("data", "my-table.csv")
+mytable <- read.csv(datafile) # Do something with that file name
 ```
 
 # Basic *R* knowledge useful for Geo-Scripting
 Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
 
 ## Vector handling and vector arithmetic
-You'll be introduced in a following lesson with the *raster* package and the raster classes that have been developed as part of that package. All objects that belong to the class `raster` are **vectors** with a few more spatial attributes. 
+**In *R* we call a one-dimensional array of values a *vector*, and a two-dimensional array of values a *matrix*.**
 
-**In *R* we call a collection of numbers a vector.** 
+This can be a bit confusing, because R vectors have nothing to do with vectors as you know them in GIS. The latter will be introduced in a later lesson. You'll also be introduced in a following lesson with the *raster* package and the `raster` classes that have been developed as part of that package. Since rasters are 2D grids of values, all objects that belong to the class `raster` are **matrices** with a few more spatial attributes.
 
-As a consequence, handling vectors is a crucial skill for processing raster data in *R*.
+As a consequence, handling vectors and matrices is a crucial skill for processing raster data in *R*.
 
 Reference manual for vector handling and vector arithmetic can be found [here](http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors).
 
 ```{r}
-## Create a vector
+# Create a vector
 a <- c(3,6,8,1)
 a
 
-## Any mathematical operation can be performed on vectors
+# Any mathematical operation can be performed on vectors
 (b <- a * 2)
 (d <- a + 6)
 
-## Two vectors of same length can also be added with each other
+# Two vectors of same length can also be added with each other
 (e <- a + b)
+
+# It works even if their lengths differ, in which case values are "recycled"
+(f <- a + b[1:2])
 ```
+
+Vectors of numbers are called **numeric vectors**, and matrices of numbers are **numeric matrices**. Arithmetics with matrices work the same way as with vectors, i.e. element-wise. So a multiplication between two matrices is element-wise value multiplication, *not* mathematical matrix multiplication.
 
 ### Value replacement
 
@@ -155,11 +168,13 @@ a[b %in% c(0,1)] <- NA
 a
 ```
 
+```{block, type="alert alert-success"}
 > **Question 1:** How do I replace values in `b` by 3 at which `a` is 6, 9 and 12?
+```
 
 ## Character vector handling
 
-When working with real data, such as shapefiles or satellite imagery, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **string** handling skills.
+When working with real data, such as satellite imagery or KML files, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **character vector** (string) handling skills.
 
 Key functions for handling character strings are listed below:
 
@@ -175,7 +190,9 @@ getwd() # check your working directory
 list.files() # list the files available in this directory
 ```
 
+```{block, type="alert alert-success"}
 > **Question 2**: List the directories in your working directory.
+```
 
 ### Example of `glob2rx()`
 
@@ -192,7 +209,9 @@ paste("Today is", date())
 paste0("A", 1:6)
 ```
 
+```{block, type="alert alert-success"}
 > **Question 3**: Create one variable containing a sentence `"geo-scripting is fun"`, by combining `a`, `b`, and `c`:
+```
 
 ```{r, eval=FALSE}
 a <- "geo-scripting"
