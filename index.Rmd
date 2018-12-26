@@ -427,6 +427,12 @@ library(raster)
 - Do not use an attachment, just paste the script (note: there is a pasting bug in Internet Explorer, so use a different browser).
 - Follow the file naming precisely!
 
+
+```{block, type="alert alert-info"}
+**Protip**: Alternatively, you can also upload your solution as a secret [GitHub Gist](https://gist.github.com/) and then paste a link to it on BlackBoard.
+```
+<!-- or a private [GitLab snippet](https://git.wur.nl/snippets/new), -->
+
 # Peer-Reviewing
 
 You will need to give the team you are reviewing feedback on their exercise solution **before 11:00 the next day** (use the review team generator Shiny app to see which team). 
