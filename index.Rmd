@@ -1,5 +1,6 @@
 ---
-author: "Jan Verbesselt and Loïc Dutrieux"
+title: Introduction to geoscripting
+author: "Jan Verbesselt, Loïc Dutrieux and Dainius Masiliūnas"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   knitrBootstrap::bootstrap_document:
@@ -92,8 +93,8 @@ Let's do some basic set up first.
 In RStudio you can set your working directory this way, if you have saved your R script to your working directory:
 ![](figs/setwd_rstudiotip.png)
 
-```{block, type="alert alert-info"}
-**Protip**: The use of `setwd()` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
+```{block, type="alert alert-danger"}
+**Warning**: The use of `setwd()` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
 ```
 
 ```{r, eval=FALSE}
@@ -191,7 +192,7 @@ list.files() # list the files available in this directory
 ```
 
 ```{block, type="alert alert-success"}
-> **Question 2**: List the directories in your working directory.
+> **Question 2**: List the *directories* in your working directory.
 ```
 
 ### Example of `glob2rx()`
@@ -240,7 +241,9 @@ class(date0)
 class(date)
 ```
 
+```{block, type="alert alert-success"}
 > **Question 4**: How do we select friday from the `name` variable?
+```
 
 See also `?substr`, this can be handy too.
 
@@ -258,12 +261,14 @@ However you can read in virtually any type of text file. Type `?read.table` in y
 (test <- c(1:5, "6,7", "8,9,10"))
 write.csv(test, file = "testing.csv") # Write to your working directory
 rm(test) # Remove the variable "test" from the R working environment
-ls() # Check the objective in the working environment
+ls() # Check that the object is no longer in the working environment
 (test = read.csv("testing.csv")) # Read from your working directory
 ```
 
+```{block, type="alert alert-success"}
 > **Question 5**: Do you know how to read an *Excel* file into *R*? 
 What are the different options? How can you find help?
+```
 
 ## Writing a function
 
@@ -290,7 +295,9 @@ add(6)
 
 That's about all there is to it. The function will generally return the result of the last line that was evaluated.
 
+```{block, type="alert alert-success"}
 > **Question 6**: How do you write a function that returns `x` and `z`?
+```
 
 Now, let's declare a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
 
@@ -322,7 +329,9 @@ library(raster)
 
 Read the help to find out how we can find the country codes.
 
+```{block, type="alert alert-success"}
 > **Question 7**: What is the country code of Belgium?
+```
 
 More info about the datasets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
 
@@ -351,9 +360,9 @@ if (!file.exists(file.path(datdir, "PHL_adm2.RData"))) {
 }
 ```
 
-Try to understand the code below, and let me know if you have questions. Feel free to use this code as an example and use this for the excercise below.
+Try to understand the code below, and let us know if you have questions. Feel free to use this code as an example and use this for the excercise below.
 
-```{r phil, eval=TRUE, fig.align='center'}
+```{r phil, eval=TRUE, warning=FALSE, fig.align='center'}
 mar <- adm[adm$NAME_1 == "Marinduque",]
 plot(mar, bg = "dodgerblue", axes=TRUE)
 plot(mar, lwd = 10, border = "skyblue", add=TRUE)
@@ -376,13 +385,13 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
 ## Description
 
 - Write your own function to create a spatial map for a country of **your choice** that is:
-    - clearly structured
-    - reproducible by another team on their computer
-    - documented script
+    - clearly structured,
+    - reproducible by another team on their computer,
+    - well documented.
 
 - To do's with the script:
     - Define the function.
-    - Demonstrate the function 
+    - Demonstrate the function
     (i.e. use it to plot a map of a country and a certain level as an example).
     - The function should accept `country` and `level` as input arguments.
     
@@ -414,13 +423,13 @@ library(raster)
 
 # Submission
 
-- Use the script review center in BlackBoard to submit your script by **1715**
-- do not use an attachment
-- follow the file naming precisely!
+- Use the script review center in BlackBoard to submit your script by **17:15**.
+- Do not use an attachment, just paste the script (note: there is a pasting bug in Internet Explorer, so use a different browser).
+- Follow the file naming precisely!
 
 # Peer-Reviewing
 
-You will need to give the team you are reviewing feedback on their exercise solution before 11:00 the next day (use the review team generator Shiny app to see which team). 
+You will need to give the team you are reviewing feedback on their exercise solution **before 11:00 the next day** (use the review team generator Shiny app to see which team). 
 
 - The teams need to use the [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing) and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
 
@@ -428,24 +437,23 @@ You will need to give the team you are reviewing feedback on their exercise solu
 
 The three specific tasks that will be assessed are:
 
-1. create a function (yes, no)
-2. the function accepts minimum two inputs (`country` and `level` ), and is able to plot a map
-3. the function is demonstrated with minimum one working example on how the function can be used
+1. Create a function (yes, no)
+2. The function accepts minimum two inputs (`country` and `level` ), and is able to plot a map
+3. The function is demonstrated with minimum one working example on how the function can be used
 
 # References and more info
 
 - [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 - [Coursera](https://www.coursera.org/course/rprog)
 
-# Pro-tip !!! (optional)
-
-## Creating documented reports
+```{block, type="alert alert-info"}
+# Optional: Creating documented reports
 
 A great way to avoid clicking and copy pasting is to create a script that combines text (explanation of your script, introduction, or something else) and a R script and creates a report as an html file.
 
-You can create an `.html` from a`.Rmd` file. Click on the following [link](https://rpubs.com/about/getting-started) for getting started and publishing your html to the www.
+You can create an `.html` from an `.Rmd` file. Click on the following [link](https://rpubs.com/about/getting-started) for getting started and publishing your html to the web.
 
-### RStudio
+## RStudio
 
 * In RStudio, create a new R Markdown document by choosing File | New | R Markdown
     * select HTML as a default output format (see screenshot)
@@ -459,6 +467,18 @@ In the white parts of the R Markdown you can type anything (such as text or titl
 ![](figs/KnitHTML.png)
 
 * In the preview window, click the Publish button.
+
+## CLI or other GUIs
+
+R Markdown is just plain Markdown with blocks of evaluated R code, so you can use any text editor to write it. Then, in order to convert a file called `index.Rmd` into HTML, you can use R functions:
+
+    library(knitrBootstrap)
+    library(rmarkdown)
+    render('index.Rmd', 'knitrBootstrap::bootstrap_document')
+
+Then you can upload the resulting HTML file anywhere, e.g. on GitHub Pages. In fact, this is how this entire course website is made!
+
+```
 
 <!--
 ## Dataframe manipulation
