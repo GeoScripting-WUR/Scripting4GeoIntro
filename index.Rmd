@@ -380,7 +380,7 @@ Coordinate System: WGS 1984    \n
 Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
 ```
 
-# Excercise 1: Develop a function to create a spatial map
+# Exercise 1: Develop a function to create a spatial map
 
 ## Description
 
