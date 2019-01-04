@@ -196,6 +196,7 @@ Quiz: Geo-scripting intro
 ## Time for R action!
 
 - The exercise of today
+- What is a "reproducible script"?
 
 
 <!--
