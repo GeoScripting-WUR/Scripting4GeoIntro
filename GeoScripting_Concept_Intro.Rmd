@@ -69,7 +69,7 @@ Goal: Scripting to solve spatial challenges!
 * A team of `R` & `Python` experts who use geo-scripting languages 
 every day helped to develop this course
 
-* Experts from companies, research institute (e.g. , [WENR](https://www.wur.nl/nl/Onderzoek-Resultaten/Onderzoeksinstituten/Environmental-Research.htm)) and 
+* Experts from companies, research institutes (e.g. , [WENR](https://www.wur.nl/nl/Onderzoek-Resultaten/Onderzoeksinstituten/Environmental-Research.htm)) and 
 our own RS and GIS group will present 
 
 ## Course concept
@@ -83,7 +83,7 @@ Flipped Classroom concept!
 
 - Teams of two:
 
-    - select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard - teams)
+    - select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard)
 
 - Other teams can be selected for the project work
 
@@ -117,10 +117,9 @@ Details: https://goo.gl/3szHDt Course Guide (google docs)
 - Question and answer forum
 - DataCamp website: challenges
     - Free access to all courses
-    - Which course would you like to have as a challenge?
+   
 - Script reviewing can be done on an individual basis, via script review center (bonus points)
-- Feedback on course content via Github (bonus points)
-- Self-study
+
 
 ## Learning outcomes of today:
 
@@ -130,10 +129,6 @@ necessary scripting skills to continue with the course
 - Know how to visualize data (spatial map) in R
 
 *Socrative Quiz at the end of this presentation!*
-
-## The geo-scripting course
-
-- How did the **DataCamp Introduction to R** go?
     
 ## What  is a scripting language?
 
@@ -175,25 +170,6 @@ grid.raster(img)
 
 ## R packages
 ![](figs/worldcloudRpackage.png)
-
-## Python versus R
-
-- Scripts in both languages can be combined:
-    - call R from Python using e.g. RPy2
-    - call Python from R (http://rpython.r-forge.r-project.org/)
-- ... and more: see here for a question asked on [StackExchange for programmers](https://programmers.stackexchange.com/questions/181342/r-vs-python-for-data-analysis)
-
-## R in Python
-
-A very simple example using the Python Rpy2 module:
-
-```{r,eval=FALSE}
-import rpy2.robjects as robjects
-pi = robjects.r['pi']
-print(pi[0])
-```
-
-![](figs/RPython.jpeg)
 
 ## Many programs have support for
 
