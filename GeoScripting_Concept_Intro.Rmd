@@ -96,9 +96,11 @@ Flipped Classroom concept!
 - The Question and Answer forum (see blackboard):
     - Ask at least one good question
     - Answer at least one question
+    - *Register with your wur e-mail address today!*
 
-http://www.geo-informatie.nl/courses/grs33806/question2answer/index.php
-See the forum and try to answer a question now and login, otherwise your question will be anonymous
+http://www.geo-informatie.nl/courses/grs33806/question2answer/
+
+
 
 - Slack: 
 https://wur-grs.slack.com/messages/geoscripting2019
