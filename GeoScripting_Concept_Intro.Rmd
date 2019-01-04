@@ -47,7 +47,7 @@ Can you think of other advantages?
 
 ## Why geo-scripting?
 
-- Build your own tools and functions (e.g. automated webprocessing, etc.)
+- Build your own tools and functions (e.g. automated web-processing, etc.)
 
 ![](figs/16199604.jpg)
 
@@ -55,7 +55,7 @@ Can you think of other advantages?
 
 ## Geo-scripting learning objectives
 
-- Read, write, and visualise spatial data using a script
+- Read, write, and visualize spatial data using a script
 - Find & use libraries, functions for geo-data handling
 - Know how to find help
     - Write a clear and reproducible script
@@ -106,7 +106,7 @@ https://wur-grs.slack.com/messages/geoscripting2019
 
 ## Scoring
 
-- All excercises - 30%
+- All exercises - 30%
 - Questions & Answers forum - 10%
 - Project - 60%
 
@@ -210,7 +210,7 @@ Quiz: Geo-scripting intro
 
 ## Tomorrow morning
 
-- Finalise the lesson 1 and the excercise
+- Finalize the lesson 1 and the exercise
 - Look at Lesson 2
     - an overview of what is possible with scripting
     - no need to understand the code: lesson 2 is a demonstration lesson!
@@ -219,9 +219,7 @@ Quiz: Geo-scripting intro
 
 ## Time for R action!
 
-- The excercise of today
-- What is reproducibility!?
-https://gist.github.com/hadley/270442
+- The exercise of today
 
 
 <!--
