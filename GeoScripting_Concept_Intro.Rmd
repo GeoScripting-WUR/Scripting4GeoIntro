@@ -192,6 +192,10 @@ Quiz: Geo-scripting intro
 
 ![](figs/rep_sci_cover.png)
 
+## Rubric
+
+[Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing)
+
 ## Tomorrow morning
 
 - Finalize the lesson 1 and the exercise
