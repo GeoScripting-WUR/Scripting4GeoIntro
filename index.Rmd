@@ -453,6 +453,7 @@ The three specific tasks that will be assessed are:
 - [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
 - [Coursera](https://www.coursera.org/course/rprog)
 
+<!--
 ```{block, type="alert alert-info"}
 # Optional: Creating documented reports
 
@@ -486,6 +487,7 @@ R Markdown is just plain Markdown with blocks of evaluated R code, so you can us
 Then you can upload the resulting HTML file anywhere, e.g. on GitHub Pages. In fact, this is how this entire course website is made!
 
 ```
+-->
 
 <!--
 ## Dataframe manipulation
