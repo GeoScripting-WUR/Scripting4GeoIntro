@@ -16,7 +16,7 @@ output:
 
 # Week 1, Lesson 1: Introduction to the geo-scripting 
 
-Good morning, and welcome to the Geoscripting course! As a student enrolled in the course at Wageningen University, here is what you will do today:
+Good morning, and welcome to the Geo-scripting course! As a student enrolled in the course at Wageningen University, here is what you will do today:
 
 - Morning: 
     - **Self-study** (working at home/or PC's at WUR): go through the tutorial below.
@@ -24,7 +24,7 @@ Good morning, and welcome to the Geoscripting course! As a student enrolled in t
 - 14:00: 
     - Participate in the course introduction and planning lecture ([location of the PC lab](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806)).
     - Select your teammate and come up with a team name.
-    - Do the excercise at the bottom of this page, with submission deadline today.
+    - Do the exercise at the bottom of this page, with submission deadline today.
 
 ## *To Do* in the morning: self-study
 
@@ -47,7 +47,7 @@ You need to have *R* and an R GUI such as *RStudio Desktop* installed on your pe
 - Refresh R skills and assessing scripting skills to see if you have the 
 necessary scripting skills to continue with the course
 - Learn to write a function
-- Know how to visualise data (spatial map) in R
+- Know how to visualize data via a spatial map using an R script
 
 # Basic *R* and *RStudio* setup {#gettingstarted}
 
@@ -61,7 +61,7 @@ In case you are working on your own computer and would like to know how to insta
 
 ## Getting started with *RStudio* and *R* on your own computer.
 
-A summary youtube movie about how to use Rstudio and writing a function is here: [Intro to RStudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a [short introduction on the RStudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
+A summary YouTube movie about how to use RStudio and writing a function is here: [Intro to RStudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a [short introduction on the RStudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
 
 Now, Open RStudio and type the following script in the R console of **RStudio**:
 
@@ -95,23 +95,29 @@ In RStudio you can set your working directory this way, if you have saved your R
 
 ```{block, type="alert alert-danger"}
 **Warning**: The use of `setwd()` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
+
+*Never set the following in your script! This would make the script not reproducible by others!*
+`setwd('some/path/on/your/computer')`
 ```
 
-```{r, eval=FALSE}
-# Never set the following in your script! This would make the script not reproducible by others!
-setwd('some/path/on/your/computer')
+
+
+```{block type="alert alert-info"}
+**Protip**: You can use relative paths to load your data. 
+For example by setting the path to a 
+file "my-table.csv" in the directory "data", relative to your script file:
+`datafile <- file.path("data", "my-table.csv")`
+
+Then you can for example read in the file using:
+`mytable <- read.csv(datafile) # Do something with that file name`
+
 ```
 
-Then you can use relative paths to load your data, for example:
-
-```{r, eval=FALSE}
-# Path to a file "my-table.csv" in the directory "data", relative to your script file
-datafile <- file.path("data", "my-table.csv")
-mytable <- read.csv(datafile) # Do something with that file name
-```
+The above Protip is very important, so make sure you understand this and use this 
+within the geo-scripting exercises.
 
 # Basic *R* knowledge useful for Geo-Scripting
-Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo scripting below. 
+Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo-scripting below. 
 
 ## Vector handling and vector arithmetic
 **In *R* we call a one-dimensional array of values a *vector*, and a two-dimensional array of values a *matrix*.**
@@ -138,7 +144,7 @@ a
 (f <- a + b[1:2])
 ```
 
-Vectors of numbers are called **numeric vectors**, and matrices of numbers are **numeric matrices**. Arithmetics with matrices work the same way as with vectors, i.e. element-wise. So a multiplication between two matrices is element-wise value multiplication, *not* mathematical matrix multiplication.
+Vectors of numbers are called **numeric vectors**, and matrices of numbers are **numeric matrices**. Calculations with matrices work the same way as with vectors, i.e. element-wise. So a multiplication between two matrices is element-wise value multiplication, *not* mathematical matrix multiplication.
 
 ### Value replacement
 
@@ -175,13 +181,13 @@ a
 
 ## Character vector handling
 
-When working with real data, such as satellite imagery or KML files, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognise patterns in file names, etc). That requires from the user some basic **character vector** (string) handling skills.
+When working with real data, such as satellite imagery or KML files, the data always needs to be read from files. File names and file paths define the location of a file on a computer hard drive. A great advantage of scripting is that locating data, reading and writing data can be fairly easily automated (generate automatic file names, recognize patterns in file names, etc). That requires from the user some basic **character vector** (string) handling skills.
 
 Key functions for handling character strings are listed below:
 
 * `list.files()`: to list files in a directory.
 * `glob2rx()`: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
-* `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a filename.
+* `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a file name.
 * `strsplit()`: to split up a string.
 
 ### Example of `list.files()`
@@ -265,11 +271,6 @@ ls() # Check that the object is no longer in the working environment
 (test = read.csv("testing.csv")) # Read from your working directory
 ```
 
-```{block, type="alert alert-success"}
-> **Question 5**: Do you know how to read an *Excel* file into *R*? 
-What are the different options? How can you find help?
-```
-
 ## Writing a function
 
 It is hard to unleash the full potential of R without writing your own functions. Luckily it's very easy to do. Here are some trivial examples:
@@ -296,7 +297,7 @@ add(6)
 That's about all there is to it. The function will generally return the result of the last line that was evaluated.
 
 ```{block, type="alert alert-success"}
-> **Question 6**: How do you write a function that returns `x` and `z`?
+> **Question 5**: How do you write a function that returns `x` and `z`?
 ```
 
 Now, let's declare a new object, a new function, `newfunc` (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.
@@ -330,10 +331,10 @@ library(raster)
 Read the help to find out how we can find the country codes.
 
 ```{block, type="alert alert-success"}
-> **Question 7**: What is the country code of Belgium?
+> **Question 6**: What is the country code of Belgium?
 ```
 
-More info about the datasets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
+More info about the data sets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
 
 ```{r, eval=FALSE, message=FALSE, results='hide', echo=FALSE}
 raster::getData("ISO3")
@@ -360,7 +361,7 @@ if (!file.exists(file.path(datdir, "PHL_adm2.RData"))) {
 }
 ```
 
-Try to understand the code below, and let us know if you have questions. Feel free to use this code as an example and use this for the excercise below.
+Try to understand the code below, and let us know if you have questions. Feel free to use this code as an example and use this for the exercise below.
 
 ```{r phil, eval=TRUE, warning=FALSE, fig.align='center'}
 mar <- adm[adm$NAME_1 == "Marinduque",]
@@ -397,12 +398,12 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
     
 ## Hints
 
-- Keep it simple (!) e.g. just plot the adminstrative boundaries as the focus on it on **reproducible scripting**
+- Keep it simple (!) e.g. just plot the administrative boundaries as the focus on it on **reproducible scripting**
 - Make sure the script is **reproducible**, **structured**, and **documented** 
 - Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
-- Do not set the working directory (see above i.e. also specific to your computer).
+- Do not set the working directory (see the above tutorial).
 - Data should be downloaded via the script
-- All code requires comments - explaining its function
+- All code requires comments - explaining its functionality
 - Use the script template below
     
 Script template:
@@ -423,13 +424,13 @@ library(raster)
 
 # Submission
 
-- Use the script review center in BlackBoard to submit your script by **17:15**.
+- Use the script review center in Black Board to submit your script by **17:15**.
 - Do not use an attachment, just paste the script (note: there is a pasting bug in Internet Explorer, so use a different browser).
 - Follow the file naming precisely!
 
 
 ```{block, type="alert alert-info"}
-**Protip**: Alternatively, you can also upload your solution as a secret [GitHub Gist](https://gist.github.com/) and then paste a link to it on BlackBoard.
+**Protip**: Alternatively, you can also upload your solution as a secret [GitHub Gist](https://gist.github.com/) and then paste a link to it on Black Board.
 ```
 <!-- or a private [GitLab snippet](https://git.wur.nl/snippets/new), -->
 
@@ -466,7 +467,7 @@ You can create an `.html` from an `.Rmd` file. Click on the following [link](htt
 
 ![](figs/DefaultOutput_Format.png)
 
-In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button ("run curent chunk") on the right top side of the grey box or by clicking in the RMD you can use the shortcut ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.
+In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button ("run current chunk") on the right top side of the grey box or by clicking in the RMD you can use the shortcut Ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.
 
 * Click the Knit HTML button in the doc toolbar to preview your document such as the assignment of today.
 
