@@ -69,7 +69,7 @@ Goal: Scripting to solve spatial challenges!
 * A team of `R` & `Python` experts who use geo-scripting languages 
 every day helped to develop this course
 
-* Experts from companies, research institute (Alterra, ISRIC) and 
+* Experts from companies, research institute (e.g. , [WENR](https://www.wur.nl/nl/Onderzoek-Resultaten/Onderzoeksinstituten/Environmental-Research.htm)) and 
 our own RS and GIS group will present 
 
 ## Course concept
@@ -101,7 +101,7 @@ http://www.geo-informatie.nl/courses/grs33806/question2answer/index.php
 See the forum and try to answer a question now and login, otherwise your question will be anonymous
 
 - Slack: 
-https://wur-grs.slack.com/messages/geoscripting2019
+https://wur-grs.slack.com/messages/geoscripting2019
 
 
 ## Scoring
@@ -174,36 +174,6 @@ grid.raster(img)
 ![](figs/RPythonS.png)
 
 ## R packages
-
-```{r, fig.align='center', echo=FALSE, message=FALSE}
-if (!file.exists(fn <- "figs/worldcloudRpackage.png")) {
-    fn <- "figs/worldcloudRpackage.png"
-    require(XML)
-    require(tm)
-    require(wordcloud)
-    require(RColorBrewer)
-    u = "http://cran.r-project.org/web/packages/available_packages_by_date.html"
-    t = readHTMLTable(u)[[1]]
-    ap.corpus <- Corpus(DataframeSource(data.frame(as.character(t[,3]))))
-    ap.corpus <- tm_map(ap.corpus, removePunctuation)
-    # ap.corpus <- tm_map(ap.corpus, tolower)
-    #  txt.corpus <- tm_map(txt.corpus, tolower)
-    # must be changed to
-    ap.corpus <- tm_map(ap.corpus, content_transformer(tolower))
-    ap.corpus <- tm_map(ap.corpus, function(x) removeWords(x, stopwords("english")))
-    ap.tdm <- TermDocumentMatrix(ap.corpus)
-    ap.m <- as.matrix(ap.tdm)
-    ap.v <- sort(rowSums(ap.m),decreasing=TRUE)
-    ap.d <- data.frame(word = names(ap.v),freq=ap.v)
-    table(ap.d$freq)
-    pal2 <- brewer.pal(8,"Dark2")
-    png(fn, width=1280, height=800)
-    wordcloud(ap.d$word,ap.d$freq, scale=c(8,.2),min.freq=3,
-    max.words=Inf, random.order=FALSE, rot.per=.15, colors=pal2)
-    dev.off()    
-}
-```
-
 ![](figs/worldcloudRpackage.png)
 
 ## Python versus R
@@ -252,3 +222,35 @@ Quiz: Geo-scripting intro
 - The excercise of today
 - What is reproducibility!?
 https://gist.github.com/hadley/270442
+
+
+<!--
+```{r, fig.align='center', echo=FALSE, message=FALSE, eval=FALSE}
+if (!file.exists(fn <- "figs/worldcloudRpackage.png")) {
+    fn <- "figs/worldcloudRpackage.png"
+    require(XML)
+    require(tm)
+    require(wordcloud)
+    require(RColorBrewer)
+    u = "http://cran.r-project.org/web/packages/available_packages_by_date.html"
+    t = readHTMLTable(u)[[1]]
+    ap.corpus <- Corpus(DataframeSource(data.frame(as.character(t[,3]))))
+    ap.corpus <- tm_map(ap.corpus, removePunctuation)
+    # ap.corpus <- tm_map(ap.corpus, tolower)
+    #  txt.corpus <- tm_map(txt.corpus, tolower)
+    # must be changed to
+    ap.corpus <- tm_map(ap.corpus, content_transformer(tolower))
+    ap.corpus <- tm_map(ap.corpus, function(x) removeWords(x, stopwords("english")))
+    ap.tdm <- TermDocumentMatrix(ap.corpus)
+    ap.m <- as.matrix(ap.tdm)
+    ap.v <- sort(rowSums(ap.m),decreasing=TRUE)
+    ap.d <- data.frame(word = names(ap.v),freq=ap.v)
+    table(ap.d$freq)
+    pal2 <- brewer.pal(8,"Dark2")
+    png(fn, width=1280, height=800)
+    wordcloud(ap.d$word,ap.d$freq, scale=c(8,.2),min.freq=3,
+    max.words=Inf, random.order=FALSE, rot.per=.15, colors=pal2)
+    dev.off()    
+}
+```
+-->
