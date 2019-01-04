@@ -184,20 +184,23 @@ Room: GEOSCRIPTING
 
 Quiz: Geo-scripting intro
 
+## Time for R action!
+
+- What is a "reproducible script"?
+
+## Reproducibility
+
+![](figs/rep_sci_cover.png)
+
 ## Tomorrow morning
 
 - Finalize the lesson 1 and the exercise
+- Provide feedback
 - Look at Lesson 2
     - an overview of what is possible with scripting
     - no need to understand the code: lesson 2 is a demonstration lesson!
 
 [See Lesson 2 demo's!](https://geoscripting-wur.github.io/Scripting4Geo/#why-scripting)
-
-## Time for R action!
-
-- The exercise of today
-- What is a "reproducible script"?
-
 
 <!--
 ```{r, fig.align='center', echo=FALSE, message=FALSE, eval=FALSE}
