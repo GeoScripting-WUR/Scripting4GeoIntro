@@ -56,28 +56,38 @@ Can you think of other advantages?
 ## Geo-scripting learning objectives
 
 - Read, write, and visualize spatial data using a script
-- Find & use libraries, functions for geo-data handling
+- Find and use  functions for geo-data handling
 - Know how to find help
     - Write a clear and reproducible script
     - Learn how to help each other
-- Apply learned concepts for your own geo-challenge 
+- Apply learned concepts for your own geo-challenge
+
+<!--
+```{block type="alert alert-info"}
+
+```
+-->
 
 ## The geo-scripting course
 
-Goal: Scripting to solve spatial challenges!
+Goal:
 
-* A team of `R` & `Python` experts who use geo-scripting languages 
+- Scripting to solve spatial challenges!
+- **Learn by doing**
+- **Learn how to keep on learning**
+
+
+A team of `R` & `Python` experts who use geo-scripting languages 
 every day helped to develop this course
-
-* Experts from companies, research institutes (e.g. , [WENR](https://www.wur.nl/nl/Onderzoek-Resultaten/Onderzoeksinstituten/Environmental-Research.htm)) and 
-our own RS and GIS group will present 
 
 ## Course concept
 
-Flipped Classroom concept!
+Flipped Classroom concept:
 
 ![](figs/flipping-the-classroom.jpg)
 
+* Experts from companies, research institutes and 
+university will present.
 
 ## Team work & helping each other
 
@@ -100,9 +110,9 @@ Flipped Classroom concept!
 
 http://www.geo-informatie.nl/courses/grs33806/question2answer/
 
+## Team work & helping each other
 
-
-- Slack: 
+**Slack**
 https://wur-grs.slack.com/messages/geoscripting2019
 
 
@@ -118,17 +128,16 @@ Details: https://goo.gl/3szHDt Course Guide (google docs)
 
 - Question and answer forum
 - DataCamp website: challenges
-    - Free access to all courses
+    - Free access to all courses for 6 months
    
-- Script reviewing can be done on an individual basis, via script review center (bonus points)
+- Script reviewing can be done on an individual basis
 
 
 ## Learning outcomes of today:
 
-- Refreshing R skills and assessing scripting skills to see if you have the 
-necessary scripting skills to continue with the course
+- Refreshing and assessing R scripting skills to see if you can continue with the course
 - Able to write a function
-- Know how to visualize data (spatial map) in R
+- Know how to visualize a spatial map in R
 
 *Socrative Quiz at the end of this presentation!*
     
@@ -164,7 +173,6 @@ grid.raster(img)
 
 - Python is a general purpose programming language
 - R is particularly strong in statistical computing and graphics
-- Installing libraries in Python is sometimes challenging
 - Syntactic differences between R and Python can be confusing  
 - There are many R and Python packages for spatial analyses
 
@@ -175,8 +183,11 @@ grid.raster(img)
 
 ## Many programs have support for
 
-- Python (Blender, Sketchup, QGIS, MySQL, PostGIS)
-- R (GRASS, QGIS, MySQL, PostGIS)
+ Python & R e.g.:
+ 
+ - QGIS
+ - GRASS
+ - PostGIS
 
 ## Challenge
 
@@ -200,9 +211,8 @@ Quiz: Geo-scripting intro
 
 ## Tomorrow morning
 
-- Finalize the lesson 1 and the exercise
 - Provide feedback
-- Look at Lesson 2
+- Lesson 2
     - an overview of what is possible with scripting
     - no need to understand the code: lesson 2 is a demonstration lesson!
 
