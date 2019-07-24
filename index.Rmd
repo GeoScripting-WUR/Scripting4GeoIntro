@@ -4,7 +4,7 @@ author: "Jan Verbesselt, Loïc Dutrieux and Dainius Masiliūnas"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   knitrBootstrap::bootstrap_document:
-    title: "Week 1, Lesson 1: Introduction to the geo-scripting course"
+    title: "Week 1, Lesson 3: Introduction to functions and refresher on R"
     theme: "simplex"
     highlight: Tomorrow Night Bright
     menu: FALSE
@@ -14,8 +14,9 @@ output:
 
 # [WUR Geoscripting](https://geoscripting-wur.github.io/) <img src="http://www.wur.nl/upload/b43b7095-e452-482a-8969-fed9a50393a8_WUR_RGB_standard.png" alt="WUR logo" style="height: 35px;"/>
 
-# Week 1, Lesson 1: Introduction to the geo-scripting 
+# Week 1, Lesson 3: Introduction to functions and refresher on R
 
+<!-- TODO: move to Brightspace
 Good morning, and welcome to the Geo-scripting course! As a student enrolled in the course at Wageningen University, here is what you will do today:
 
 - Morning: 
@@ -42,12 +43,14 @@ You need to have *R* and an R GUI such as *RStudio Desktop* installed on your pe
 **Note for external students:** if you are taking the course externally, see the [Geo-scripting system set-up](http://geoscripting-wur.github.io/system_setup/) page for instructions on how to set up all the software needed for the course.
 ```
 
+-->
+
 ## Objective and Learning outcomes of today:
 
-- Refresh R skills and assessing scripting skills to see if you have the 
-necessary scripting skills to continue with the course
-- Learn to write a function
-- Know how to visualize data via a spatial map using an R script
+* Learn to write a function
+* Know how to visualize data via a spatial map using an R script
+* Adopt some good scripting/programming habits
+* Use control flow for efficient function writing
 
 # Basic *R* and *RStudio* setup {#gettingstarted}
 
