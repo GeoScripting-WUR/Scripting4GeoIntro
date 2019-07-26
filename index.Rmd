@@ -52,73 +52,6 @@ You need to have *R* and an R GUI such as *RStudio Desktop* installed on your pe
 * Adopt some good scripting/programming habits
 * Use control flow for efficient function writing
 
-# Basic *R* and *RStudio* setup {#gettingstarted}
-
-This preliminary section will cover some basic details about *R*. For this course you can use RStudio to write and run scripts.
-In case you are working on your own computer and would like to know how to install *R* and *RStudio*, see the [RStudio website](https://www.rstudio.com/products/rstudio/download/).
-
-
-```{block type="alert alert-info"}
-**Protip**: if you are following the course externally, you can also set up all the rest of the necessary software for the course now. See the [system setup page](https://geoscripting-wur.github.io/system_setup/) for instructions. This is not necessary for enrolled students, as all the software will be provided in the upcoming lessons.
-```
-
-## Getting started with *RStudio* and *R* on your own computer.
-
-A summary YouTube movie about how to use RStudio and writing a function is here: [Intro to RStudio](https://www.youtube.com/watch?v=jPk6-3prknk). Have a look at this movie if you do not know how to work with RStudio and then do the following section. See the following tutorial for a [short introduction on the RStudio interface](http://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf).
-
-Now, Open RStudio and type the following script in the R console of **RStudio**:
-
-```{r}
-a <- 1
-a
-```
-
-The first line you passed to the console created a new object named  $a$ in memory.
-The symbol `<-` is somewhat equivalent to an equals sign `=` for assigning values to variables. In the second line you printed $a$ to the console by simply typing its name.
-
-**What is the class of this object?**
-
-```{r}
-class(a)
-```
-
-You now have requested the class attribute of $a$ and the console has returned the attribute: numeric. R possesses a simple mechanism to support an object-oriented style of programming. All objects ($a$ in this case) have a class attribute assigned to them. R is quite forgiving and will assign a class to an object even if you haven't specified one (as you didn't in this case). Classes are a very important feature of the R environment. Any function or method that is applied to an object takes into account its class and uses this information to determine the correct course of action.
-
-## Set Your Working Directory
-
-Let's do some basic set up first.
-
-- Create a folder which will be your working directory e.g. `Lesson1`
-- Create an R script within that folder
-- Set your working directory to the `Lesson1` folder
-- Create a `data` folder within your working directory
-
-In RStudio you can set your working directory this way, if you have saved your R script to your working directory:
-![](figs/setwd_rstudiotip.png)
-
-```{block, type="alert alert-danger"}
-**Warning**: The use of `setwd()` is not a good practice in scripts without a very, very good reason. The users are aware of the environment and working directories and scripts should not try to outsmart the users.
-
-*Never set the following in your script! This would make the script not reproducible by others!*
-`setwd('some/path/on/your/computer')`
-```
-
-
-
-```{block type="alert alert-info"}
-**Protip**: You can use relative paths to load your data. 
-For example by setting the path to a 
-file "my-table.csv" in the directory "data", relative to your script file:
-`datafile <- file.path("data", "my-table.csv")`
-
-Then you can for example read in the file using:
-`mytable <- read.csv(datafile) # Do something with that file name`
-
-```
-
-The above Protip is very important, so make sure you understand this and use this 
-within the geo-scripting exercises.
-
 # Basic *R* knowledge useful for Geo-Scripting
 Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo-scripting below. 
 
@@ -320,7 +253,447 @@ Next, a new object `a2b` is created which contains the result of applying `newfu
 rm(a, newfunc, a2b)
 ```
 
-## Creating a map within *R* - a simple demo
+# Good scripting/programming habits
+
+Increasing your scripting/programming efficiency goes through adopting good scripting habits. Following a couple of guidelines will ensure that your work:
+
+* Can be understood and used by others.
+* Can be understood and reused by you in the future.
+* Can be debugged with minimal effort.
+* Can be re-used across different projects.
+* Is easily accessible by others.
+
+In order to achieve these objectives, you should try to follow a few good practices. The list below is not exhaustive, but already constitutes a good basis that will help you getting more efficient now and in the future when working on R projects.
+
+* Comment your code.
+* Write [functions](#function-writing) for code you need more than once:
+    - Make your functions generic and flexible, using [control flow](#control-flow).
+    - Document your functions.
+* Follow a R [style guide](http://adv-r.had.co.nz/Style.html). This will make your code more readable! Most important are: 
+    - Meaningful and consistent naming of files, functions, variables...
+    - Indentation (like in Python: use spaces or tab to indent code in functions or loops etc.).
+    - Consistent use of the assignment operator: either `<-` or `=` in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.
+    - Consistent placement of curly braces.
+* [Make your own packages](#optional-writing-packages).
+* Keep a similar [directory structure](#project-structure) across your projects.
+* Use [version control](#version-control) to develop/maintain your projects and packages.
+<!--* Work with [projects](#working-with-projects).-->
+
+Note that R IDEs like RStudio make a lot of these good practices a lot easier and you should try to take maximum advantage of them. Take a moment to explore the menus of the RStudio session that should already be open on your machine. Particular emphasis will be given later in this tutorial on projects, project structure and use of version control.
+
+Below is an example of a function written with good practices and without.
+First the good example:
+
+```{r}
+ageCalculator <- function(x) {
+    # Function to calculate age from birth year
+    # x (numeric) is the year you were born
+    if(!is.numeric(x)) {
+        stop("x must be of class numeric")
+    } else { # x is numeric
+        # Get today's date
+        date <- Sys.Date()
+        # extract year from date and subtract
+        year <- as.numeric(format(date, "%Y"))
+        if(year <= x) {
+            stop("You aren't born yet")
+        }
+        age <- year - x
+    }
+    return(age)
+}
+
+ageCalculator(1985)
+```
+
+What a beautiful age for learning geo-scripting!
+
+Then the bad example:
+
+```{r}
+## DON'T DO THAT, BAD EXAMPLE!!!
+funTest_4 <- function(x) {
+if( !is.numeric(x))
+{
+stop("x must be of class numeric"  )
+ }
+else {
+a = Sys.Date()
+b<- as.numeric( format( a,"%Y"))
+b-x
+}
+}
+
+funTest_4(1985)
+```
+It also works, but which of the two is the easiest to read, understand, and modify if needed? ... Exactly, the first one.
+So let's look back at the examples and identify some differences:
+
+* Function name: Not very self descriptive in the second example.
+* Function description: Missing in the second example.
+* Arguments description: Missing in the second example.
+* Comments: The second example has none (okay, the first one really has a lot, but that's for the example).
+* Variables naming: use of `a` and `b` not very self descriptive in second example.
+* Indentation: Missing in the second example.
+* Control flow: Second example does not check for implausible dates.
+* Consistency: Second example uses spaces, assigment operators and curly braces inconsistently.
+
+You haven't fully understood what control flow is or you are not fully comfortable with function writing yet? We'll see more of that in the following sections.
+
+# Function writing
+> A function is a sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed. -[Wikipedia](https://en.wikipedia.org/wiki/Subroutine)
+
+The objective of this section is to provide some help on effective function writing. That is functions that are:
+
+* simple, 
+* generic, and
+* flexible.
+
+They should integrate well in a processing/analysis chain and be easily be re-used in a slightly different chain if needed.
+More flexibility in your function can be achieved through some easy control flow tricks. The following section develops this concept and provides examples.
+
+## Control flow
+Control flow refers to the use of conditions in your code that redirect the flow to different directions depending on variables values or class. Make use of that in your code, as this will make your functions more flexible and generic.
+
+### Object classes and Control flow
+You have seen in a previous lesson already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
+
+A quick reminder on classes:
+
+```{r}
+# 5 different objects belonging to 5 different classes
+a <- 12
+class(a)
+
+b <- "I have a class too"
+class(b)
+
+library(raster)
+c <- raster(ncol=10, nrow=10)
+class(c)
+
+d <- stack(c, c)
+class(d)
+
+e <- brick(d)
+class(e)
+```
+
+### Controlling the class of input variables of a function
+
+One way of making functions more auto-adaptive is by adding checks of the input variables. Using object class can greatly simplify this task.
+For example let's imagine that you just wrote a simple Hello World function.
+
+```{r}
+HelloWorld <- function (x) {
+    hello <- sprintf('Hello %s', x)
+    return(hello)
+}
+
+# Let's test it
+HelloWorld('john')
+HelloWorld(2.5)
+HelloWorld(c("Devis", "Martin"))
+HelloWorld(NULL)
+HelloWorld(data.frame(a=1:10, b=rep("Name", 10)))
+```
+
+Surprisingly enough, R is smart enough to give intuitive output in most of the tested cases, since the `sprintf` function automatically casts non-character variables into character ones, and is also vectorised to produce output when the input is a vector. However, in the last two cases, the output is not intuitive. We may want to only allow passing character vectors to this function. We can do this with a small change:
+
+```{r, error=TRUE}
+HelloWorld <- function (x) {
+    if (!is.character(x))
+      stop('Object of class "character" expected for x')
+
+    hello <- sprintf('Hello %s', x)
+    return(hello)
+}
+
+HelloWorld(21)
+
+```
+
+The function now throws an informative error when something not supported is requested. These function argument "sanity checks" are useful to avoid lengthy processing, when we know that the output of the function is going to be wrong anyway because of invalid arguments. Alternatively to `stop()`, the function could throw a `warning()` but still return some value.
+
+```{block, type="alert alert-success"}
+> **Question**: In which cases should you use `stop()`, `warning()`, `message()`, and when should you return a string?
+```
+
+Note that most common object classes have their own logical function (that returns `TRUE` or `FALSE`) to check what class it is.
+For example:
+
+```{r}
+is.character('john')
+# is similar to
+class('john') == 'character'
+
+is.character(32)
+is.numeric(32)
+```
+
+You should always try to take maximum advantage of these small utilities and check for classes and properties of your objects. This is important in some cases that you might not think of in advance, for instance, consider an object with more than one class:
+
+```{r}
+a = list(a=1:10, b="b")
+# We can also set a class (only do that if you make your own class!)
+class(a) = c("myclass", "list")
+
+# Wrong
+if (class(a) == "list") {
+  print("a is a list")
+} else {
+  print("a is not a list")
+}
+
+# Right
+if (is.list(a)) {
+  print("a is a list")
+} else {
+  print("a is not a list")
+}
+
+```
+
+
+Also note that `is.character(32) == TRUE` is equivalent to `is.character(32)`. Therefore when checking logical arguments, you don't need to use the `== TRUE`. As an example, a function may have an argument (say, `plot`) that, if set to `TRUE` will generate a plot, and if set to `FALSE` does not generate a plot. It means that the function certainly contains an if statement. `if(plot)` in that case is equivalent to `if(plot == TRUE)`, it's just shorter (and very slightly faster).
+
+
+An example, with a function that subtracts 2 RasterLayers, with the option to plot the resulting RasterLayer, or not.
+
+```{r, fig.align='center'}
+library(raster)
+## Function to subtract 2 rasterLayers
+minusRaster <- function(x, y, plot=FALSE) { 
+    z <- x - y
+    if (plot) {
+        plot(z)
+    }
+    return(z)
+}
+
+# Let's generate 2 rasters 
+# that first one is the R logo raster
+# converted to the raster package file format.
+r <- raster(system.file("external/rlogo.grd", package="raster")) 
+# The second RasterLayer is derived from the initial RasterLayer in order
+# to avoid issues of non matching extent or resolution, etc
+r2 <- r
+## Filling the rasterLayer with new values
+# The /10 simply makes the result more spectacular
+r2[] <- (1:ncell(r2)) / 10
+## Simply performs the calculation
+r3 <- minusRaster(r, r2) 
+## Now performs the calculation and plots the resulting RasterLayer
+r4 <- minusRaster(r, r2, plot=TRUE) 
+```
+
+## Vectorised functions
+
+A lot of core R functions are *vectorised*, i.e. they are capable of taking vectors, rather than individual values, as input. This allows very simple and powerful syntax without needing to use loops, for instance:
+
+```{r}
+NumVec = 1:10
+# We do not need to run the function on each element individually
+as.character(NumVec)
+# Functions that reduce input into fewer numbers are also vectorised
+mean(NumVec)
+range(NumVec)
+# All math operators are vectorised
+NumVec + 100
+NumVec^2
+```
+
+Because most base functions are already vectorised, it is easy to write new functions that are themselves vectorised. For the most part, all you need to do is test your functions not just on single values, but also vectors of values, and think whether the result makes sense.
+
+Vectorisation also allows us to write short and versatile code. For instance, to check whether the input is a positive number:
+
+```{r}
+is.positive.number = function(x)
+{
+  is.numeric(x) & x > 0
+}
+
+is.positive.number(100)
+is.positive.number(c(-100, 10, NA))
+is.positive.number(c(TRUE, FALSE))
+```
+
+```{block, type="alert alert-success"}
+> **Question**: Why does the following function call return different and counter-intuitive results? 
+```
+
+```{r}
+is.positive.number(c(TRUE, -5, 10))
+```
+
+## Type consistency
+We just became familiar with functions for checking the types (classes) of variables. You may have noticed that there is one way in which they are all consistent: no matter the input, they return a `logical` value (`TRUE`, `FALSE`, or also `NA`). This is called type consistency and is a useful property. Consider code like this:
+
+```{r}
+AddNewSubject = function(NewBirthYear)
+{
+  # Birth years of previous subjects
+  BirthYears = c(1980, 1985, 1987, 1990, 1993, 1994, 1998, 2000)
+  return(c(BirthYears, NewBirthYear))
+}
+
+# Works as expected
+NewSubjects = AddNewSubject(c(1995, 1998, 1999, 2000))
+sum(NewSubjects >= 2000) # How many subjects are born on or after 2000
+
+# Whoops!
+NewSubjects = AddNewSubject(c("MCMXCV", "1998", "1999", "2000"))
+sum(NewSubjects >= 2000)
+```
+
+```{block, type="alert, alert-success"}
+> **Question**: What happened, and what would happen if we didn't include the Roman numerals?
+```
+
+`AddNewSubject` is not type consistent: depending on the input, the output class changes. This is sometimes convenient, but in the case above, the function succeeds but gives an output that is completely misleading. This has gone horribly right: a lot of code in R is flexible and can handle multiple input types, and so you may only notice that your output is wrong when you inspect it yourself. If the function `AddNewSubject` checked the input and always returned integers, we would be sure that comparing its output against numbers and summing them is safe. Similarly, the `is.numeric()` etc. functions are type consistent, and thus it is safe to use them in `if` statements which always require a logical input. This allows us to not need extra type checking after running such a function. In addition, the function name is hinting towards the type consistency: `is.` makes us realise that it will give a yes/no answer.
+
+## `try` and debugging
+
+### Use of `try` for error handling
+
+The `try()` function may help you writing functions that do not stop with a cryptic error whenever they encounter an unknown of any kind. Anything (sub-function, piece of code) that is wrapped into `try()` will not interrupt the bigger function that contains `try()`. So for instance, this is useful if you want to apply a function sequentially but independently over a large set of raster files, and you already know that some of the files are corrupted and might return an error. By wrapping your function into `try()` you allow the overall process to continue until its end, regardless of the success of individual layers. So `try()` is a perfect way to deal with heterogeneous/unpredictable input data.
+
+
+Also `try()` returns an object of different class when it fails. You can take advantage of that at a later stage of your processing chain to make your function more adaptive.
+See the example below that illustrate the use of `try()` for sequentially calculating frequency on a list of auto-generated RasterLayers.
+
+```{r, eval=TRUE, echo=TRUE}
+library(raster)
+
+## Create a raster layer and fill it with "randomly" generated integer values
+a <- raster(nrow=50, ncol=50)
+a[] <- floor(rnorm(n=ncell(a)))
+
+# The freq() function returns the frequency of a certain value in a RasterLayer
+# We want to know how many times the value -2 is present in the RasterLayer
+freq(a, value=-2)
+
+# Let's imagine that you want to run this function over a whole list of RasterLayer
+# but some elements of the list are impredictibly corrupted
+# so the list looks as follows
+b <- a
+c <- NA
+list <- c(a,b,c)
+# In that case, b and a are raster layers, c is ''corrupted''
+```
+
+```{r, error=TRUE}
+## Running freq(c) would return an error and stop the whole process
+out <- list()
+for(i in 1:length(list)) {
+    out[i] <- freq(list[[i]], value=-2)
+}
+```
+
+```{r}
+## If you wrap the call in a try(), you still get an error, but it's non-fatal
+out <- list()
+for(i in 1:length(list)) {
+    out[i] <- try(freq(list[[i]], value=-2))
+}
+out
+```
+
+```{r}
+# By building a function that includes a try()
+# we are able to catch the error without having it printed,
+# allowing the process to handle the error gracefully.
+fun <- function(x, value) {
+    tr <- try(freq(x=x, value=value), silent=TRUE)
+    if (class(tr) == 'try-error') {
+        return('This object returned an error')
+    } else {
+        return(tr)
+    }
+}
+
+## Let's try to run the loop again
+out <- list()
+for(i in 1:length(list)) {
+    out[i] <- fun(list[[i]], value=-2)
+}
+out
+
+# Note that using a function of the apply family would be a more
+# elegant/shorter way to obtain the same result
+(out <- sapply(X=list, FUN=fun, value=-2))
+
+```
+
+
+### Function debugging
+
+Debugging a single line of code is usually relatively easy; simply double checking the classes of all input arguments often gives good pointers to why the line crashes. But when writing more complicated functions where objects created within the function are reused later on in that same function or in a nested function, it is easy to lose track of what is happening, and debugging can then become a nightmare. A few tricks can be used to make that process less painful. 
+
+#### `traceback()` and `debugonce()`
+Here are the manual commands, which also work with RStudio and other IDEs:
+
+- The first thing to investigate right after an error occurs is to run the `traceback()` function; just like that without arguments. 
+- Carefully reading the return of that function will tell you where exactly in your function the error occurred. 
+
+```{r, eval=FALSE}
+foo <- function(x) {
+    x <- x + 2
+    print(x)
+    bar(2) 
+}
+
+bar <- function(x) { 
+    x <- x + a.variable.which.does.not.exist 
+    print(x)
+}
+
+foo(2) 
+## gives an error
+
+traceback()
+## 2: bar(2) at #1
+## 1: foo(2)
+# Ah, bar() is the problem
+
+# Debug it by declaring what to debug and running it
+debugonce(bar)
+foo(2)
+```
+
+Depending on the IDE you are using, you may be presented with tools for stepping through the function line by line, as well as a Browse console, which allows you to query the state of the variables involved so that you can identify exactly what is going on in the function call. For instance, in RKWard, the *Debugging Frames* pane on the right shows which line you are stepping through.
+
+For another example see: [rfunction.com](http://rfunction.com/archives/2562).
+
+#### RStudio
+RStudio has integration with the debugging tools in R, so you can use a point-and-click interface. However, some parts of it are specific to the RStudio IDE.
+
+- To force them to catch every error, select *Debug - On Error - Break in Code* in the main menu.
+- Run again ``foo(2)``. 
+- RStudio will stop the execution where the error happened. The traceback appears in a separate pane on the right. 
+- You can and use the little green "Next" button to go line by line through the code, or the red Stop button to leave the debugging mode. 
+- Reset the *On Error* behaviour to *Error Inspector*. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to "traceback" or "rerun the code with debugging" with two buttons in the console. 
+
+Finally, solve the problem:
+
+```{r, eval=FALSE}
+## redefine bar
+bar <- function(x) {
+    x + 5
+}
+foo(2)
+## [1] 4
+## [1] 7
+```
+
+Refer to the reference section of this document for further information on function debugging.
+
+```{block, type="alert alert-info"}
+# (optional) Writing packages
+The next step to write re-usable code is packaging it, so others can simply install and use it. If followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](packages.html) and in the [references](#references) below.
+```
+
+# Creating a map within *R* - a simple demo
 
 Here is an example of how you can create a map in *R*. It is a function to get *public* data from anywhere in the world. See help of the `getData` function in the `raster` package.
 
