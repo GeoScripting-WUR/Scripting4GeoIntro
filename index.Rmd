@@ -1,5 +1,5 @@
 ---
-title: Introduction to geoscripting
+pagetitle: Introduction to geoscripting
 author: "Jan Verbesselt, Loïc Dutrieux and Dainius Masiliūnas"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
