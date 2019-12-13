@@ -4,7 +4,7 @@ author: "Jan Verbesselt"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   ioslides_presentation:
-    footer: "Geo-scripting 2019"
+    footer: "Geo-scripting 2020"
 ---
 
 <!--
@@ -87,13 +87,20 @@ Flipped Classroom concept:
 ![](figs/flipping-the-classroom.jpg)
 
 * Experts from companies, research institutes and 
-university will present.
+university will present (guest lectures)
+
+## Course concept
+
+Day planning See our course guide.
+See also Brightspace
+
+- Dayly automatically evaluated Exercises!
 
 ## Team work & helping each other
 
 - Teams of two:
 
-    - select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard)
+- select the team (2 persons, e.g. 1st with 2nd year MGI ) and fill in the form (see blackboard)
 
 - Other teams can be selected for the project work
 
@@ -103,26 +110,18 @@ university will present.
 
 ## Team work & helping each other
 
-- The Question and Answer forum (see blackboard):
-    - Ask at least one good question
-    - Answer at least one question
-    - *Register with your wur e-mail address today!*
+- Microsoft teams question and answer Forum
 
-http://www.geo-informatie.nl/courses/grs33806/question2answer/
-
-## Team work & helping each other
-
-**Slack**
-https://wur-grs.slack.com/messages/geoscripting2019
+- Microsoft team - Staff announcements
 
 
 ## Scoring
 
-- All exercises - 30%
-- Questions & Answers forum - 10%
+- 3 weekly assignments - 30%
+- Questions & Answers support and activity - 10%
 - Project - 60%
 
-Details: https://goo.gl/3szHDt Course Guide (google docs)
+Details -see the course guide!
 
 ## Individual assessment
 
@@ -130,8 +129,8 @@ Details: https://goo.gl/3szHDt Course Guide (google docs)
 - DataCamp website: challenges
     - Free access to all courses for 6 months
    
-- Script reviewing can be done on an individual basis
-
+- Script reviewing can be done on an individual basis both team member need to
+equally use Git
 
 ## Learning outcomes of today:
 
@@ -199,6 +198,8 @@ Quiz: Geo-scripting intro
 
 ## Time for R action!
 
+- Linux
+- Git
 - What is a "reproducible script"?
 
 ## Reproducibility
