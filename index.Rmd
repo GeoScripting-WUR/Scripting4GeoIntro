@@ -266,20 +266,20 @@ Increasing your scripting/programming efficiency goes through adopting good scri
 In order to achieve these objectives, you should try to follow a few good practices. The list below is not exhaustive, but already constitutes a good basis that will help you getting more efficient now and in the future when working on R projects.
 
 * Comment your code.
-* Write [functions](#function-writing) for code you need more than once:
-    - Make your functions generic and flexible, using [control flow](#control-flow).
+* Write [functions](#Function_writing) for code you need more than once:
+    - Make your functions generic and flexible, using [control flow](#Control_flow).
     - Document your functions.
 * Follow a R [style guide](http://adv-r.had.co.nz/Style.html). This will make your code more readable! Most important are:
     - Meaningful and consistent naming of files, functions, variables...
     - Indentation (like in Python: use spaces or tab to indent code in functions or loops etc.).
     - Consistent use of the assignment operator: either `<-` or `=` in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.
     - Consistent placement of curly braces.
-* [Make your own packages](#optional-writing-packages).
-* Keep a similar [directory structure](#project-structure) across your projects.
-* Use [version control](#version-control) to develop/maintain your projects and packages.
+* [Make your own packages](#__optional__Writing_packages_).
+* Keep a similar [directory structure](../RProjectManagement/index.html) across your projects.
+* Use [version control](../RProjectManagement/index.html) to develop/maintain your projects and packages.
 <!--* Work with [projects](#working-with-projects).-->
 
-Note that R IDEs like RStudio make a lot of these good practices a lot easier and you should try to take maximum advantage of them. Take a moment to explore the menus of the RStudio session that should already be open on your machine. Particular emphasis will be given later in this tutorial on projects, project structure and use of version control.
+Note that R IDEs like RStudio make a lot of these good practices a lot easier and you should try to take maximum advantage of them. Take a moment to explore the menus of the RStudio session that should already be open on your machine.
 
 Below is an example of a function written with good practices and without.
 First the good example:
@@ -690,7 +690,7 @@ Refer to the reference section of this document for further information on funct
 
 ```{block, type="alert alert-info"}
 # (optional) Writing packages
-The next step to write re-usable code is packaging it, so others can simply install and use it. If you followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](packages.html) and in the [references](#references) below.
+The next step to write re-usable code is packaging it, so others can simply install and use it. If you followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](https://r-pkgs.org/intro.html) and in the [references](#References_and_more_info) below.
 ```
 
 # Creating a map within *R* - a simple demo
@@ -828,7 +828,7 @@ The three specific tasks that will be assessed are:
 
 # References and more info
 
-- [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/).
+- [RStudio Online Learning](https://rstudio.cloud/learn/primers).
 - [Coursera](https://www.coursera.org/course/rprog)
 
 <!--
