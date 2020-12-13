@@ -1,6 +1,6 @@
 ## Scripting4GeoIntro
 
-Lesson 1 of the Geo-Scripting course.
+Lesson 3 of the Geo-Scripting course.
 Lesson material available [here](http://geoscripting-wur.github.io/Scripting4GeoIntro).
 
 ## Content
