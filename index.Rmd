@@ -19,10 +19,10 @@ output:
 <!-- TODO: move to Brightspace
 Good morning, and welcome to the Geo-scripting course! As a student enrolled in the course at Wageningen University, here is what you will do today:
 
-- Morning: 
+- Morning:
     - **Self-study** (working at home/or PC's at WUR): go through the tutorial below.
     - Answer the questions mentioned in **bold** in green boxes within the self-study section.
-- 14:00: 
+- 14:00:
     - Participate in the course introduction and planning lecture ([location of the PC lab](https://ssc.wur.nl/Handbook/CourseSchedule/GRS-33806)).
     - Select your teammate and come up with a team name.
     - Do the exercise at the bottom of this page, with submission deadline today.
@@ -31,7 +31,7 @@ Good morning, and welcome to the Geo-scripting course! As a student enrolled in 
 
 You need to complete before 13h today:
 
-- See information provided via blackboard in the section course description: lesson 1! 
+- See information provided via blackboard in the section course description: lesson 1!
 You need to have *R* and an R GUI such as *RStudio Desktop* installed on your personal computer. Or work from a Wageningen University PC where this should normally be available. Throughout this course, we will be using free and open-source software.
 
 - For more information about *R* and *RStudio* installation: see the [RStudio website](https://www.rstudio.com/products/rstudio/download/).
@@ -53,7 +53,7 @@ You need to have *R* and an R GUI such as *RStudio Desktop* installed on your pe
 * Use control flow for efficient function writing
 
 # Basic *R* knowledge useful for Geo-Scripting
-Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo-scripting below. 
+Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo-scripting below.
 
 ## Vector handling and vector arithmetic
 **In *R* we call a one-dimensional array of values a *vector*, and a two-dimensional array of values a *matrix*.**
@@ -204,7 +204,7 @@ However you can read in virtually any type of text file. Type `?read.table` in y
 write.csv(test, file = "testing.csv") # Write to your working directory
 rm(test) # Remove the variable "test" from the R working environment
 ls() # Check that the object is no longer in the working environment
-(test = read.csv("testing.csv")) # Read from your working directory
+(test <- read.csv("testing.csv")) # Read from your working directory
 ```
 
 ## Writing a function
@@ -269,7 +269,7 @@ In order to achieve these objectives, you should try to follow a few good practi
 * Write [functions](#function-writing) for code you need more than once:
     - Make your functions generic and flexible, using [control flow](#control-flow).
     - Document your functions.
-* Follow a R [style guide](http://adv-r.had.co.nz/Style.html). This will make your code more readable! Most important are: 
+* Follow a R [style guide](http://adv-r.had.co.nz/Style.html). This will make your code more readable! Most important are:
     - Meaningful and consistent naming of files, functions, variables...
     - Indentation (like in Python: use spaces or tab to indent code in functions or loops etc.).
     - Consistent use of the assignment operator: either `<-` or `=` in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.
@@ -345,7 +345,7 @@ You haven't fully understood what control flow is or you are not fully comfortab
 
 The objective of this section is to provide some help on effective function writing. That is functions that are:
 
-* simple, 
+* simple,
 * generic, and
 * flexible.
 
@@ -463,7 +463,7 @@ An example, with a function that subtracts 2 RasterLayers, with the option to pl
 ```{r, fig.align='center'}
 library(raster)
 ## Function to subtract 2 rasterLayers
-minusRaster <- function(x, y, plot=FALSE) { 
+minusRaster <- function(x, y, plot=FALSE) {
     z <- x - y
     if (plot) {
         plot(z)
@@ -471,10 +471,10 @@ minusRaster <- function(x, y, plot=FALSE) {
     return(z)
 }
 
-# Let's generate 2 rasters 
+# Let's generate 2 rasters
 # that first one is the R logo raster
 # converted to the raster package file format.
-r <- raster(system.file("external/rlogo.grd", package="raster")) 
+r <- raster(system.file("external/rlogo.grd", package="raster"))
 # The second RasterLayer is derived from the initial RasterLayer in order
 # to avoid issues of non matching extent or resolution, etc
 r2 <- r
@@ -482,9 +482,9 @@ r2 <- r
 # The /10 simply makes the result more spectacular
 r2[] <- (1:ncell(r2)) / 10
 ## Simply performs the calculation
-r3 <- minusRaster(r, r2) 
+r3 <- minusRaster(r, r2)
 ## Now performs the calculation and plots the resulting RasterLayer
-r4 <- minusRaster(r, r2, plot=TRUE) 
+r4 <- minusRaster(r, r2, plot=TRUE)
 ```
 
 ## Vectorised functions
@@ -519,7 +519,7 @@ is.positive.number(c(TRUE, FALSE))
 ```
 
 ```{block, type="alert alert-success"}
-> **Question**: Why does the following function call return different and counter-intuitive results? 
+> **Question**: Why does the following function call return different and counter-intuitive results?
 ```
 
 ```{r}
@@ -628,27 +628,27 @@ out
 
 ### Function debugging
 
-Debugging a single line of code is usually relatively easy; simply double checking the classes of all input arguments often gives good pointers to why the line crashes. But when writing more complicated functions where objects created within the function are reused later on in that same function or in a nested function, it is easy to lose track of what is happening, and debugging can then become a nightmare. A few tricks can be used to make that process less painful. 
+Debugging a single line of code is usually relatively easy; simply double checking the classes of all input arguments often gives good pointers to why the line crashes. But when writing more complicated functions where objects created within the function are reused later on in that same function or in a nested function, it is easy to lose track of what is happening, and debugging can then become a nightmare. A few tricks can be used to make that process less painful.
 
 #### `traceback()` and `debugonce()`
 Here are the manual commands, which also work with RStudio and other IDEs:
 
-- The first thing to investigate right after an error occurs is to run the `traceback()` function; just like that without arguments. 
-- Carefully reading the return of that function will tell you where exactly in your function the error occurred. 
+- The first thing to investigate right after an error occurs is to run the `traceback()` function; just like that without arguments.
+- Carefully reading the return of that function will tell you where exactly in your function the error occurred.
 
 ```{r, eval=FALSE}
 foo <- function(x) {
     x <- x + 2
     print(x)
-    bar(2) 
+    bar(2)
 }
 
-bar <- function(x) { 
-    x <- x + a.variable.which.does.not.exist 
+bar <- function(x) {
+    x <- x + a.variable.which.does.not.exist
     print(x)
 }
 
-foo(2) 
+foo(2)
 ## gives an error
 
 traceback()
@@ -669,10 +669,10 @@ For another example see: [rfunction.com](http://rfunction.com/archives/2562).
 RStudio has integration with the debugging tools in R, so you can use a point-and-click interface. However, some parts of it are specific to the RStudio IDE.
 
 - To force them to catch every error, select *Debug - On Error - Break in Code* in the main menu.
-- Run again ``foo(2)``. 
-- RStudio will stop the execution where the error happened. The traceback appears in a separate pane on the right. 
-- You can and use the little green "Next" button to go line by line through the code, or the red Stop button to leave the debugging mode. 
-- Reset the *On Error* behaviour to *Error Inspector*. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to "traceback" or "rerun the code with debugging" with two buttons in the console. 
+- Run again ``foo(2)``.
+- RStudio will stop the execution where the error happened. The traceback appears in a separate pane on the right.
+- You can and use the little green "Next" button to go line by line through the code, or the red Stop button to leave the debugging mode.
+- Reset the *On Error* behaviour to *Error Inspector*. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to "traceback" or "rerun the code with debugging" with two buttons in the console.
 
 Finally, solve the problem:
 
@@ -690,7 +690,7 @@ Refer to the reference section of this document for further information on funct
 
 ```{block, type="alert alert-info"}
 # (optional) Writing packages
-The next step to write re-usable code is packaging it, so others can simply install and use it. If followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](packages.html) and in the [references](#references) below.
+The next step to write re-usable code is packaging it, so others can simply install and use it. If you followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](packages.html) and in the [references](#references) below.
 ```
 
 # Creating a map within *R* - a simple demo
@@ -746,7 +746,7 @@ plot(mar, lwd = 10, border = "skyblue", add=TRUE)
 plot(mar, col = "green4", add = TRUE)
 grid()
 box()
-invisible(text(getSpPPolygonsLabptSlots(mar),
+invisible(text(sp::coordinates(mar),
 labels = as.character(mar$NAME_2), cex = 1.1, col = "white", font = 2))
 mtext(side = 3, line = 1, "Provincial Map of Marinduque", cex = 2)
 mtext(side = 1, "Longitude", line = 2.5, cex=1.1)
@@ -772,17 +772,17 @@ Data Source: GADM.org    ", adj = 1, cex = 0.5, col = "grey20")
     - Demonstrate the function
     (i.e. use it to plot a map of a country and a certain level as an example).
     - The function should accept `country` and `level` as input arguments.
-    
+
 ## Hints
 
 - Keep it simple (!) e.g. just plot the administrative boundaries as the focus on it on **reproducible scripting**
-- Make sure the script is **reproducible**, **structured**, and **documented** 
-- Do not use any paths e.g. `mydocument/John/blabla` specific for your computer. 
+- Make sure the script is **reproducible**, **structured**, and **documented**
+- Do not use any paths e.g. `mydocument/John/blabla` specific for your computer.
 - Do not set the working directory (see the above tutorial).
 - Data should be downloaded via the script
 - All code requires comments - explaining its functionality
 - Use the script template below
-    
+
 Script template:
 ```{r, eval=FALSE}
 # Name: Team name and members of the team
@@ -812,7 +812,7 @@ library(raster)
 
 # Peer-Reviewing
 
-You will need to give the team you are reviewing feedback on their exercise solution **before 11:00 the next day** (use the review team generator Shiny app to see which team). 
+You will need to give the team you are reviewing feedback on their exercise solution **before 11:00 the next day** (use the review team generator Shiny app to see which team).
 
 - The teams need to use the [Generic Rubric](https://docs.google.com/document/d/1wdqcrqh4Bt-tNwhEFRa4esq7ozwo36tfOjGmbBTK5B4/edit?usp=sharing) and fill in the *form* as a guideline and copy "as text" (*not as a document or attachement*) within the blackboard box.
 
@@ -828,7 +828,7 @@ The three specific tasks that will be assessed are:
 
 # References and more info
 
-- [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/). 
+- [RStudio Online Learning](http://www.rstudio.com/resources/training/online-learning/).
 - [Coursera](https://www.coursera.org/course/rprog)
 
 <!--
@@ -884,14 +884,14 @@ One central object class of R is the dataframes. The spatial vector classes of R
 # suppressPackageStartupMessages(library(googleVis))
 # ## create the scatter chart
 # sc <- gvisScatterChart(data=df,
-#                         options=list(width=300, height=300, 
+#                         options=list(width=300, height=300,
 #                                      legend='none',
 #                                      hAxis="{title:'x'}",
 #                                      vAxis="{title:'y'}")
 #           )
 # plot(sc)
 # ```
-# 
+#
 # ```{r, results='asis', echo=FALSE}
 # print(sc, "chart")  ## same as cat(sc$html$chart)
 # ```
