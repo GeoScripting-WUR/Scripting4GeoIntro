@@ -277,7 +277,10 @@ In order to achieve these objectives, you should try to follow a few good practi
 * [Make your own packages](#__optional__Writing_packages_).
 * Keep a similar [directory structure](../RProjectManagement/index.html) across your projects.
 * Use [version control](../RProjectManagement/index.html) to develop/maintain your projects and packages.
-<!--* Work with [projects](#working-with-projects).-->
+* Never place `rm(list = ls())` anywhere in your script. If you do so, you may [find your computer set on fire](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
+* Use relative file paths and never use `setwd()`. Do press the button below every time you open a script, and assume everyone else will do that too.
+
+![Session -> Set working directory -> To Source File Location](figs/setwd_rstudiotip.png)
 
 Note that R IDEs like RStudio make a lot of these good practices a lot easier and you should try to take maximum advantage of them. Take a moment to explore the menus of the RStudio session that should already be open on your machine.
 
