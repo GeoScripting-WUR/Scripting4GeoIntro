@@ -521,7 +521,7 @@ is.positive.number(c(TRUE, FALSE))
 ```
 
 ```{block, type="alert alert-success"}
-> **Question**: Why does the following function call return different and counter-intuitive results?
+> **Question 6**: Why does the following function call return different and counter-intuitive results?
 ```
 
 ```{r}
@@ -549,7 +549,7 @@ sum(NewSubjects >= 2000)
 ```
 
 ```{block, type="alert, alert-success"}
-> **Question**: What happened, and what would happen if we didn't include the Roman numerals?
+> **Question 7**: What happened, and what would happen if we didn't include the Roman numerals?
 ```
 
 `AddNewSubject` is not type consistent: depending on the input, the output class changes. This is sometimes convenient, but in the case above, the function succeeds but gives an output that is completely misleading. This has gone horribly right: a lot of code in R is flexible and can handle multiple input types, and so you may only notice that your output is wrong when you inspect it yourself. If the function `AddNewSubject` checked the input and always returned integers, we would be sure that comparing its output against numbers and summing them is safe. Similarly, the `is.numeric()` etc. functions are type consistent, and thus it is safe to use them in `if` statements which always require a logical input. This allows us to not need extra type checking after running such a function. In addition, the function name is hinting towards the type consistency: `is.` makes us realise that it will give a yes/no answer.
@@ -709,7 +709,7 @@ library(raster)
 Read the help to find out how we can find the country codes.
 
 ```{block, type="alert alert-success"}
-> **Question 6**: What is the country code of Belgium?
+> **Question 8**: What is the country code of Belgium?
 ```
 
 More info about the data sets see [Global Adminstrative Areas database (GADM)](http://www.gadm.org).
