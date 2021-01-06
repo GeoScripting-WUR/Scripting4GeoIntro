@@ -368,6 +368,8 @@ class(a)
 b <- "I have a class too"
 class(b)
 
+#  check for the raster package and install if missing
+if(!"raster" %in% rownames(installed.packages())){install.packages("raster")}
 library(raster)
 c <- raster(ncol=10, nrow=10)
 class(c)
