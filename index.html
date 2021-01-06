@@ -6,12 +6,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Jan Verbesselt, Loïc Dutrieux and Dainius Masiliūnas" />
   <title>Introduction to geoscripting</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
+  <style type="text/css">code{white-space: pre;}</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- jQuery -->
@@ -912,10 +907,10 @@ You need to have *R* and an R GUI such as *RStudio Desktop* installed on your pe
 <li>Use control flow for efficient function writing</li>
 </ul>
 <h1 id="basic-r-knowledge-useful-for-geo-scripting">Basic <em>R</em> knowledge useful for Geo-Scripting</h1>
-<p>Scripting with <em>R</em> to handle spatial problems requires a core set of basic <em>R</em> skills. To prepare you well for the coming weeks, we’ve summarized what we think are important skills for geo-scripting below.</p>
+<p>Scripting with <em>R</em> to handle spatial problems requires a core set of basic <em>R</em> skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geo-scripting below.</p>
 <h2 id="vector-handling-and-vector-arithmetic">Vector handling and vector arithmetic</h2>
 <p><strong>In <em>R</em> we call a one-dimensional array of values a <em>vector</em>, and a two-dimensional array of values a <em>matrix</em>.</strong></p>
-<p>This can be a bit confusing, because R vectors have nothing to do with vectors as you know them in GIS. The latter will be introduced in a later lesson. You’ll also be introduced in a following lesson with the <em>raster</em> package and the <code>raster</code> classes that have been developed as part of that package. Since rasters are 2D grids of values, all objects that belong to the class <code>raster</code> are <strong>matrices</strong> with a few more spatial attributes.</p>
+<p>This can be a bit confusing, because R vectors have nothing to do with vectors as you know them in GIS. The latter will be introduced in a later lesson. You'll also be introduced in a following lesson with the <em>raster</em> package and the <code>raster</code> classes that have been developed as part of that package. Since rasters are 2D grids of values, all objects that belong to the class <code>raster</code> are <strong>matrices</strong> with a few more spatial attributes.</p>
 <p>As a consequence, handling vectors and matrices is a crucial skill for processing raster data in <em>R</em>.</p>
 <p>Reference manual for vector handling and vector arithmetic can be found <a href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html#Simple-manipulations-numbers-and-vectors">here</a>.</p>
 <div class="row">
@@ -970,7 +965,7 @@ a</code></pre>
 <pre style=""><code class="output r">## [1]  9 18 14 13
 </code></pre>
 </div>
-<p>Vectors of numbers are called <strong>numeric vectors</strong>, and matrices of numbers are <strong>numeric matrices</strong>. Calculations with matrices work the same way as with vectors, i.e. element-wise. So a multiplication between two matrices is element-wise value multiplication, <em>not</em> mathematical matrix multiplication.</p>
+<p>Vectors of numbers are called <strong>numeric vectors</strong>, and matrices of numbers are <strong>numeric matrices</strong>. Calculations with matrices work the same way as with vectors, i.e. element-wise. So a multiplication between two matrices is element-wise value multiplication, <em>not</em> mathematical matrix multiplication.</p>
 <h3 id="value-replacement">Value replacement</h3>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1034,7 +1029,7 @@ a</code></pre>
 <ul>
 <li><code>list.files()</code>: to list files in a directory.</li>
 <li><code>glob2rx()</code>: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.</li>
-<li><code>paste()</code>, <code>paste0()</code>, <code>sprintf()</code>: useful to combine vectors e.g. to create a file name.</li>
+<li><code>paste()</code>, <code>paste0()</code>, <code>sprintf()</code>: useful to combine vectors e.g. to create a file name.</li>
 <li><code>strsplit()</code>: to split up a string.</li>
 </ul>
 <h3 id="example-of-list.files">Example of <code>list.files()</code></h3>
@@ -1072,7 +1067,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Thu Dec 31 17:17:31 2020"
+<pre style=""><code class="output r">## [1] "Today is Wed Jan  6 10:22:02 2021"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1088,7 +1083,7 @@ paste("Today is", date())</code></pre>
 <div class="alert alert-success">
 <blockquote>
 <p>
-<strong>Question 3</strong>: Create one variable containing a sentence <code>“geo-scripting is fun”</code>, by combining <code>a</code>, <code>b</code>, and <code>c</code>:
+<strong>Question 3</strong>: Create one variable containing a sentence <code>&quot;geo-scripting is fun&quot;</code>, by combining <code>a</code>, <code>b</code>, and <code>c</code>:
 </p>
 </blockquote>
 </div>
@@ -1152,8 +1147,8 @@ class(date0)</code></pre>
 </div>
 <p>See also <code>?substr</code>, this can be handy too.</p>
 <h2 id="reading-and-writing-data">Reading and writing data</h2>
-<p>In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).</p>
-<p>Here, an example is given how you can read (import into <em>R</em>) and write a text file (i.e. export from <em>R</em>).</p>
+<p>In the following lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).</p>
+<p>Here, an example is given how you can read (import into <em>R</em>) and write a text file (i.e. export from <em>R</em>).</p>
 <p>The most common way to read in spread sheet tables is with the <code>read.csv()</code> command. However you can read in virtually any type of text file. Type <code>?read.table</code> in your console for some other examples.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1195,7 +1190,7 @@ ls() # Check that the object is no longer in the working environment</code></pre
 </code></pre>
 </div>
 <h2 id="writing-a-function">Writing a function</h2>
-<p>It is hard to unleash the full potential of R without writing your own functions. Luckily it’s very easy to do. Here are some trivial examples:</p>
+<p>It is hard to unleash the full potential of R without writing your own functions. Luckily it's very easy to do. Here are some trivial examples:</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1236,7 +1231,7 @@ add()</code></pre>
 <pre style=""><code class="output r">## [1] 7
 </code></pre>
 </div>
-<p>That’s about all there is to it. The function will generally return the result of the last line that was evaluated.</p>
+<p>That's about all there is to it. The function will generally return the result of the last line that was evaluated.</p>
 <div class="row">
 <div class="alert alert-success">
 <blockquote>
@@ -1246,7 +1241,7 @@ add()</code></pre>
 </blockquote>
 </div>
 </div>
-<p>Now, let’s declare a new object, a new function, <code>newfunc</code> (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.</p>
+<p>Now, let's declare a new object, a new function, <code>newfunc</code> (this is just a name and if you like you can give this function another name). Appearing in the first set of brackets is an argument list that specifies (in this case) two names. The value of the function appears within the second set of brackets where the process applied to the named objects from the argument list is defined.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1289,7 +1284,7 @@ a2b</code></pre>
 </ul></li>
 <li>Follow a R <a href="http://adv-r.had.co.nz/Style.html">style guide</a>. This will make your code more readable! Most important are:
 <ul>
-<li>Meaningful and consistent naming of files, functions, variables…</li>
+<li>Meaningful and consistent naming of files, functions, variables...</li>
 <li>Indentation (like in Python: use spaces or tab to indent code in functions or loops etc.).</li>
 <li>Consistent use of the assignment operator: either <code>&lt;-</code> or <code>=</code> in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.</li>
 <li>Consistent placement of curly braces.</li>
@@ -1329,7 +1324,7 @@ ageCalculator(1985)</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] 35
+<pre style=""><code class="output r">## [1] 36
 </code></pre>
 </div>
 <p>What a beautiful age for learning geo-scripting!</p>
@@ -1355,21 +1350,21 @@ funTest_4(1985)</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] 35
+<pre style=""><code class="output r">## [1] 36
 </code></pre>
 </div>
-<p>It also works, but which of the two is the easiest to read, understand, and modify if needed? … Exactly, the first one. So let’s look back at the examples and identify some differences:</p>
+<p>It also works, but which of the two is the easiest to read, understand, and modify if needed? ... Exactly, the first one. So let's look back at the examples and identify some differences:</p>
 <ul>
 <li>Function name: Not very self descriptive in the second example.</li>
 <li>Function description: Missing in the second example.</li>
 <li>Arguments description: Missing in the second example.</li>
-<li>Comments: The second example has none (okay, the first one really has a lot, but that’s for the example).</li>
+<li>Comments: The second example has none (okay, the first one really has a lot, but that's for the example).</li>
 <li>Variables naming: use of <code>a</code> and <code>b</code> not very self descriptive in second example.</li>
 <li>Indentation: Missing in the second example.</li>
 <li>Control flow: Second example does not check for implausible dates.</li>
 <li>Consistency: Second example uses spaces, assigment operators and curly braces inconsistently.</li>
 </ul>
-<p>You haven’t fully understood what control flow is or you are not fully comfortable with function writing yet? We’ll see more of that in the following sections.</p>
+<p>You haven't fully understood what control flow is or you are not fully comfortable with function writing yet? We'll see more of that in the following sections.</p>
 <h1 id="function-writing">Function writing</h1>
 <blockquote>
 <p>A function is a sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed. -<a href="https://en.wikipedia.org/wiki/Subroutine">Wikipedia</a></p>
@@ -1411,7 +1406,9 @@ class(b)</code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">library(raster)</code></pre>
+<pre style=""><code class="source r">#  check for the raster package and install if missing
+if(!"raster" %in% rownames(installed.packages())){install.packages("raster")}
+library(raster)</code></pre>
 <button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
 </button>
@@ -1455,7 +1452,7 @@ class(e)</code></pre>
 </code></pre>
 </div>
 <h3 id="controlling-the-class-of-input-variables-of-a-function">Controlling the class of input variables of a function</h3>
-<p>One way of making functions more auto-adaptive is by adding checks of the input variables. Using object class can greatly simplify this task. For example let’s imagine that you just wrote a simple Hello World function.</p>
+<p>One way of making functions more auto-adaptive is by adding checks of the input variables. Using object class can greatly simplify this task. For example let's imagine that you just wrote a simple Hello World function.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1530,7 +1527,7 @@ HelloWorld(21)</code></pre>
 <pre style=""><code class="error r">## Error in HelloWorld(21): Object of class "character" expected for x
 </code></pre>
 </div>
-<p>The function now throws an informative error when something not supported is requested. These function argument “sanity checks” are useful to avoid lengthy processing, when we know that the output of the function is going to be wrong anyway because of invalid arguments. Alternatively to <code>stop()</code>, the function could throw a <code>warning()</code> but still return some value.</p>
+<p>The function now throws an informative error when something not supported is requested. These function argument &quot;sanity checks&quot; are useful to avoid lengthy processing, when we know that the output of the function is going to be wrong anyway because of invalid arguments. Alternatively to <code>stop()</code>, the function could throw a <code>warning()</code> but still return some value.</p>
 <div class="row">
 <div class="alert alert-success">
 <blockquote>
@@ -1621,7 +1618,7 @@ if (is.list(a)) {
 <pre style=""><code class="output r">## [1] "a is a list"
 </code></pre>
 </div>
-<p>Also note that <code>is.character(32) == TRUE</code> is equivalent to <code>is.character(32)</code>. Therefore when checking logical arguments, you don’t need to use the <code>== TRUE</code>. As an example, a function may have an argument (say, <code>plot</code>) that, if set to <code>TRUE</code> will generate a plot, and if set to <code>FALSE</code> does not generate a plot. It means that the function certainly contains an if statement. <code>if(plot)</code> in that case is equivalent to <code>if(plot == TRUE)</code>, it’s just shorter (and very slightly faster).</p>
+<p>Also note that <code>is.character(32) == TRUE</code> is equivalent to <code>is.character(32)</code>. Therefore when checking logical arguments, you don't need to use the <code>== TRUE</code>. As an example, a function may have an argument (say, <code>plot</code>) that, if set to <code>TRUE</code> will generate a plot, and if set to <code>FALSE</code> does not generate a plot. It means that the function certainly contains an if statement. <code>if(plot)</code> in that case is equivalent to <code>if(plot == TRUE)</code>, it's just shorter (and very slightly faster).</p>
 <p>An example, with a function that subtracts 2 RasterLayers, with the option to plot the resulting RasterLayer, or not.</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -1658,7 +1655,7 @@ r4 <- minusRaster(r, r2, plot=TRUE)</code></pre>
 </div>
 </div>
 <h2 id="vectorised-functions">Vectorised functions</h2>
-<p>A lot of core R functions are <em>vectorised</em>, i.e. they are capable of taking vectors, rather than individual values, as input. This allows very simple and powerful syntax without needing to use loops, for instance:</p>
+<p>A lot of core R functions are <em>vectorised</em>, i.e. they are capable of taking vectors, rather than individual values, as input. This allows very simple and powerful syntax without needing to use loops, for instance:</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1803,7 +1800,7 @@ sum(NewSubjects >= 2000)</code></pre>
 <div class="alert, alert-success">
 <blockquote>
 <p>
-<strong>Question</strong>: What happened, and what would happen if we didn’t include the Roman numerals?
+<strong>Question</strong>: What happened, and what would happen if we didn't include the Roman numerals?
 </p>
 </blockquote>
 </div>
@@ -1829,7 +1826,7 @@ freq(a, value=-2)</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] 330
+<pre style=""><code class="output r">## [1] 362
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1880,10 +1877,10 @@ for(i in 1:length(list)) {
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 330
+## [1] 362
 ## 
 ## [[2]]
-## [1] 330
+## [1] 362
 ## 
 ## [[3]]
 ## [1] "Error in (function (classes, fdef, mtable)  : \n  unable to find an inherited method for function 'freq' for signature '\"logical\"'\n"
@@ -1915,10 +1912,10 @@ out</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 330
+## [1] 362
 ## 
 ## [[2]]
-## [1] 330
+## [1] 362
 ## 
 ## [[3]]
 ## [1] "This object returned an error"
@@ -1932,7 +1929,7 @@ out</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "330"                           "330"                          
+<pre style=""><code class="output r">## [1] "362"                           "362"                          
 ## [3] "This object returned an error"
 </code></pre>
 </div>
@@ -1979,8 +1976,8 @@ foo(2)</code></pre>
 <li>To force them to catch every error, select <em>Debug - On Error - Break in Code</em> in the main menu.</li>
 <li>Run again <code>foo(2)</code>.</li>
 <li>RStudio will stop the execution where the error happened. The traceback appears in a separate pane on the right.</li>
-<li>You can and use the little green “Next” button to go line by line through the code, or the red Stop button to leave the debugging mode.</li>
-<li>Reset the <em>On Error</em> behaviour to <em>Error Inspector</em>. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to “traceback” or “rerun the code with debugging” with two buttons in the console.</li>
+<li>You can and use the little green &quot;Next&quot; button to go line by line through the code, or the red Stop button to leave the debugging mode.</li>
+<li>Reset the <em>On Error</em> behaviour to <em>Error Inspector</em>. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to &quot;traceback&quot; or &quot;rerun the code with debugging&quot; with two buttons in the console.</li>
 </ul>
 <p>Finally, solve the problem:</p>
 <div class="row">
@@ -2154,7 +2151,7 @@ The three specific tasks that will be assessed are:
 </ul></li>
 </ul>
 <p><img src="figs/DefaultOutput_Format.png" /></p>
-<p>In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button (“run current chunk”) on the right top side of the grey box or by clicking in the RMD you can use the shortcut Ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.</p>
+<p>In the white parts of the R Markdown you can type anything (such as text or titles), which will not be run as a script. In the grey boxes you can type your code. Running the code can be done with the play button (&quot;run current chunk&quot;) on the right top side of the grey box or by clicking in the RMD you can use the shortcut Ctrl + shift + enter to run the whole code chunk. This combination of text and code in R Markdown is very user friendly and makes it easy to make documents with nice visualizations or nicely documented code.</p>
 <ul>
 <li>Click the Knit HTML button in the doc toolbar to preview your document such as the assignment of today.</li>
 </ul>
@@ -2167,7 +2164,7 @@ The three specific tasks that will be assessed are:
 <pre><code>library(knitrBootstrap)
 library(rmarkdown)
 render(&#39;index.Rmd&#39;, &#39;knitrBootstrap::bootstrap_document&#39;)</code></pre>
-<p>Then you can upload the resulting HTML file anywhere, e.g. on GitHub Pages. In fact, this is how this entire course website is made!</p>
+<p>Then you can upload the resulting HTML file anywhere, e.g. on GitHub Pages. In fact, this is how this entire course website is made!</p>
 </div></div>
 -->
 <!--
