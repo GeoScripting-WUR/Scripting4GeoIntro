@@ -1195,7 +1195,8 @@ you know regular expressions, you do not need that function. But most
 people are more comfortable working with wildcards.</li>
 <li><code>paste()</code>, <code>paste0()</code>, <code>sprintf()</code>:
 useful to combine vectors e.g. to create a file name.</li>
-<li><code>strsplit()</code>: to split up a string.</li>
+<li><code>strsplit()</code>: to split up a string. #
+<code>switch()</code>: to return a value based on a match.</li>
 </ul>
 <h3 id="example-of-list.files">Example of <code>list.files()</code></h3>
 <div class="row">
@@ -1237,7 +1238,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Mon Oct 31 12:20:45 2022"
+<pre style=""><code class="output r">## [1] "Today is Tue Nov 01 08:44:36 2022"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1318,6 +1319,26 @@ class(date0)</code></pre>
 </blockquote>
 </div>
 </div>
+<h3 id="example-of-switch">Example of <code>switch()</code></h3>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r"># Lets say we want to return a custom country code based on the country name
+
+# Define country name
+country = "Belgium"
+
+# switch()
+countrycode = switch(country, "Netherlands" = 1, "Belgium" = 2, "Germany" = 3)
+
+countrycode</code></pre>
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button>
+<pre style=""><code class="output r">## [1] 2
+</code></pre>
+</div>
 <p>See also <code>?substr</code>, this can be handy too.</p>
 <h2 id="reading-and-writing-data">Reading and writing data</h2>
 <p>In future lessons we will show you how you can read and write
@@ -1363,7 +1384,8 @@ ls() </code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "a"     "b"     "d"     "date"  "date0" "e"     "f"     "name"
+<pre style=""><code class="output r">##  [1] "a"           "b"           "country"     "countrycode" "d"          
+##  [6] "date"        "date0"       "e"           "f"           "name"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -2149,7 +2171,7 @@ freq(a, value=-2)$count</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] 358
+<pre style=""><code class="output r">## [1] 341
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -2200,10 +2222,10 @@ for(i in 1:length(list)) {
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 358
+## [1] 341
 ## 
 ## [[2]]
-## [1] 358
+## [1] 341
 ## 
 ## [[3]]
 ## [1] "Error in (function (classes, fdef, mtable)  : \n  unable to find an inherited method for function 'freq' for signature '\"logical\"'\n"
@@ -2234,10 +2256,10 @@ out</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 358
+## [1] 341
 ## 
 ## [[2]]
-## [1] 358
+## [1] 341
 ## 
 ## [[3]]
 ## [1] "This object returned an error"
@@ -2251,7 +2273,7 @@ out</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "358"                           "358"                          
+<pre style=""><code class="output r">## [1] "341"                           "341"                          
 ## [3] "This object returned an error"
 </code></pre>
 </div>
@@ -2351,8 +2373,8 @@ information on function debugging.</p>
 The next step to write re-usable code is packaging it, so others can
 simply install and use it. If you followed the steps to here, this step
 is not very big anymore! For this course, it is optional. Find
-instructions <a href="https://r-pkgs.org/intro.html">here</a> and in the
-<a href="#References_and_more_info">references</a> below.
+instructions <a href="https://r-pkgs.org/introduction.html">here</a> and
+in the <a href="#References_and_more_info">references</a> below.
 </p>
 </div>
 </div>
@@ -2362,15 +2384,31 @@ instructions <a href="https://r-pkgs.org/intro.html">here</a> and in the
 make use of a subset of the <a href="http://www.gadm.org">Global
 Adminstrative Areas database (GADM)</a>:</p>
 <div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r"># Create data and output folders and download data from URL
+data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/data/data.zip"
+data_folder <- "data"
 
+if (!dir.exists(data_folder)){
+  dir.create(data_folder)}
+
+if (!file.exists('data/data.zip')) {
+  download.file(url = data_URL, destfile = 'data/data.zip', method = 'auto', mode = 'wb')
+  unzip('data/data.zip', exdir = 'data')
+}</code></pre>
 </div>
-<p>Now we will load the administrative boundaries of the Philippines,
-using the <code>sf</code> library:</p>
+<p>We load the administrative boundaries of the Philippines, using the
+<code>sf</code> library, to which you will be introduced more in-depth
+in a future lesson:</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">library(sf)</code></pre>
+<pre style=""><code class="source r"># Check for the terra package and install if missing
+if(!"sf" %in% rownames(installed.packages())){install.packages("sf")}
+library(sf)</code></pre>
 <button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
 </button>
@@ -2379,9 +2417,11 @@ using the <code>sf</code> library:</p>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">adm <- st_read(paste0(data_folder, "/gadm41_PHL_2.json"), quiet=T)
+<pre style=""><code class="source r"># Load the data and subset its geometry
+adm <- st_read(paste0(data_folder, "/gadm41_PHL_2.json"), quiet=T)
 adm_geom <- st_geometry(adm)
 
+# Create and example plot
 plot(adm_geom[adm$NAME_1 == "Tarlac"])</code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">

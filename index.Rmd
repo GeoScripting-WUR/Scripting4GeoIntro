@@ -102,6 +102,7 @@ Key functions for handling character strings are listed below:
 * `glob2rx()`: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
 * `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a file name.
 * `strsplit()`: to split up a string.
+# `switch()`: to return a value based on a match.
 
 ### Example of `list.files()`
 
@@ -165,6 +166,21 @@ class(date)
 
 ```{block, type="alert alert-success"}
 > **Question 4**: How do we select friday from the `name` variable?
+```
+
+### Example of `switch()`
+
+```{r}
+# Lets say we want to return a custom country code based on the country name
+
+# Define country name
+country = "Belgium"
+
+# switch()
+countrycode = switch(country, "Netherlands" = 1, "Belgium" = 2, "Germany" = 3)
+
+countrycode
+
 ```
 
 See also `?substr`, this can be handy too.
@@ -687,14 +703,14 @@ Refer to the reference section of this document for further information on funct
 
 ```{block, type="alert alert-info"}
 # (optional) Writing packages
-The next step to write re-usable code is packaging it, so others can simply install and use it. If you followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](https://r-pkgs.org/intro.html) and in the [references](#References_and_more_info) below.
+The next step to write re-usable code is packaging it, so others can simply install and use it. If you followed the steps to here, this step is not very big anymore! For this course, it is optional. Find instructions [here](https://r-pkgs.org/introduction.html) and in the [references](#References_and_more_info) below.
 ```
 
 # Creating a map within *R* - a simple demo
 
 Here is an example of how you can create a map in *R*. We will make use of a subset of the [Global Adminstrative Areas database (GADM)](http://www.gadm.org):
 
-```{r, echo=FALSE, message=FALSE}
+```{r}
 # Create data and output folders and download data from URL
 data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/data/data.zip"
 data_folder <- "data"
@@ -708,14 +724,18 @@ if (!file.exists('data/data.zip')) {
 }
 ```
 
-Now we will load the administrative boundaries of the Philippines, using the `sf` library:
+We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a future lesson:
 
 ```{r}
+# Check for the terra package and install if missing
+if(!"sf" %in% rownames(installed.packages())){install.packages("sf")}
 library(sf)
 
+# Load the data and subset its geometry
 adm <- st_read(paste0(data_folder, "/gadm41_PHL_2.json"), quiet=T)
 adm_geom <- st_geometry(adm)
 
+# Create and example plot
 plot(adm_geom[adm$NAME_1 == "Tarlac"])
 ```
 
