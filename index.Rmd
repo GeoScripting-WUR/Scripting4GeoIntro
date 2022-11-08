@@ -1,10 +1,10 @@
 ---
-pagetitle: "Lesson 3: Intro to functions and refresher on R"
+pagetitle: "Tutorial 3: Intro to functions and refresher on R"
 author: "Jan Verbesselt, Loïc Dutrieux and Dainius Masiliūnas"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   knitrBootstrap::bootstrap_document:
-    title: "Lesson 3: Intro to functions and refresher on R"
+    title: "Tutorial 3: Intro to functions and refresher on R"
     theme: "simplex"
     highlight: Tomorrow Night Bright
     menu: FALSE
@@ -19,7 +19,7 @@ a:visited {color: #91170a;}
 
 # [WUR Geoscripting](https://geoscripting-wur.github.io/) <img src="https://www.wur.nl/upload/854757ab-168f-46d7-b415-f8b501eebaa5_WUR_RGB_standard_2021-site.svg" alt="WUR logo" style="height: 35px;"/>
 
-# Week 1, Lesson 3: Intro to functions and refresher on R
+# Week 1, Tutorial 3: Intro to functions and refresher on R
 
 ## Learning objectives
 * Learn to write a function
@@ -33,7 +33,7 @@ Scripting with *R* to handle spatial problems requires a core set of basic *R* s
 ## Vector handling and vector arithmetic
 **In *R* we call a one-dimensional array of values a *vector*, and a two-dimensional array of values a *matrix*.**
 
-This can be a bit confusing, because R vectors have nothing to do with vectors as you know them in GIS. The latter will be introduced in a later lesson. You'll also be introduced in a later lesson to the *terra* package and the `SpatRaster` class that has been developed as part of that package. Since rasters are 2D grids of values, all objects that belong to the class `SpatRaster` are **matrices** with a few more spatial attributes.
+This can be a bit confusing, because R vectors have nothing to do with vectors as you know them in GIS. The latter will be introduced in a later tutorial. You'll also be introduced in a later tutorial to the *terra* package and the `SpatRaster` class that has been developed as part of that package. Since rasters are 2D grids of values, all objects that belong to the class `SpatRaster` are **matrices** with a few more spatial attributes.
 
 As a consequence, handling vectors and matrices is a crucial skill for processing raster data in *R*.
 
@@ -186,7 +186,7 @@ See also `?substr`, this can be handy too.
 
 ## Reading and writing data
 
-In future lessons we will show you how you can read and write different spatial objects (e.g. vector and raster files).
+In future tutorials we will show you how you can read and write different spatial objects (e.g. vector and raster files).
 
 Here, an example is given how you can read (import into *R*) and write (export from *R*) a text file.
 
@@ -371,7 +371,7 @@ More flexibility in your function can be achieved through some easy control flow
 Control flow refers to the use of conditions in your code that redirect the flow to different directions depending on variables values or class. Make use of that in your code, as this will make your functions more flexible and generic.
 
 ### Object classes and Control flow
-You have seen in a previous lesson already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
+You have seen in a previous tutorial already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
 
 A quick reminder on classes:
 
@@ -525,8 +525,7 @@ Because most base functions are already vectorised, it is easy to write new func
 Vectorisation also allows us to write short and versatile code. For instance, to check whether the input is a positive number:
 
 ```{r}
-is.positive.number = function(x)
-{
+is.positive.number = function(x) {
   is.numeric(x) & x > 0
 }
 
@@ -547,8 +546,7 @@ is.positive.number(c(TRUE, -5, 10))
 We just became familiar with functions for checking the types (classes) of variables. You may have noticed that there is one way in which they are all consistent: no matter the input, they return a `logical` value (`TRUE`, `FALSE`, or also `NA`). This is called type consistency and is a useful property. Consider code like this:
 
 ```{r}
-AddNewSubject = function(NewBirthYear)
-{
+AddNewSubject = function(NewBirthYear) {
   # Birth years of previous subjects
   BirthYears = c(1980, 1985, 1987, 1990, 1993, 1994, 1998, 2000)
   return(c(BirthYears, NewBirthYear))
@@ -723,7 +721,7 @@ if (!file.exists('data/data.zip')) {
 }
 ```
 
-We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a future lesson:
+We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a future tutorial:
 
 ```{r}
 # Check for the terra package and install if missing
