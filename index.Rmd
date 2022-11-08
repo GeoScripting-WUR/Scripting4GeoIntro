@@ -168,10 +168,8 @@ class(date)
 ```
 
 ### Example of `switch()`
-
+Lets say we want to return a custom country code based on the country name
 ```{r}
-# Lets say we want to return a custom country code based on the country name
-
 # Define country name
 country = "Belgium"
 
@@ -596,7 +594,7 @@ list <- list(a, b, c)
 ```
 
 ```{r, error=TRUE}
-## Running freq(c) would return an error and stop the whole process
+# Running freq(c) would return an error and stop the whole process
 out <- list()
 for(i in 1:length(list)) {
     out[i] <- freq(list[[i]], value = -2)$count
@@ -604,7 +602,7 @@ for(i in 1:length(list)) {
 ```
 
 ```{r}
-## If you wrap the call in a try(), you still get an error, but it's non-fatal
+# If you wrap the call in a try(), you still get an error, but it's non-fatal
 out <- list()
 for(i in 1:length(list)) {
     out[i] <- try(freq(list[[i]], value = -2)$count)
@@ -709,11 +707,12 @@ Here is an example of how you can create a map in *R*. We will make use of a sub
 
 ```{r}
 # Create data and output folders and download data from URL
-data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/data/data.zip"
+data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/gadm-data/gadm41_PHL_2.zip"
 data_folder <- "data"
 
-if (!dir.exists(data_folder)){
-  dir.create(data_folder)}
+if (!dir.exists(data_folder)) {
+  dir.create(data_folder)
+}
 
 if (!file.exists('data/data.zip')) {
   download.file(url = data_URL, destfile = 'data/data.zip', method = 'auto', mode = 'wb')
