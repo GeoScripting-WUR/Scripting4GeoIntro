@@ -184,7 +184,7 @@ See also `?substr`, this can be handy too.
 
 ## Reading and writing data
 
-In future tutorials we will show you how you can read and write different spatial objects (e.g. vector and raster files).
+In later tutorials we will show you how you can read and write different spatial objects (e.g. vector and raster files).
 
 Here, an example is given how you can read (import into *R*) and write (export from *R*) a text file.
 
