@@ -720,7 +720,7 @@ if (!file.exists('data/data.zip')) {
 }
 ```
 
-We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a later tutorial:
+We load the administrative boundaries of the Philippines, using the `sf` package, to which you will be introduced more in-depth in a later tutorial:
 
 ```{r}
 # Check for the sf package and install if missing
