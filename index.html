@@ -1236,7 +1236,7 @@ paste("Today is", date())</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "Today is Thu Nov 24 10:57:04 2022"
+<pre style=""><code class="output r">## [1] "Today is Mon Nov 28 10:48:33 2022"
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -1672,7 +1672,7 @@ that, using control flow, to make your functions more flexible.</p>
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r"># Check for the terra package and install if missing
-if(!"terra" %in% rownames(installed.packages())){install.packages("terra")}
+if(!"terra" %in% installed.packages()){install.packages("terra")}
 library(terra)</code></pre>
 <button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
@@ -1932,7 +1932,7 @@ minusRaster <- function(x, y, plot=FALSE) {
 }
 
 # Let's generate 2 SpatRasters. The first one is the R logo raster
-# converted to the raster package file format
+# converted to the terra package file format
 r <- rast(system.file("ex/logo.tif", package = "terra"))
 
 # The second SpatRaster is derived from the initial SpatRaster in order
@@ -2158,7 +2158,7 @@ calculating frequency on a list of auto-generated SpatRasters.</p>
 </button>
 <pre style=""><code class="source r">library(terra)
 
-# Create a raster layer and fill it with "randomly" generated integer values
+# Create a SpatRaster and fill it with "randomly" generated integer values
 a <- rast(nrow = 50, ncol = 50)
 a[] <- floor(rnorm(n = ncell(a)))
 
@@ -2168,7 +2168,7 @@ freq(a, value = -2)$count</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] 358
+<pre style=""><code class="output r">## [1] 336
 </code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
@@ -2179,7 +2179,7 @@ b <- a
 c <- NA
 list <- list(a, b, c)
 
-# Now, b and a are raster layers, and c is ''corrupted''</code></pre>
+# Now, b and a are SpatRasters, and c is ''corrupted''</code></pre>
 </div>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
@@ -2219,10 +2219,10 @@ for(i in 1:length(list)) {
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 358
+## [1] 336
 ## 
 ## [[2]]
-## [1] 358
+## [1] 336
 ## 
 ## [[3]]
 ## [1] "Error in (function (classes, fdef, mtable)  : \n  unable to find an inherited method for function 'freq' for signature '\"logical\"'\n"
@@ -2253,10 +2253,10 @@ out</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
 <pre style=""><code class="output r">## [[1]]
-## [1] 358
+## [1] 336
 ## 
 ## [[2]]
-## [1] 358
+## [1] 336
 ## 
 ## [[3]]
 ## [1] "This object returned an error"
@@ -2270,7 +2270,7 @@ out</code></pre>
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button>
-<pre style=""><code class="output r">## [1] "358"                           "358"                          
+<pre style=""><code class="output r">## [1] "336"                           "336"                          
 ## [3] "This object returned an error"
 </code></pre>
 </div>
@@ -2384,28 +2384,28 @@ Adminstrative Areas database (GADM)</a>:</p>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r"># Create data and output folders and download data from URL
+<pre style=""><code class="source r"># Create data and output directories and download data from URL
 data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/gadm-data/gadm41_PHL_2.zip"
-data_folder <- "data"
+data_dir <- "data"
 
-if (!dir.exists(data_folder)) {
-  dir.create(data_folder)
+if (!dir.exists(data_dir)) {
+  dir.create(data_dir)
 }
 
 if (!file.exists('data/data.zip')) {
-  download.file(url = data_URL, destfile = 'data/data.zip', method = 'auto', mode = 'wb')
+  download.file(url = data_URL, destfile = file.path(data_dir, "data.zip"))
   unzip('data/data.zip', exdir = 'data')
 }</code></pre>
 </div>
 <p>We load the administrative boundaries of the Philippines, using the
 <code>sf</code> library, to which you will be introduced more in-depth
-in a future tutorial:</p>
+in a later tutorial:</p>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r"># Check for the terra package and install if missing
-if(!"sf" %in% rownames(installed.packages())){install.packages("sf")}
+<pre style=""><code class="source r"># Check for the sf package and install if missing
+if(!"sf" %in% installed.packages()){install.packages("sf")}
 library(sf)</code></pre>
 <button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
@@ -2416,7 +2416,7 @@ library(sf)</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r"># Load the data and subset its geometry
-adm <- st_read(paste0(data_folder, "/gadm41_PHL_2.json"), quiet = TRUE)
+adm <- st_read(file.path(data_dir, "gadm41_PHL_2.json"), quiet = TRUE)
 adm_geom <- st_geometry(adm)
 
 # Create and example plot

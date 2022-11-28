@@ -375,7 +375,7 @@ A quick reminder on classes:
 
 ```{r}
 # Check for the terra package and install if missing
-if(!"terra" %in% rownames(installed.packages())){install.packages("terra")}
+if(!"terra" %in% installed.packages()){install.packages("terra")}
 library(terra)
 
 # Three different objects belonging to three different classes
@@ -481,7 +481,7 @@ minusRaster <- function(x, y, plot=FALSE) {
 }
 
 # Let's generate 2 SpatRasters. The first one is the R logo raster
-# converted to the raster package file format
+# converted to the terra package file format
 r <- rast(system.file("ex/logo.tif", package = "terra"))
 
 # The second SpatRaster is derived from the initial SpatRaster in order
@@ -576,7 +576,7 @@ Also `try()` returns an object of different class when it fails. You can take ad
 ```{r, eval=TRUE, echo=TRUE}
 library(terra)
 
-# Create a raster layer and fill it with "randomly" generated integer values
+# Create a SpatRaster and fill it with "randomly" generated integer values
 a <- rast(nrow = 50, ncol = 50)
 a[] <- floor(rnorm(n = ncell(a)))
 
@@ -590,7 +590,7 @@ b <- a
 c <- NA
 list <- list(a, b, c)
 
-# Now, b and a are raster layers, and c is ''corrupted''
+# Now, b and a are SpatRasters, and c is ''corrupted''
 ```
 
 ```{r, error=TRUE}
@@ -706,29 +706,29 @@ The next step to write re-usable code is packaging it, so others can simply inst
 Here is an example of how you can create a map in *R*. We will make use of a subset of the [Global Adminstrative Areas database (GADM)](http://www.gadm.org):
 
 ```{r}
-# Create data and output folders and download data from URL
+# Create data and output directories and download data from URL
 data_URL <- "https://github.com/GeoScripting-WUR/Scripting4GeoIntro/releases/download/gadm-data/gadm41_PHL_2.zip"
-data_folder <- "data"
+data_dir <- "data"
 
-if (!dir.exists(data_folder)) {
-  dir.create(data_folder)
+if (!dir.exists(data_dir)) {
+  dir.create(data_dir)
 }
 
 if (!file.exists('data/data.zip')) {
-  download.file(url = data_URL, destfile = 'data/data.zip', method = 'auto', mode = 'wb')
+  download.file(url = data_URL, destfile = file.path(data_dir, "data.zip"))
   unzip('data/data.zip', exdir = 'data')
 }
 ```
 
-We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a future tutorial:
+We load the administrative boundaries of the Philippines, using the `sf` library, to which you will be introduced more in-depth in a later tutorial:
 
 ```{r}
-# Check for the terra package and install if missing
-if(!"sf" %in% rownames(installed.packages())){install.packages("sf")}
+# Check for the sf package and install if missing
+if(!"sf" %in% installed.packages()){install.packages("sf")}
 library(sf)
-
+  
 # Load the data and subset its geometry
-adm <- st_read(paste0(data_folder, "/gadm41_PHL_2.json"), quiet = TRUE)
+adm <- st_read(file.path(data_dir, "gadm41_PHL_2.json"), quiet = TRUE)
 adm_geom <- st_geometry(adm)
 
 # Create and example plot
