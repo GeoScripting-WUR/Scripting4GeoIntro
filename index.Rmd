@@ -19,7 +19,7 @@ a:visited {color: #91170a;}
 
 # [WUR Geoscripting](https://geoscripting-wur.github.io/) <img src="https://www.wur.nl/upload/854757ab-168f-46d7-b415-f8b501eebaa5_WUR_RGB_standard_2021-site.svg" alt="WUR logo" style="height: 35px;"/>
 
-# Week 1, Tutorial 3: Intro to functions and refresher on R
+# Intro to functions and refresher on R
 
 ## Learning objectives
 * Learn to write a function
@@ -29,6 +29,10 @@ a:visited {color: #91170a;}
 
 # Basic *R* knowledge useful for Geo-Scripting
 Scripting with *R* to handle spatial problems requires a core set of basic *R* skills. To prepare you well for the coming weeks, we've summarized what we think are important skills for geoscripting below.
+
+```{block type="alert alert-info"}
+**Note** that this tutorial uses the basic programming structure with lists, strings, and more. For a refresher on these elements click [here](https://geoscripting-wur.github.io/RPythonBasics/).
+```
 
 ## Vector handling and vector arithmetic
 **In *R* we call a one-dimensional array of values a *vector*, and a two-dimensional array of values a *matrix*.**
@@ -98,10 +102,10 @@ When working with real data, such as satellite imagery or KML files, the data al
 Key functions for handling character strings are listed below:
 
 * `list.files()`: to list files in a directory.
-* `glob2rx()`: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards.
+* `glob2rx()`: to select files using a wildcard. Note: if you know regular expressions, you do not need that function. But most people are more comfortable working with wildcards. For a list of wildcards click [here](../Intro2Linux/index.html#file-manipulation).
 * `paste()`, `paste0()`, `sprintf()`: useful to combine vectors e.g. to create a file name.
 * `strsplit()`: to split up a string.
-# `switch()`: to return a value based on a match.
+* `switch()`: to return a value based on a match.
 
 ### Example of `list.files()`
 
@@ -284,13 +288,13 @@ In order to achieve these objectives, you should try to follow a few good practi
     - Indentation (like in Python: use spaces or tab to indent code in functions or loops etc.).
     - Consistent use of the assignment operator: either `<-` or `=` in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.
     - Consistent placement of curly braces.
-* [Make your own packages](#__optional__Writing_packages_).
-* Keep a similar [directory structure](../RProjectManagement/index.html) across your projects.
-* Use [version control](../RProjectManagement/index.html) to develop/maintain your projects and packages.
+* [Make your own packages](#__optional__Writing_packages_). 
+* Keep a similar [directory structure](../RProjectManagement/index.html) across your projects. 
+* Use [version control](../RProjectManagement/index.html#version-control) to develop/maintain your projects and packages.
 * Never place `rm(list = ls())` anywhere in your script. If you do so, you may [find your computer set on fire](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
 * Use relative file paths and never use `setwd()`. Do press the button below every time you open a script, and assume everyone else will do that too.
 
-![Session -> Set working directory -> To Source File Location](figs/setwd_rstudiotip.png)
+![Session -> Set working directory -> To Source File Location](figs/setwd_rstudiotip.png) 
 
 Note that R IDEs like RStudio make a lot of these good practices a lot easier and you should try to take maximum advantage of them. Take a moment to explore the menus of the RStudio session that should already be open on your machine.
 
@@ -369,7 +373,7 @@ More flexibility in your function can be achieved through some easy control flow
 Control flow refers to the use of conditions in your code that redirect the flow to different directions depending on variables values or class. Make use of that in your code, as this will make your functions more flexible and generic.
 
 ### Object classes and Control flow
-You have seen in a previous tutorial already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
+You have seen in a [previous tutorial](../RPythonBasics/index.html/#data-types) already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
 
 A quick reminder on classes:
 
@@ -388,6 +392,8 @@ class(b)
 c <- rast(ncol = 10, nrow = 10)
 class(c)
 ```
+
+Here we used the function `rast` from the Terra package to create an object of class `SpatRaster`. `SpatRaster` is a class for rasters (or matrices) that comprise the necessary elements for spatial data. With Terra and `SpatRaster`, complex spatial data will be processed more efficiently by using specifically tailored functions for `SpatRaster`. This will be studied further in [another tutorial](../IntroToRaster/index.html).
 
 ### Controlling the class of input variables of a function
 
@@ -588,7 +594,7 @@ freq(a, value = -2)$count
 # but some elements of the list are impredictibly corrupted, so the list looks as follows
 b <- a
 c <- NA
-list <- list(a, b, c)
+rasterList <- list(a, b, c)
 
 # Now, b and a are SpatRasters, and c is ''corrupted''
 ```
@@ -596,16 +602,16 @@ list <- list(a, b, c)
 ```{r, error=TRUE}
 # Running freq(c) would return an error and stop the whole process
 out <- list()
-for(i in 1:length(list)) {
-    out[i] <- freq(list[[i]], value = -2)$count
+for(i in 1:length(rasterList)) {
+    out[i] <- freq(rasterList[[i]], value = -2)$count
 }
 ```
 
 ```{r}
 # If you wrap the call in a try(), you still get an error, but it's non-fatal
 out <- list()
-for(i in 1:length(list)) {
-    out[i] <- try(freq(list[[i]], value = -2)$count)
+for(i in 1:length(rasterList)) {
+    out[i] <- try(freq(rasterList[[i]], value = -2)$count)
 }
 out
 ```
@@ -624,14 +630,14 @@ fun <- function(x, value) {
 
 # Let's try to run the loop again
 out <- list()
-for(i in 1:length(list)) {
-    out[i] <- fun(list[[i]], value = -2)
+for(i in 1:length(rasterList)) {
+    out[i] <- fun(rasterList[[i]], value = -2)
 }
 out
 
 # Note that using a function of the apply family would be a more
 # elegant/shorter way to obtain the same result
-(out <- sapply(X = list, FUN = fun, value = -2))
+(out <- sapply(X = rasterList, FUN = fun, value = -2))
 ```
 
 ### Function debugging
