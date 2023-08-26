@@ -22,6 +22,7 @@ a:visited {color: #91170a;}
 # Intro to functions and refresher on R
 
 ## Learning objectives
+* Install packages and create directories in R
 * Learn to write a function
 * Know how to visualize data via a spatial map using an R script
 * Adopt some good scripting/programming habits
@@ -32,6 +33,29 @@ Scripting with *R* to handle spatial problems requires a core set of basic *R* s
 
 ```{block type="alert alert-info"}
 **Note** that this tutorial uses the basic programming structure with lists, strings, and more. For a refresher on these elements click [here](https://geoscripting-wur.github.io/RPythonBasics/).
+```
+
+## Package installation and creating new directories 
+To code efficiently, we use packages that contain ready-made features for specific applications. The relevant packages must first be installed before using their features. In this tutorial, we will be using the *terra* and *sf* packages. We can therefore go ahead and install them now. 
+
+```{r}
+# Check for the terra and sf packages and install if missing
+if(!"terra" %in% installed.packages()){install.packages("terra")}
+if(!"sf" %in% installed.packages()){install.packages("sf")}
+```
+
+We first check if the package has already been installed, to avoid unnecessary steps. If the package is missing, then we install it. 
+
+```{r}
+# Load the terra and sf packages 
+library(terra)
+library(sf)
+```
+
+Similarly, we can create new directories for storing out data using the functions `dir.exists` and `dir.create`. Again, we check if these directories are missing before creating them, to avoid redundancy. 
+
+```{r}
+if(!dir.exists("data")){dir.create("data")}
 ```
 
 ## Vector handling and vector arithmetic
@@ -373,27 +397,18 @@ More flexibility in your function can be achieved through some easy control flow
 Control flow refers to the use of conditions in your code that redirect the flow to different directions depending on variables values or class. Make use of that in your code, as this will make your functions more flexible and generic.
 
 ### Object classes and Control flow
-You have seen in a [previous tutorial](../RPythonBasics/index.html/#data-types) already that every variable in your R working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible.
-
-A quick reminder on classes:
+You have seen in a [previous tutorial](../RPythonBasics/index.html/#data-types) already that every variable in your *R* working environment belongs to a class. You can take advantage of that, using control flow, to make your functions more flexible. First, let's introduce a new class.
 
 ```{r}
 # Check for the terra package and install if missing
 if(!"terra" %in% installed.packages()){install.packages("terra")}
 library(terra)
 
-# Three different objects belonging to three different classes
-a <- 12
-class(a)
-
-b <- "I have a class too"
-class(b)
-
 c <- rast(ncol = 10, nrow = 10)
 class(c)
 ```
 
-Here we used the function `rast` from the Terra package to create an object of class `SpatRaster`. `SpatRaster` is a class for rasters (or matrices) that comprise the necessary elements for spatial data. With Terra and `SpatRaster`, complex spatial data will be processed more efficiently by using specifically tailored functions for `SpatRaster`. This will be studied further in [another tutorial](../IntroToRaster/index.html).
+Here we used the function `rast` from the *terra* package to create an object of class `SpatRaster`. `SpatRaster` is a class for rasters (or matrices) that comprise the necessary elements for spatial data. With *terra* and `SpatRaster`, complex spatial data will be processed more efficiently by using specifically tailored functions for `SpatRaster`. This will be studied further in [another tutorial](../IntroToRaster/index.html).
 
 ### Controlling the class of input variables of a function
 
