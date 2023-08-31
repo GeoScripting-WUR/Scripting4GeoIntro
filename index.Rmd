@@ -454,14 +454,18 @@ a = list(a = 1:10, b = "b")
 
 # We can also set a class (only do that if you make your own class!)
 class(a) = c("myclass", "list")
+```
 
+```{r, error=TRUE}
 # Wrong
 if (class(a) == "list") {
   print("a is a list")
 } else {
   print("a is not a list")
 }
+```
 
+```{r}
 # Right
 if (is.list(a)) {
   print("a is a list")
