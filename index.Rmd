@@ -304,7 +304,7 @@ Here's a refresher, with some additional points specific to R:
 
 * Comment your code.
 * Write [functions](#function_writing) for code you need more than once:
-    - Make your functions generic and flexible, using [control flow](#control_flow).
+    - Make your functions generic and flexible, using [control flow](#control-flow).
     - Document your functions.
 * Follow a R [style guide](http://adv-r.had.co.nz/Style.html). This will make your code more readable! Most important are:
     - Meaningful and consistent naming of files, functions, variables...
@@ -771,7 +771,7 @@ adm_geom <- st_geometry(adm)
 plot(adm_geom[adm$NAME_1 == "Tarlac"])
 ```
 
-Try to understand the code below, and let us know if you have questions. Feel free to use this code as an example and use this for exercise 3.
+Try to understand the code below, and let us know if you have questions. Feel free to use this code as an example for exercise 5.
 
 ```{r phil, eval=TRUE, warning=FALSE, fig.align='center'}
 mar <- adm_geom[adm$NAME_1 == "Marinduque"]
