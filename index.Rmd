@@ -5,6 +5,7 @@ date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   rmdformats::html_clean:
     highlight: zenburn
+    md_extensions: -smart
 ---
 
 ```{css, echo=FALSE}
