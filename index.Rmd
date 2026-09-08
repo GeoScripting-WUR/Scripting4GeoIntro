@@ -715,11 +715,20 @@ Depending on the IDE you are using, you may be presented with tools for stepping
 #### Positron
 Positron has integration with the debugging tools in R, so you can use a point-and-click interface. However, some parts of it are specific to the Positron IDE.
 
-- To force them to catch every error, cehck the box *Breakpoints - Errors* in the main menu, bottom left.
+- To force them to catch every error, check the box *Breakpoints - Errors* in the main menu, bottom left.
+
+<center>
+![file name](figs/breakpoint_errors.png)
+</center>
+
 - Run again ``foo(2)``.
 - Positron will stop the execution where the error happened. The traceback will be highlighted in the code.
-- You can and use the little blue "Continue (F5)" button to go line by line through the code, or the red "Disconnect (Shift + F5)" button to leave the debugging mode.
-- Reset the *Errors* behaviour by unchecking the box. In this default setting, Positron offers the options to "traceback" with a button in the console.
+- You can use the little blue "Continue (F5)" button to go line by line through the code, or press the red "Disconnect (Shift + F5)" button to leave the debugging mode.
+- Reset the *Breakpoints - Errors* behaviour by unchecking the box. In this default setting, Positron offers the option to traceback the error with a "Show Traceback" button in the console, when pressed takes you to the origin of the error.
+
+<center>
+![](figs/debugging_traceback_img.png){width=100%}
+</center>
 
 Finally, solve the problem:
 
