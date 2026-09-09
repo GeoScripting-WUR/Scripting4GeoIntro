@@ -24,7 +24,7 @@ code[class^="sourceCode python"]::before { content: "Python Source"; }
 code[class^="sourceCode bash"]::before { content: "Bash Source"; }
 ```
 
-<font size="6">[WUR Geoscripting](https://geoscripting-wur.github.io/)</font> <img src="https://www.wur.nl/upload/854757ab-168f-46d7-b415-f8b501eebaa5_WUR_RGB_standard_2021-site.svg" alt="WUR logo" style="height: 35px; margin:inherit;"/>
+<font size="6">[WUR Geoscripting](https://geoscripting-wur.github.io/)</font> <img src="https://geoscripting-wur.github.io/figs/WUR_RGB_standard_2025.svg" alt="WUR logo" style="height: 50px;"/>
 
 
 # Intro to functions and refresher on R
@@ -141,7 +141,7 @@ Key functions for handling character strings are listed below:
 ### Example of `list.files()`
 
 ```{r, eval=FALSE}
-# Check your working directory
+# Check your working directory; note that Positron automatically sets the working directory to the opened folder
 getwd()
 
 # List the files available in this directory
@@ -226,9 +226,6 @@ Here, an example is given how you can read (import into *R*) and write (export f
 The most common way to read in spreadsheet tables is with the `read.csv()` command. However, you can read in virtually any type of text file. Type `?read.table` in your console for some other examples.
 
 ```{r, eval=TRUE}
-# Check your working directory
-getwd() 
-
 # Create some dummy data
 (test <- c(1:5, "6, 7", "8, 9, 10"))
 
@@ -313,7 +310,7 @@ Here's a refresher, with some additional points specific to R:
     - Consistent use of the assignment operator: either `<-` or `=` in all your code. The former is used by core R and allows assigning in function calls, the latter is shorter and consistent with most other programming languages.
     - Consistent placement of curly braces.
 * Never place `rm(list = ls())` anywhere in your script. If you do so, you may [find your computer set on fire](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
-* Set your working directory relative to where you saved your R script: go to *Session* in the RStudio menu bar → *Set Working Directory* → *To Source File Location*
+* Set your working directory relative to where you saved your R script: It varies for different IDEs. For example, Positron automatically sets the working directory to the opened folder, while for RStudio: go to *Session* in the RStudio menu bar → *Set Working Directory* → *To Source File Location*
 
 ![Session -> Set working directory -> To Source File Location](figs/setwd_rstudiotip.png) 
 
@@ -715,14 +712,23 @@ Depending on the IDE you are using, you may be presented with tools for stepping
 <!-- # This link requires username and password. Maybe nice to replace with something else. -->
 <!-- #For another example see: [rfunction.com](http://rfunction.com/archives/2562). -->
 
-#### RStudio
-RStudio has integration with the debugging tools in R, so you can use a point-and-click interface. However, some parts of it are specific to the RStudio IDE.
+#### Positron
+Positron has integration with the debugging tools in R, so you can use a point-and-click interface. However, some parts of it are specific to the Positron IDE.
 
-- To force them to catch every error, select *Debug - On Error - Break in Code* in the main menu.
+- To force them to catch every error, check the box *Breakpoints - Errors* in the main menu, bottom left.
+
+<center>
+![file name](figs/breakpoint_errors.png)
+</center>
+
 - Run again ``foo(2)``.
-- RStudio will stop the execution where the error happened. The traceback appears in a separate pane on the right.
-- You can and use the little green "Next" button to go line by line through the code, or the red Stop button to leave the debugging mode.
-- Reset the *On Error* behaviour to *Error Inspector*. In this default setting, RStudio will try to decide whether the error is complex enough for debugging, and then offer the options to "traceback" or "rerun the code with debugging" with two buttons in the console.
+- Positron will stop the execution where the error happened. The traceback will be highlighted in the code.
+- You can use the little blue "Continue (F5)" button to go line by line through the code, or press the red "Disconnect (Shift + F5)" button to leave the debugging mode.
+- Reset the *Breakpoints - Errors* behaviour by unchecking the box. In this default setting, Positron offers the option to traceback the error with a "Show Traceback" button in the console, when pressed takes you to the origin of the error.
+
+<center>
+![](figs/debugging_traceback_img.png){width=100%}
+</center>
 
 Finally, solve the problem:
 
